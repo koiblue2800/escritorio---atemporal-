@@ -319,14 +319,14 @@ function loadEmulatorJS(container, game) {
 <script>
   EJS_player = '#game';
   EJS_core = '${core}';
-  EJS_gameUrl = '${window.location.origin}/${game.rom}';
-  EJS_pathtodata = '${window.location.origin}/${PATHS.emulatorjs}data/';
+  EJS_gameUrl = '${window.location.href.replace(/\/[^\/]*$/, '')}/${game.rom}';
+  EJS_pathtodata = '${window.location.href.replace(/\/[^\/]*$/, '')}/${PATHS.emulatorjs}data/';
   EJS_startOnLoaded = true;
   EJS_color = '#316AC5';
   EJS_backgroundColor = '#000000';
   EJS_Buttons = { playPause:true, restart:true, mute:true, settings:true, fullscreen:true, saveState:true, loadState:true, screenRecord:false, gamepad:true, cheat:false };
 <\/script>
-<script src="${window.location.origin}/${PATHS.emulatorjs}data/loader.js"><\/script>
+<script src="${window.location.href.replace(/\/[^\/]*$/, '')}/${PATHS.emulatorjs}data/loader.js"><\/script>
 </body>
 </html>`;
 
