@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval' data: blob:;">
+  <title>Windows XP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="desktop">
+
+  <div class="icon" onclick="selectIcon(this); openFolder('mame')">
+    <div class="icon-img" style="--ic1:#f5c518;--ic2:#d4a017">📁</div>
+    <div class="icon-label">MAME</div>
+  </div>
+
+  <div class="icon" onclick="selectIcon(this); openFolder('flash')">
+    <div class="icon-img" style="--ic1:#e63946;--ic2:#c1121f">⚡</div>
+    <div class="icon-label">Flash Games</div>
+  </div>
+
+  <!-- Paint -->
+  <div class="icon" onclick="selectIcon(this); openWebApp('paint')" >
+    <div class="icon-img" style="--ic1:#ffffff;--ic2:#c8c8c8">🎨</div>
+    <div class="icon-label">Paint</div>
+  </div>
+
+  <!-- Counter Strike -->
+  <div class="icon" onclick="selectIcon(this); openWebApp('cs')">
+    <div class="icon-img" style="--ic1:#1a1a1a;--ic2:#f5a623">🔫</div>
+    <div class="icon-label">Counter Strike</div>
+  </div>
+
+
+
+</div>
+
+<div id="taskbar">
+  <button id="start-btn">
+    <span class="start-logo">🪟</span>
+    <span>start</span>
+  </button>
+  <div id="taskbar-items"></div>
+  <div id="clock">00:00</div>
+</div>
+
+<div id="ctx-menu">
+  <div class="ctx-item">Actualizar escritorio</div>
+  <div class="ctx-sep"></div>
+  <div class="ctx-item">Propiedades de pantalla</div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Tahoma:wght@400;700&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; user-select: none; }
+
+body {
+  font-family: 'Tahoma', sans-serif;
+  font-size: 11px;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  background: #1F5F9E url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="4" height="4"><rect width="2" height="2" fill="%23ffffff08"/></svg>');
+  background-size: 4px 4px;
+}
+
+#desktop {
+  width: 100%;
+  height: calc(100vh - 30px);
+  position: relative;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 8px;
+}
+
+.icon {
+  width: 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 2px;
+  border: 1px solid transparent;
+}
+.icon:hover { background: rgba(49,106,197,0.4); border-color: rgba(49,106,197,0.8); }
+.icon.selected { background: rgba(49,106,197,0.6); border-color: #316AC5; }
+
+.icon-img {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  border-radius: 4px;
+  background: linear-gradient(135deg, var(--ic1), var(--ic2));
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.4), inset 1px 1px 0 rgba(255,255,255,0.3);
+}
+.icon-label {
+  color: white;
+  font-size: 10px;
+  text-align: center;
+  text-shadow: 1px 1px 2px black, -1px -1px 2px black;
+  line-height: 1.2;
+  word-break: break-word;
+}
+
+#taskbar {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  height: 30px;
+  background: linear-gradient(to bottom, #2a6dd9 0%, #1e55b0 4%, #245ecb 6%, #2566ce 10%, #2263c9 90%, #1a4fa5 95%, #1a4395 100%);
+  display: flex;
+  align-items: center;
+  z-index: 9999;
+  border-top: 1px solid #0f3d8c;
+}
+
+#start-btn {
+  height: 100%;
+  padding: 0 12px 0 8px;
+  background: linear-gradient(to bottom, #57a428 0%, #3d8216 4%, #438b19 6%, #4a9820 50%, #418015 95%, #356b10 100%);
+  border: none;
+  border-right: 1px solid #2a5a0e;
+  color: white;
+  font-family: 'Tahoma', sans-serif;
+  font-weight: bold;
+  font-size: 13px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: 0 10px 10px 0;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.3);
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  min-width: 95px;
+}
+#start-btn:hover { filter: brightness(1.1); }
+#start-btn .start-logo { font-size: 18px; }
+
+#taskbar-items {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 0 4px;
+  overflow: hidden;
+}
+
+.taskbar-item {
+  height: 22px;
+  padding: 0 8px;
+  background: linear-gradient(to bottom, #3a7bd5, #2a5db0);
+  border: 1px solid #1a4a8a;
+  border-radius: 2px;
+  color: white;
+  font-family: 'Tahoma', sans-serif;
+  font-size: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  max-width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.taskbar-item:hover { background: linear-gradient(to bottom, #4a8be5, #3a6dc0); }
+.taskbar-item.active { background: linear-gradient(to bottom, #1a4a8a, #2a5db0); box-shadow: inset 1px 1px 2px rgba(0,0,0,0.3); }
+
+#clock {
+  padding: 0 8px;
+  color: white;
+  font-size: 11px;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+  border-left: 1px solid rgba(255,255,255,0.2);
+  min-width: 60px;
+  text-align: center;
+}
+
+.window {
+  position: fixed;
+  background: #ece9d8;
+  border: 1px solid #0054E3;
+  border-radius: 6px 6px 4px 4px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+  min-width: 300px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+}
+.window.active { z-index: 200; }
+.window.minimized { display: none; }
+
+.window-titlebar {
+  background: linear-gradient(to bottom, #0A246A 0%, #A6CAF0 3%, #0A246A 4%, #2369EA 6%, #2574E4 50%, #1959CF 95%, #1350C0 100%);
+  border-radius: 5px 5px 0 0;
+  padding: 3px 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: move;
+  height: 28px;
+}
+
+.window-title-icon { font-size: 14px; }
+.window-title-text {
+  flex: 1;
+  color: white;
+  font-weight: bold;
+  font-size: 11px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.window-controls { display: flex; gap: 2px; }
+.win-btn {
+  width: 21px; height: 21px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+.btn-min { background: linear-gradient(to bottom, #7cb3e8, #4a82d4); }
+.btn-max { background: linear-gradient(to bottom, #7cb3e8, #4a82d4); }
+.btn-close { background: linear-gradient(to bottom, #e8705a, #c0392b); }
+.win-btn:hover { filter: brightness(1.2); }
+.win-btn:active { filter: brightness(0.9); }
+
+.window-menubar {
+  background: #ece9d8;
+  border-bottom: 1px solid #aca899;
+  padding: 2px 4px;
+  display: flex;
+  gap: 2px;
+}
+.menu-item {
+  padding: 2px 6px;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 11px;
+}
+.menu-item:hover { background: #316AC5; color: white; }
+
+.window-content {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  background: #000;
+  border-radius: 0 0 3px 3px;
+}
+.window-content iframe,
+.window-content canvas {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+.emu-loading {
+  color: #00ff41;
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  text-align: center;
+  padding: 20px;
+}
+.emu-loading .spinner {
+  font-size: 24px;
+  animation: spin 1s linear infinite;
+  display: block;
+  margin-bottom: 10px;
+}
+@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+.emu-error {
+  color: #ff4444;
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  text-align: center;
+  padding: 20px;
+  max-width: 300px;
+}
+
+.resize-handle {
+  position: absolute;
+  bottom: 0; right: 0;
+  width: 16px; height: 16px;
+  cursor: se-resize;
+  background: linear-gradient(135deg, transparent 50%, #aca899 50%);
+}
+
+#ctx-menu {
+  position: fixed;
+  background: #ece9d8;
+  border: 1px solid #aca899;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  z-index: 9000;
+  min-width: 160px;
+  display: none;
+}
+.ctx-item {
+  padding: 4px 16px;
+  font-size: 11px;
+  cursor: pointer;
+}
+.ctx-item:hover { background: #316AC5; color: white; }
+.ctx-sep { height: 1px; background: #aca899; margin: 2px 0; }
+
+/* ─── INTERNET EXPLORER TOOLBAR ─── */
+.ie-toolbar {
+  background: #ece9d8;
+  border-bottom: 1px solid #aca899;
+  padding: 2px 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.ie-nav-btns {
+  display: flex;
+  gap: 1px;
+}
+
+.ie-btn {
+  width: 22px;
+  height: 22px;
+  background: linear-gradient(to bottom, #f5f4f0, #dbd8cc);
+  border: 1px solid #aca899;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ie-btn:hover { background: linear-gradient(to bottom, #daeeff, #b0d4f0); border-color: #316AC5; }
+
+.ie-address-bar {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.ie-address-label {
+  font-size: 11px;
+  color: #333;
+  white-space: nowrap;
+}
+
+.ie-address-input {
+  flex: 1;
+  background: white;
+  border: 1px solid #7f9db9;
+  padding: 2px 6px;
+  font-size: 11px;
+  font-family: 'Tahoma', sans-serif;
+  color: #000080;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.ie-go-btn {
+  padding: 1px 8px;
+  background: linear-gradient(to bottom, #f5f4f0, #dbd8cc);
+  border: 1px solid #aca899;
+  font-size: 11px;
+  cursor: pointer;
+  height: 22px;
+  font-family: 'Tahoma', sans-serif;
+}
+.ie-go-btn:hover { background: linear-gradient(to bottom, #daeeff, #b0d4f0); }
+
+.ie-menubar {
+  background: #ece9d8;
+  border-bottom: 1px solid #aca899;
+  padding: 1px 4px;
+  display: flex;
+  gap: 2px;
+}
+
+.ie-statusbar {
+  background: #ece9d8;
+  border-top: 1px solid #aca899;
+  padding: 2px 8px;
+  font-size: 10px;
+  color: #444;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
