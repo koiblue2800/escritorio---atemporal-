@@ -413,9 +413,11 @@ function openFolder(folderId) {
       const contentEl = document.getElementById('folder-content-' + winId);
       const statusEl = document.getElementById('folder-status-' + winId);
       const icons = roms.map(filename => {
-        const name = filename.replace('.zip','').replace('.swf','');
-        const gid = Object.keys(GAMES).find(k => GAMES[k].rom.endsWith(filename));
-        const label = gid ? GAMES[gid].title : name;
+        // Si tiene subcarpeta, usar solo el nombre del archivo sin extensión
+        const basename = filename.split('/').pop();
+        const name = basename.replace('.zip','').replace('.swf','').replace(/_/g,' ');
+        const gid = Object.keys(GAMES).find(k => GAMES[k].rom && GAMES[k].rom.endsWith(filename));
+        const label = gid ? GAMES[gid].title : (GAMES[Object.keys(GAMES).find(k => GAMES[k].rom && GAMES[k].rom.endsWith(basename))] ? GAMES[Object.keys(GAMES).find(k => GAMES[k].rom && GAMES[k].rom.endsWith(basename))].title : name);
         const icon = gid ? GAMES[gid].icon : '🕹️';
         const c = iconColor(folder.type || 'mame');
         return `<div class="icon" ondblclick="openRom('${filename}','${folder.type || 'mame'}','${folder.romPath}')" onclick="selectIcon(this)" style="width:80px">
