@@ -8,8 +8,7 @@ body {
   overflow: hidden;
   width: 100vw;
   height: 100vh;
-  background: #1F5F9E url('img/fondo-de-pantalla.png') no-repeat center center;
-  background-size: cover;
+  background: #1F5F9E url('img/fondo-de-pantalla.png') no-repeat center center / cover;
 }
 
 #desktop {
@@ -25,7 +24,7 @@ body {
 }
 
 .icon {
-  width: 72px;
+  width: 64px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -62,8 +61,9 @@ body {
   position: fixed;
   bottom: 0; left: 0; right: 0;
   height: 30px;
-  background: url('img/bar.png') repeat-x center;
+  background: url('img/bar.png') repeat-x left center;
   background-size: auto 100%;
+  border-top: none;
   display: flex;
   align-items: center;
   z-index: 9999;
@@ -104,8 +104,9 @@ body {
 .taskbar-item {
   height: 22px;
   padding: 0 8px;
-  background: linear-gradient(to bottom, #3a7bd5, #2a5db0);
-  border: 1px solid #1a4a8a;
+  background: url('img/label-.png') no-repeat center;
+  background-size: 100% 100%;
+  border: none;
   border-radius: 2px;
   color: white;
   font-family: 'Tahoma', sans-serif;
@@ -118,9 +119,10 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
 }
-.taskbar-item:hover { background: linear-gradient(to bottom, #4a8be5, #3a6dc0); }
-.taskbar-item.active { background: linear-gradient(to bottom, #1a4a8a, #2a5db0); box-shadow: inset 1px 1px 2px rgba(0,0,0,0.3); }
+.taskbar-item:hover { background-image: url('img/label-press.png'); }
+.taskbar-item.active { background-image: url('img/label-press.png'); }
 
 #clock {
   padding: 0 8px;
@@ -464,15 +466,15 @@ body {
 
 /* ─── ICONOS CON IMAGEN ─── */
 .icon-img-img {
-  width: 48px;
-  height: 48px;
+  width: 32px;
+  height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .icon-img-img img {
-  width: 48px;
-  height: 48px;
+  width: 32px;
+  height: 32px;
   object-fit: contain;
   image-rendering: pixelated;
 }
