@@ -349,6 +349,11 @@ function loadRuffle(container, game) {
     const player = ruffle.createPlayer();
     player.style.width = '100%';
     player.style.height = '100%';
+    player.style.display = 'block';
+    player.style.position = 'absolute';
+    player.style.top = '0';
+    player.style.left = '0';
+    container.style.position = 'relative';
     container.innerHTML = '';
     container.appendChild(player);
     player.load(game.rom);
