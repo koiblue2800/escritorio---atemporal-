@@ -246,7 +246,7 @@ function createWindow(id, game) {
 function loadEmulator(gameId, game) {
   const content = document.getElementById('content-' + gameId);
   if (game.type === 'flash') {
-    showFlashPreview(content, game, gameId);
+    loadRuffle(content, game);
   } else {
     loadEmulatorJS(content, game);
   }
@@ -283,9 +283,17 @@ function showFlashPreview(container, game, gameId) {
 const FLASH_TEMP = {};
 
 function startFlash(gameId) {
+  console.log('startFlash llamado con:', gameId);
+  console.log('FLASH_TEMP:', JSON.stringify(Object.keys(FLASH_TEMP)));
   const game = GAMES[gameId] || FLASH_TEMP[gameId];
+  console.log('game encontrado:', game);
   const content = document.getElementById('content-' + gameId);
-  if (!game) { content.innerHTML = '<div class="emu-error">❌ No se encontró el juego</div>'; return; }
+  console.log('content element:', content);
+  if (!game || !content) { 
+    console.error('game o content no encontrado');
+    if (content) content.innerHTML = '<div class="emu-error">❌ No se encontró el juego</div>'; 
+    return; 
+  }
   content.innerHTML = '<div class="emu-loading"><span class="spinner">⚙️</span> Cargando...</div>';
   loadRuffle(content, game);
 }
