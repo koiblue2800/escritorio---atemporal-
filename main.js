@@ -435,8 +435,8 @@ function openFolder(folderId) {
 }
 
 function openRom(filename, type, romPath) {
-  // ID seguro sin puntos
-  const id = filename.replace(/\..*$/, '_rom');
+  // ID seguro sin puntos ni caracteres especiales
+  const id = filename.replace(/[^a-zA-Z0-9]/g, '_').replace(/_+/g, '_');
   if (windows[id]) { restoreWindow(id); focusWindow(id); return; }
 
   // Buscar si ya está configurado en GAMES
