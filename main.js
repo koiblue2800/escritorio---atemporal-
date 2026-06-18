@@ -384,30 +384,64 @@ function openFolder(folderId) {
   const win = document.createElement('div');
   win.className = 'window active';
   win.id = 'win-' + winId;
-  win.style.width = '560px';
-  win.style.height = '420px';
-  win.style.left = '120px';
-  win.style.top = '80px';
+
+  const isFlash = folderId === 'flash';
+
+  if (isFlash) {
+    win.style.width = '900px';
+    win.style.height = '620px';
+  } else {
+    win.style.width = '560px';
+    win.style.height = '420px';
+  }
+  win.style.left = '60px';
+  win.style.top = '40px';
+
+  const titlebarContent = isFlash ? `
+    <div class="ie-toolbar">
+      <div class="ie-nav-btns">
+        <button class="ie-btn">◀</button>
+        <button class="ie-btn">▶</button>
+        <button class="ie-btn">✕</button>
+        <button class="ie-btn">↻</button>
+        <button class="ie-btn">🏠</button>
+      </div>
+      <div class="ie-address-bar">
+        <span class="ie-address-label">Dirección</span>
+        <div class="ie-address-input">🌐 http://www.atempo-juegos.com/flash</div>
+        <button class="ie-go-btn">Ir</button>
+      </div>
+    </div>
+    <div class="ie-menubar">
+      <span class="menu-item">Archivo</span>
+      <span class="menu-item">Edición</span>
+      <span class="menu-item">Ver</span>
+      <span class="menu-item">Favoritos</span>
+      <span class="menu-item">Herramientas</span>
+      <span class="menu-item">Ayuda</span>
+    </div>` : `
+    <div class="window-menubar">
+      <span class="menu-item">Archivo</span>
+      <span class="menu-item">Edición</span>
+      <span class="menu-item">Ver</span>
+    </div>`;
 
   win.innerHTML = `
     <div class="window-titlebar" onmousedown="startDrag(event, '${winId}')">
-      <span class="window-title-icon">📁</span>
-      <span class="window-title-text">${folder.title}</span>
+      <span class="window-title-icon">${isFlash ? '🌐' : '📁'}</span>
+      <span class="window-title-text">${isFlash ? 'atempo-juegos.com - Microsoft Internet Explorer' : folder.title}</span>
       <div class="window-controls">
         <button class="win-btn btn-min" onclick="minimizeWindow('${winId}')">─</button>
         <button class="win-btn btn-max" onclick="maximizeWindow('${winId}')">□</button>
         <button class="win-btn btn-close" onclick="closeWindow('${winId}')">✕</button>
       </div>
     </div>
-    <div class="window-menubar">
-      <span class="menu-item">Archivo</span>
-      <span class="menu-item">Edición</span>
-      <span class="menu-item">Ver</span>
-    </div>
-    <div id="folder-content-${winId}" style="background:#fff;flex:1;padding:12px;display:flex;flex-wrap:wrap;gap:8px;align-content:flex-start;overflow-y:auto;border-radius:0 0 3px 3px">
+    ${titlebarContent}
+    <div id="folder-content-${winId}" class="${isFlash ? 'juegos-grid-container' : ''}" style="${isFlash ? '' : 'background:#fff;flex:1;padding:12px;display:flex;flex-wrap:wrap;gap:8px;align-content:flex-start;overflow-y:auto;border-radius:0 0 3px 3px'}">
       <div style="color:#888;font-size:11px;padding:20px">Cargando...</div>
     </div>
-    <div id="folder-status-${winId}" style="background:#ece9d8;border-top:1px solid #aca899;padding:3px 8px;font-size:10px;color:#444">
+    ${isFlash ? '<div class="ie-statusbar"><span>🔒 Internet</span></div>' : ''}
+    <div id="folder-status-${winId}" style="background:#ece9d8;border-top:1px solid #aca899;padding:3px 8px;font-size:10px;color:#444;${isFlash ? 'display:none' : ''}">
       ...
     </div>
     <div class="resize-handle" onmousedown="startResize(event, '${winId}')"></div>
@@ -425,21 +459,60 @@ function openFolder(folderId) {
     .then(roms => {
       const contentEl = document.getElementById('folder-content-' + winId);
       const statusEl = document.getElementById('folder-status-' + winId);
-      const icons = roms.map(filename => {
-        // Si tiene subcarpeta, usar solo el nombre del archivo sin extensión
-        const basename = filename.split('/').pop();
-        const name = basename.replace('.zip','').replace('.swf','').replace(/_/g,' ');
-        const gid = Object.keys(GAMES).find(k => GAMES[k].rom && GAMES[k].rom.endsWith(filename));
-        const label = gid ? GAMES[gid].title : (GAMES[Object.keys(GAMES).find(k => GAMES[k].rom && GAMES[k].rom.endsWith(basename))] ? GAMES[Object.keys(GAMES).find(k => GAMES[k].rom && GAMES[k].rom.endsWith(basename))].title : name);
-        const icon = gid ? GAMES[gid].icon : '🕹️';
-        const c = iconColor(folder.type || 'mame');
-        return `<div class="icon" ondblclick="openRom('${filename}','${folder.type || 'mame'}','${folder.romPath}')" onclick="selectIcon(this)" style="width:80px">
-          <div class="icon-img" style="--ic1:${c.c1};--ic2:${c.c2};width:48px;height:48px;font-size:28px">${icon}</div>
-          <div class="icon-label" style="color:#000;text-shadow:none;font-size:9px">${label}</div>
-        </div>`;
-      }).join('');
-      contentEl.innerHTML = icons;
-      statusEl.textContent = roms.length + ' objeto(s)';
+      const isFlash = folder.type === 'flash';
+      if (isFlash) {
+        // Juegos.com style grid
+        const header = `<div class="juegos-header">
+          <div class="juegos-logo">⚡ atempo-juegos.com</div>
+          <div class="juegos-nav">
+            <span class="juegos-nav-item">Inicio</span>
+            <span class="juegos-nav-item">Juegos nuevos</span>
+            <span class="juegos-nav-item">Populares</span>
+          </div>
+        </div>
+        <div class="juegos-sidebar">
+          <div class="juegos-section-title">CATEGORÍAS</div>
+          <div class="juegos-cat-item">⚡ Acción</div>
+          <div class="juegos-cat-item">🎮 Aventura</div>
+          <div class="juegos-cat-item">🧩 Puzzle</div>
+          <div class="juegos-cat-item">🏎️ Carreras</div>
+          <div class="juegos-cat-item">👗 Vestir</div>
+          <div class="juegos-cat-item">🍕 Cocina</div>
+        </div>
+        <div class="juegos-main">
+          <div class="juegos-section-title">JUEGOS FLASH</div>
+          <div class="juegos-grid">`;
+        
+        const cards = roms.map(filename => {
+          const basename = filename.split('/').pop();
+          const name = basename.replace('.zip','').replace('.swf','').replace(/_/g,' ');
+          const gid = Object.keys(GAMES).find(k => GAMES[k].rom && (GAMES[k].rom.endsWith(filename) || GAMES[k].rom.endsWith(basename)));
+          const label = gid ? GAMES[gid].title : name;
+          const icon = gid ? GAMES[gid].icon : '⚡';
+          const preview = gid && GAMES[gid].preview ? `<img src="${GAMES[gid].preview}" style="width:100%;height:100%;object-fit:cover">` : `<div style="font-size:40px;display:flex;align-items:center;justify-content:center;height:100%;background:#1a1a2e">${icon}</div>`;
+          return `<div class="juegos-card" onclick="openRom('${filename}','${folder.type}','${folder.romPath}')">
+            <div class="juegos-thumb">${preview}</div>
+            <div class="juegos-card-name">${label}</div>
+          </div>`;
+        }).join('');
+
+        contentEl.innerHTML = header + cards + `</div></div>`;
+      } else {
+        const icons = roms.map(filename => {
+          const basename = filename.split('/').pop();
+          const name = basename.replace('.zip','').replace('.swf','').replace(/_/g,' ');
+          const gid = Object.keys(GAMES).find(k => GAMES[k].rom && GAMES[k].rom.endsWith(filename));
+          const label = gid ? GAMES[gid].title : name;
+          const icon = gid ? GAMES[gid].icon : '🕹️';
+          const c = iconColor(folder.type || 'mame');
+          return `<div class="icon" ondblclick="openRom('${filename}','${folder.type || 'mame'}','${folder.romPath}')" onclick="selectIcon(this)" style="width:80px">
+            <div class="icon-img" style="--ic1:${c.c1};--ic2:${c.c2};width:48px;height:48px;font-size:28px">${icon}</div>
+            <div class="icon-label" style="color:#000;text-shadow:none;font-size:9px">${label}</div>
+          </div>`;
+        }).join('');
+        contentEl.innerHTML = icons;
+        statusEl.textContent = roms.length + ' objeto(s)';
+      }
     })
     .catch(() => {
       document.getElementById('folder-content-' + winId).innerHTML =
