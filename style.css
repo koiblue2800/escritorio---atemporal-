@@ -1,489 +1,688 @@
-@import url('https://fonts.googleapis.com/css2?family=Tahoma:wght@400;700&display=swap');
+// ─── CONFIG ───────────────────────────────────────────────────
+const GAMES = {
+  simpsons: {
+    title: 'The Simpsons Arcade',
+    icon: '🍩',
+    type: 'mame',
+    rom: 'roms/mame/simpsons.zip',
+    width: 800, height: 620
+  },
+  mk: {
+    title: 'Mortal Kombat',
+    icon: '⚔️',
+    type: 'mame',
+    rom: 'roms/mame/mk.zip',
+    width: 800, height: 620
+  },
+  mkla2: {
+    title: 'Mortal Kombat (LA)',
+    icon: '⚔️',
+    type: 'mame',
+    rom: 'roms/mame/mkla2.zip',
+    width: 800, height: 620
+  },
+  bublbobl: {
+    title: 'Bubble Bobble',
+    icon: '🫧',
+    type: 'mame',
+    rom: 'roms/mame/bublbobl.zip',
+    width: 800, height: 580
+  },
+  wboy: {
+    title: 'Wonder Boy',
+    icon: '🧙',
+    type: 'mame',
+    rom: 'roms/mame/wboy.zip',
+    width: 800, height: 580
+  },
+  dbz2: {
+    title: 'Dragon Ball Z 2',
+    icon: '🐉',
+    type: 'mame',
+    rom: 'roms/mame/dbz2.zip',
+    width: 800, height: 620
+  },
+  mvscur1: {
+    title: 'Marvel vs Capcom',
+    icon: '🦸',
+    type: 'mame',
+    rom: 'roms/mame/mvscur1.zip',
+    width: 800, height: 620
+  },
+  xmcotahr1: {
+    title: 'X-Men: Children of the Atom',
+    icon: '🧬',
+    type: 'mame',
+    rom: 'roms/mame/xmcotahr1.zip',
+    width: 800, height: 620
+  },
+  xmvsfu1d: {
+    title: 'X-Men vs Street Fighter',
+    icon: '👊',
+    type: 'mame',
+    rom: 'roms/mame/xmvsfu1d.zip',
+    width: 800, height: 620
+  },
+  flash1: {
+    title: 'Flash Game',
+    icon: '⚡',
+    type: 'flash',
+    rom: 'roms/flash/game.swf',
+    width: 800, height: 600,
+    desc: 'Un juego Flash clásico de los 2000s.',
+    category: 'Acción',
+    controls: 'Mouse / Teclado',
+    stars: 4,
+    preview: ''   // ruta a imagen de preview, ej: 'roms/flash/previews/game.jpg'
+  }
+};
 
-* { margin: 0; padding: 0; box-sizing: border-box; user-select: none; }
+const FOLDERS = {
+  mame: {
+    title: 'MAME',
+    icon: '📁',
+    type: 'mame',
+    romPath: 'roms/mame/',
+    indexJson: 'roms/mame/index.json'
+  },
+  flash: {
+    title: 'Flash Games',
+    icon: '⚡',
+    type: 'flash',
+    romPath: 'roms/flash/',
+    indexJson: 'roms/flash/index.json'
+  }
+};
 
-body {
-  font-family: 'Tahoma', sans-serif;
-  font-size: 11px;
-  overflow: hidden;
-  width: 100vw;
-  height: 100vh;
-  background: #1F5F9E url('img/fondo-de-pantalla.png') no-repeat center center / cover;
-}
+const PATHS = {
+  emulatorjs: 'emulatorjs/',
+  ruffle: 'ruffle/'
+};
 
-#desktop {
-  width: 100%;
-  height: calc(100vh - 30px);
-  position: relative;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: flex-start;
-  gap: 8px;
-}
+// ─── WEB APPS ─────────────────────────────────────────────────
+const WEBAPPS = {
+  paint: {
+    title: 'Paint',
+    icon: '🎨',
+    url: 'https://jspaint.app',
+    width: 900, height: 650
+  },
+  minesweeper: {
+    title: 'Buscaminas',
+    icon: '💣',
+    url: 'https://minesweeper.online',
+    width: 600, height: 520
+  },
+  cs: {
+    title: 'Counter-Strike 1.6',
+    icon: '🔫',
+    url: 'https://dos.zone/mp/?lobby=cs16',
+    width: 1024, height: 700
+  }
+};
 
-.icon {
-  width: 52px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-  cursor: pointer;
-  padding: 4px;
-  border-radius: 2px;
-  border: 1px solid transparent;
-}
-.icon:hover { background: rgba(49,106,197,0.4); border-color: rgba(49,106,197,0.8); }
-.icon.selected { background: rgba(49,106,197,0.6); border-color: #316AC5; }
+function openWebApp(appId) {
+  const app = WEBAPPS[appId];
+  if (!app) return;
+  if (windows[appId]) { restoreWindow(appId); focusWindow(appId); return; }
 
-.icon-img {
-  width: 24px;
-  height: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-}
-.icon-label {
-  color: white;
-  font-size: 10px;
-  text-align: center;
-  text-shadow: 1px 1px 2px black, -1px -1px 2px black;
-  line-height: 1.2;
-  word-break: break-word;
-}
+  const win = document.createElement('div');
+  win.className = 'window active';
+  win.id = 'win-' + appId;
+  win.style.width = app.width + 'px';
+  win.style.height = (app.height + 56) + 'px';
+  win.style.left = (Math.random() * 80 + 40) + 'px';
+  win.style.top = (Math.random() * 60 + 20) + 'px';
 
-#taskbar {
-  position: fixed;
-  bottom: 0; left: 0; right: 0;
-  height: 39px;
-  background: #1F5F9E url('img/bar.png') no-repeat left center;
-  background-size: 100% 100%;
-  border-top: none;
-  display: flex;
-  align-items: center;
-  z-index: 9999;
-  
-}
+  win.innerHTML = `
+    <div class="window-titlebar" onmousedown="startDrag(event, '${appId}')">
+      <span class="window-title-icon">${app.icon}</span>
+      <span class="window-title-text">${app.title}</span>
+      <div class="window-controls">
+        <button class="win-btn btn-min" onclick="minimizeWindow('${appId}')">─</button>
+        <button class="win-btn btn-max" onclick="maximizeWindow('${appId}')">□</button>
+        <button class="win-btn btn-close" onclick="closeWindow('${appId}')">✕</button>
+      </div>
+    </div>
+    <div class="window-menubar">
+      <span class="menu-item">Archivo</span>
+      <span class="menu-item">Ver</span>
+      <span class="menu-item">Ayuda</span>
+    </div>
+    <div class="window-content">
+      <iframe src="${app.url}" style="width:100%;height:100%;border:none;" allowfullscreen></iframe>
+    </div>
+    <div class="resize-handle" onmousedown="startResize(event, '${appId}')"></div>
+  `;
 
-#start-btn {
-  height: 100%;
-  padding: 0 12px 0 8px;
-  background: linear-gradient(to bottom, #57a428 0%, #3d8216 4%, #438b19 6%, #4a9820 50%, #418015 95%, #356b10 100%);
-  border: none;
-  border-right: 1px solid #2a5a0e;
-  color: white;
-  font-family: 'Tahoma', sans-serif;
-  font-weight: bold;
-  font-size: 13px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  border-radius: 0 10px 10px 0;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.3);
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-  min-width: 95px;
-}
-#start-btn:hover { filter: brightness(1.1); }
-#start-btn .start-logo { font-size: 18px; }
-
-#taskbar-items {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  gap: 2px;
-  padding-left: 150px;
-  overflow: hidden;
-}
-
-.taskbar-item {
-  height: 22px;
-  padding: 0 8px;
-  background: url('img/label-.png') no-repeat center;
-  background-size: 100% 100%;
-  border: none;
-  border-radius: 2px;
-  color: white;
-  font-family: 'Tahoma', sans-serif;
-  font-size: 10px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  max-width: 150px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
-}
-.taskbar-item:hover { background-image: url('img/label-press.png'); }
-.taskbar-item.active { background-image: url('img/label-press.png'); }
-
-#clock {
-  padding: 0 8px;
-  color: white;
-  font-size: 11px;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
-  border-left: 1px solid rgba(255,255,255,0.2);
-  min-width: 60px;
-  text-align: center;
-}
-
-.window {
-  position: fixed;
-  background: #ece9d8;
-  border: 1px solid #0054E3;
-  border-radius: 6px 6px 4px 4px;
-  box-shadow: 2px 2px 8px rgba(0,0,0,0.5);
-  min-width: 300px;
-  min-height: 200px;
-  display: flex;
-  flex-direction: column;
-  z-index: 100;
-}
-.window.active { z-index: 200; }
-.window.minimized { display: none; }
-
-.window-titlebar {
-  background: linear-gradient(to bottom, #0A246A 0%, #A6CAF0 3%, #0A246A 4%, #2369EA 6%, #2574E4 50%, #1959CF 95%, #1350C0 100%);
-  border-radius: 5px 5px 0 0;
-  padding: 3px 4px;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  cursor: move;
-  height: 28px;
-}
-
-.window-title-icon { font-size: 14px; }
-.window-title-text {
-  flex: 1;
-  color: white;
-  font-weight: bold;
-  font-size: 11px;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  win.addEventListener('mousedown', () => focusWindow(appId));
+  document.body.appendChild(win);
+  windows[appId] = win;
+  addTaskbarItem(appId, app);
+  focusWindow(appId);
 }
 
-.window-controls { display: flex; gap: 2px; }
-.win-btn {
-  width: 21px; height: 21px;
-  border: none;
-  border-radius: 2px;
-  cursor: pointer;
-  font-size: 10px;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
-}
-.btn-min { background: url('img/minimizar.png') no-repeat center; background-size: contain; font-size: 0; }
-.btn-min:hover { background-image: url('img/minimizar-press.png'); }
-.btn-max { background: url('img/maximizar.png') no-repeat center; background-size: contain; font-size: 0; }
-.btn-max:hover { background-image: url('img/maximizar-press.png'); }
-.btn-close { background: url('img/x.png') no-repeat center; background-size: contain; font-size: 0; }
-.btn-close:hover { filter: brightness(1.2); }
-.win-btn:hover { filter: brightness(1.2); }
-.win-btn:active { filter: brightness(0.9); }
+// ─── WINDOW MANAGER ───────────────────────────────────────────
+let windowZ = 200;
+let windows = {};
+let activeWindow = null;
 
-.window-menubar {
-  background: #ece9d8;
-  border-bottom: 1px solid #aca899;
-  padding: 2px 4px;
-  display: flex;
-  gap: 2px;
-}
-.menu-item {
-  padding: 2px 6px;
-  border-radius: 2px;
-  cursor: pointer;
-  font-size: 11px;
-}
-.menu-item:hover { background: #316AC5; color: white; }
-
-.window-content {
-  flex: 1;
-  overflow: hidden;
-  position: relative;
-  background: #000;
-  border-radius: 0 0 3px 3px;
-}
-.window-content iframe,
-.window-content canvas {
-  width: 100%;
-  height: 100%;
-  border: none;
-  display: block;
+function openGame(gameId) {
+  if (windows[gameId]) { restoreWindow(gameId); focusWindow(gameId); return; }
+  const game = GAMES[gameId];
+  if (!game) return;
+  const win = createWindow(gameId, game);
+  document.body.appendChild(win);
+  windows[gameId] = win;
+  addTaskbarItem(gameId, game);
+  focusWindow(gameId);
+  setTimeout(() => loadEmulator(gameId, game), 100);
 }
 
-.emu-loading {
-  color: #00ff41;
-  font-family: 'Courier New', monospace;
-  font-size: 13px;
-  text-align: center;
-  padding: 20px;
-}
-.emu-loading .spinner {
-  font-size: 24px;
-  animation: spin 1s linear infinite;
-  display: block;
-  margin-bottom: 10px;
-}
-@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+function createWindow(id, game) {
+  const win = document.createElement('div');
+  win.className = 'window active';
+  win.id = 'win-' + id;
+  const isFlash = game.type === 'flash';
+  win.style.width = game.width + 'px';
+  win.style.height = (game.height + (isFlash ? 86 : 56)) + 'px';
+  win.style.left = (Math.random() * 100 + 50) + 'px';
+  win.style.top = (Math.random() * 80 + 30) + 'px';
 
-.emu-error {
-  color: #ff4444;
-  font-family: 'Courier New', monospace;
-  font-size: 12px;
-  text-align: center;
-  padding: 20px;
-  max-width: 300px;
-}
+  const toolbar = isFlash ? `
+    <div class="ie-toolbar">
+      <div class="ie-nav-btns">
+        <button class="ie-btn">◀</button>
+        <button class="ie-btn">▶</button>
+        <button class="ie-btn">✕</button>
+        <button class="ie-btn">↻</button>
+        <button class="ie-btn">🏠</button>
+      </div>
+      <div class="ie-address-bar">
+        <span class="ie-address-label">Dirección</span>
+        <div class="ie-address-input">🌐 http://www.atempo-juegos.com</div>
+        <button class="ie-go-btn">Ir</button>
+      </div>
+    </div>
+    <div class="ie-menubar">
+      <span class="menu-item">Archivo</span>
+      <span class="menu-item">Edición</span>
+      <span class="menu-item">Ver</span>
+      <span class="menu-item">Favoritos</span>
+      <span class="menu-item">Herramientas</span>
+      <span class="menu-item">Ayuda</span>
+    </div>` : `
+    <div class="window-menubar">
+      <span class="menu-item">Archivo</span>
+      <span class="menu-item">Ver</span>
+      <span class="menu-item">Ayuda</span>
+    </div>`;
 
-.resize-handle {
-  position: absolute;
-  bottom: 0; right: 0;
-  width: 16px; height: 16px;
-  cursor: se-resize;
-  background: linear-gradient(135deg, transparent 50%, #aca899 50%);
-}
-
-#ctx-menu {
-  position: fixed;
-  background: #ece9d8;
-  border: 1px solid #aca899;
-  box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-  z-index: 9000;
-  min-width: 160px;
-  display: none;
-}
-.ctx-item {
-  padding: 4px 16px;
-  font-size: 11px;
-  cursor: pointer;
-}
-.ctx-item:hover { background: #316AC5; color: white; }
-.ctx-sep { height: 1px; background: #aca899; margin: 2px 0; }
-
-/* ─── INTERNET EXPLORER TOOLBAR ─── */
-.ie-toolbar {
-  background: #ece9d8;
-  border-bottom: 1px solid #aca899;
-  padding: 2px 4px;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.ie-nav-btns {
-  display: flex;
-  gap: 1px;
-}
-
-.ie-btn {
-  width: 22px;
-  height: 22px;
-  background: linear-gradient(to bottom, #f5f4f0, #dbd8cc);
-  border: 1px solid #aca899;
-  border-radius: 2px;
-  cursor: pointer;
-  font-size: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.ie-btn:hover { background: linear-gradient(to bottom, #daeeff, #b0d4f0); border-color: #316AC5; }
-
-.ie-address-bar {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  gap: 4px;
+  win.innerHTML = `
+    <div class="window-titlebar" onmousedown="startDrag(event, '${id}')">
+      <span class="window-title-icon">${isFlash ? '🌐' : game.icon}</span>
+      <span class="window-title-text">${isFlash ? 'atempo-juegos.com - Microsoft Internet Explorer' : game.title}</span>
+      <div class="window-controls">
+        <button class="win-btn btn-min" onclick="minimizeWindow('${id}')">─</button>
+        <button class="win-btn btn-max" onclick="maximizeWindow('${id}')">□</button>
+        <button class="win-btn btn-close" onclick="closeWindow('${id}')">✕</button>
+      </div>
+    </div>
+    ${toolbar}
+    <div class="window-content" id="content-${id}">
+      <div class="emu-loading">
+        <span class="spinner">⚙️</span>
+        Cargando ${game.title}...
+      </div>
+    </div>
+    ${isFlash ? '<div class="ie-statusbar"><span>🔒 Internet</span></div>' : ''}
+    <div class="resize-handle" onmousedown="startResize(event, '${id}')"></div>
+  `;
+  win.addEventListener('mousedown', () => focusWindow(id));
+  return win;
 }
 
-.ie-address-label {
-  font-size: 11px;
-  color: #333;
-  white-space: nowrap;
+// ─── EMULATOR LOADER ──────────────────────────────────────────
+function loadEmulator(gameId, game) {
+  const content = document.getElementById('content-' + gameId);
+  if (game.type === 'flash') {
+    loadRuffle(content, game);
+  } else {
+    loadEmulatorJS(content, game);
+  }
 }
 
-.ie-address-input {
-  flex: 1;
-  background: white;
-  border: 1px solid #7f9db9;
-  padding: 2px 6px;
-  font-size: 11px;
-  font-family: 'Tahoma', sans-serif;
-  color: #000080;
-  height: 20px;
-  display: flex;
-  align-items: center;
-  gap: 4px;
+function showFlashPreview(container, game, gameId) {
+  const stars = '★'.repeat(game.stars || 4) + '☆'.repeat(5 - (game.stars || 4));
+  container.innerHTML = `
+    <div class="flash-preview">
+      <div class="flash-preview-left">
+        <div class="flash-preview-img">
+          ${game.preview
+            ? `<img src="${game.preview}" alt="${game.title}" style="width:100%;height:100%;object-fit:cover;border-radius:2px">`
+            : `<div class="flash-preview-noimg">${game.icon}<br><small>Sin preview</small></div>`}
+        </div>
+        <div class="flash-rating">${stars}</div>
+        <div class="flash-category">${game.category || 'Acción'}</div>
+      </div>
+      <div class="flash-preview-right">
+        <h2 class="flash-title">${game.title}</h2>
+        <p class="flash-desc">${game.desc || 'Juego Flash clásico de los 2000s.'}</p>
+        <div class="flash-info">
+          <span>🎮 ${game.controls || 'Mouse / Teclado'}</span>
+        </div>
+        <button class="flash-play-btn" onclick="startFlash('${gameId}')">
+          ▶ JUGAR AHORA
+        </button>
+      </div>
+    </div>
+  `;
 }
 
-.ie-go-btn {
-  padding: 1px 8px;
-  background: linear-gradient(to bottom, #f5f4f0, #dbd8cc);
-  border: 1px solid #aca899;
-  font-size: 11px;
-  cursor: pointer;
-  height: 22px;
-  font-family: 'Tahoma', sans-serif;
-}
-.ie-go-btn:hover { background: linear-gradient(to bottom, #daeeff, #b0d4f0); }
+// Guarda temporal de juegos flash abiertos desde carpeta
+const FLASH_TEMP = {};
 
-.ie-menubar {
-  background: #ece9d8;
-  border-bottom: 1px solid #aca899;
-  padding: 1px 4px;
-  display: flex;
-  gap: 2px;
-}
-
-.ie-statusbar {
-  background: #ece9d8;
-  border-top: 1px solid #aca899;
-  padding: 2px 8px;
-  font-size: 10px;
-  color: #444;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+function startFlash(gameId) {
+  console.log('startFlash llamado con:', gameId);
+  console.log('FLASH_TEMP:', JSON.stringify(Object.keys(FLASH_TEMP)));
+  const game = GAMES[gameId] || FLASH_TEMP[gameId];
+  console.log('game encontrado:', game);
+  const content = document.getElementById('content-' + gameId);
+  console.log('content element:', content);
+  if (!game || !content) { 
+    console.error('game o content no encontrado');
+    if (content) content.innerHTML = '<div class="emu-error">❌ No se encontró el juego</div>'; 
+    return; 
+  }
+  content.innerHTML = '<div class="emu-loading"><span class="spinner">⚙️</span> Cargando...</div>';
+  loadRuffle(content, game);
 }
 
-/* ─── FLASH PREVIEW ─── */
-.flash-preview {
-  width: 100%;
-  height: 100%;
-  background: #e8f0f8;
-  display: flex;
-  gap: 0;
-  overflow: hidden;
+function loadEmulatorJS(container, game) {
+  const iframe = document.createElement('iframe');
+  iframe.style.width = '100%';
+  iframe.style.height = '100%';
+  iframe.style.border = 'none';
+  iframe.style.background = '#000';
+
+  const coreMap = {
+    mame: 'arcade',
+    n64: 'n64',
+    snes: 'snes',
+    nes: 'nes',
+    genesis: 'segaMD',
+    flash: 'flash'
+  };
+  const core = coreMap[game.type] || game.type;
+
+  const html = `<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval' data: blob:;">
+<style>* {margin:0;padding:0;} body {background:#000;overflow:hidden;} #game {width:100vw;height:100vh;}</style>
+</head>
+<body>
+<div id="game"></div>
+<script>
+  EJS_player = '#game';
+  EJS_core = '${core}';
+  EJS_gameUrl = '${window.location.href.replace(/\/[^\/]*$/, '')}/${game.rom}';
+  EJS_pathtodata = '${window.location.href.replace(/\/[^\/]*$/, '')}/${PATHS.emulatorjs}data/';
+  EJS_startOnLoaded = true;
+  EJS_color = '#316AC5';
+  EJS_backgroundColor = '#000000';
+  EJS_Buttons = { playPause:true, restart:true, mute:true, settings:true, fullscreen:true, saveState:true, loadState:true, screenRecord:false, gamepad:true, cheat:false };
+<\/script>
+<script src="${window.location.href.replace(/\/[^\/]*$/, '')}/${PATHS.emulatorjs}data/loader.js"><\/script>
+</body>
+</html>`;
+
+  container.innerHTML = '';
+  iframe.srcdoc = html;
+  container.appendChild(iframe);
 }
 
-.flash-preview-left {
-  width: 200px;
-  min-width: 200px;
-  background: #d0dff0;
-  border-right: 1px solid #a0b8d8;
-  padding: 16px 12px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
+function loadRuffle(container, game) {
+  function startPlayer() {
+    const ruffle = window.RufflePlayer.newest();
+    const player = ruffle.createPlayer();
+    player.style.width = '100%';
+    player.style.height = '100%';
+    player.style.display = 'block';
+    player.style.position = 'absolute';
+    player.style.top = '0';
+    player.style.left = '0';
+    container.style.position = 'relative';
+    container.innerHTML = '';
+    container.appendChild(player);
+    player.load(game.rom);
+  }
+
+  // Si Ruffle ya está cargado, usarlo directamente
+  if (window.RufflePlayer) {
+    startPlayer();
+    return;
+  }
+
+  const script = document.createElement('script');
+  script.src = PATHS.ruffle + 'ruffle.js';
+  script.onload = startPlayer;
+  script.onerror = () => {
+    container.innerHTML = `<div class="emu-error">❌ No se encontró ruffle.js en /ruffle/</div>`;
+  };
+  document.head.appendChild(script);
 }
 
-.flash-preview-img {
-  width: 160px;
-  height: 120px;
-  background: #1a1a2e;
-  border: 2px solid #316AC5;
-  border-radius: 3px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+// ─── FOLDERS ──────────────────────────────────────────────────
+function openFolder(folderId) {
+  const folder = FOLDERS[folderId];
+  if (!folder) return;
+  const winId = 'folder-' + folderId;
+  if (windows[winId]) { restoreWindow(winId); focusWindow(winId); return; }
+
+  const win = document.createElement('div');
+  win.className = 'window active';
+  win.id = 'win-' + winId;
+
+  const isFlash = folderId === 'flash';
+
+  if (isFlash) {
+    win.style.width = '900px';
+    win.style.height = '620px';
+  } else {
+    win.style.width = '560px';
+    win.style.height = '420px';
+  }
+  win.style.left = '60px';
+  win.style.top = '40px';
+
+  const titlebarContent = isFlash ? `
+    <div class="ie-toolbar">
+      <div class="ie-nav-btns">
+        <button class="ie-btn">◀</button>
+        <button class="ie-btn">▶</button>
+        <button class="ie-btn">✕</button>
+        <button class="ie-btn">↻</button>
+        <button class="ie-btn">🏠</button>
+      </div>
+      <div class="ie-address-bar">
+        <span class="ie-address-label">Dirección</span>
+        <div class="ie-address-input">🌐 http://www.atempo-juegos.com/flash</div>
+        <button class="ie-go-btn">Ir</button>
+      </div>
+    </div>
+    <div class="ie-menubar">
+      <span class="menu-item">Archivo</span>
+      <span class="menu-item">Edición</span>
+      <span class="menu-item">Ver</span>
+      <span class="menu-item">Favoritos</span>
+      <span class="menu-item">Herramientas</span>
+      <span class="menu-item">Ayuda</span>
+    </div>` : `
+    <div class="window-menubar">
+      <span class="menu-item">Archivo</span>
+      <span class="menu-item">Edición</span>
+      <span class="menu-item">Ver</span>
+    </div>`;
+
+  win.innerHTML = `
+    <div class="window-titlebar" onmousedown="startDrag(event, '${winId}')">
+      <span class="window-title-icon">${isFlash ? '🌐' : '📁'}</span>
+      <span class="window-title-text">${isFlash ? 'atempo-juegos.com - Microsoft Internet Explorer' : folder.title}</span>
+      <div class="window-controls">
+        <button class="win-btn btn-min" onclick="minimizeWindow('${winId}')">─</button>
+        <button class="win-btn btn-max" onclick="maximizeWindow('${winId}')">□</button>
+        <button class="win-btn btn-close" onclick="closeWindow('${winId}')">✕</button>
+      </div>
+    </div>
+    ${titlebarContent}
+    <div id="folder-content-${winId}" class="${isFlash ? 'juegos-grid-container' : ''}" style="${isFlash ? '' : 'background:#fff;flex:1;padding:12px;display:flex;flex-wrap:wrap;gap:8px;align-content:flex-start;overflow-y:auto;border-radius:0 0 3px 3px'}">
+      <div style="color:#888;font-size:11px;padding:20px">Cargando...</div>
+    </div>
+    ${isFlash ? '<div class="ie-statusbar"><span>🔒 Internet</span></div>' : ''}
+    <div id="folder-status-${winId}" style="background:#ece9d8;border-top:1px solid #aca899;padding:3px 8px;font-size:10px;color:#444;${isFlash ? 'display:none' : ''}">
+      ...
+    </div>
+    <div class="resize-handle" onmousedown="startResize(event, '${winId}')"></div>
+  `;
+
+  win.addEventListener('mousedown', () => focusWindow(winId));
+  document.body.appendChild(win);
+  windows[winId] = win;
+  addTaskbarItem(winId, { icon: folder.icon, title: folder.title });
+  focusWindow(winId);
+
+  // Cargar ROMs desde index.json
+  fetch(folder.indexJson)
+    .then(r => r.json())
+    .then(roms => {
+      const contentEl = document.getElementById('folder-content-' + winId);
+      const statusEl = document.getElementById('folder-status-' + winId);
+      const isFlash = folder.type === 'flash';
+      if (isFlash) {
+        // Juegos.com style grid
+        const header = `<div class="juegos-header">
+          <div class="juegos-logo">⚡ atempo-juegos.com</div>
+          <div class="juegos-nav">
+            <span class="juegos-nav-item">Inicio</span>
+            <span class="juegos-nav-item">Juegos nuevos</span>
+            <span class="juegos-nav-item">Populares</span>
+          </div>
+        </div>
+        <div class="juegos-sidebar">
+          <div class="juegos-section-title">CATEGORÍAS</div>
+          <div class="juegos-cat-item">⚡ Acción</div>
+          <div class="juegos-cat-item">🎮 Aventura</div>
+          <div class="juegos-cat-item">🧩 Puzzle</div>
+          <div class="juegos-cat-item">🏎️ Carreras</div>
+          <div class="juegos-cat-item">👗 Vestir</div>
+          <div class="juegos-cat-item">🍕 Cocina</div>
+        </div>
+        <div class="juegos-main">
+          <div class="juegos-section-title">JUEGOS FLASH</div>
+          <div class="juegos-grid">`;
+        
+        const cards = roms.map(filename => {
+          const basename = filename.split('/').pop();
+          const name = basename.replace('.zip','').replace('.swf','').replace(/_/g,' ');
+          const gid = Object.keys(GAMES).find(k => GAMES[k].rom && (GAMES[k].rom.endsWith(filename) || GAMES[k].rom.endsWith(basename)));
+          const label = gid ? GAMES[gid].title : name;
+          const icon = gid ? GAMES[gid].icon : '⚡';
+          const preview = gid && GAMES[gid].preview ? `<img src="${GAMES[gid].preview}" style="width:100%;height:100%;object-fit:cover">` : `<div style="font-size:40px;display:flex;align-items:center;justify-content:center;height:100%;background:#1a1a2e">${icon}</div>`;
+          return `<div class="juegos-card" onclick="openRom('${filename}','${folder.type}','${folder.romPath}')">
+            <div class="juegos-thumb">${preview}</div>
+            <div class="juegos-card-name">${label}</div>
+          </div>`;
+        }).join('');
+
+        contentEl.innerHTML = header + cards + `</div></div>`;
+      } else {
+        const icons = roms.map(filename => {
+          const basename = filename.split('/').pop();
+          const name = basename.replace('.zip','').replace('.swf','').replace(/_/g,' ');
+          const gid = Object.keys(GAMES).find(k => GAMES[k].rom && GAMES[k].rom.endsWith(filename));
+          const label = gid ? GAMES[gid].title : name;
+          const icon = gid ? GAMES[gid].icon : '🕹️';
+          const c = iconColor(folder.type || 'mame');
+          return `<div class="icon" ondblclick="openRom('${filename}','${folder.type || 'mame'}','${folder.romPath}')" onclick="selectIcon(this)" style="width:80px">
+            <div class="icon-img" style="--ic1:${c.c1};--ic2:${c.c2};width:48px;height:48px;font-size:28px">${icon}</div>
+            <div class="icon-label" style="color:#000;text-shadow:none;font-size:9px">${label}</div>
+          </div>`;
+        }).join('');
+        contentEl.innerHTML = icons;
+        statusEl.textContent = roms.length + ' objeto(s)';
+      }
+    })
+    .catch(() => {
+      document.getElementById('folder-content-' + winId).innerHTML =
+        '<div style="color:red;font-size:11px;padding:20px">❌ No se encontró index.json</div>';
+    });
 }
 
-.flash-preview-noimg {
-  color: #aaa;
-  font-size: 32px;
-  text-align: center;
-  line-height: 1.4;
+function openRom(filename, type, romPath) {
+  // ID seguro sin puntos ni caracteres especiales
+  const id = filename.replace(/[^a-zA-Z0-9]/g, '_').replace(/_+/g, '_');
+  if (windows[id]) { restoreWindow(id); focusWindow(id); return; }
+
+  // Buscar si ya está configurado en GAMES
+  const gid = Object.keys(GAMES).find(k => GAMES[k].rom && GAMES[k].rom.endsWith(filename));
+  const game = gid ? GAMES[gid] : {
+    title: filename.replace('.zip','').replace('.swf','').replace(/_/g,' '),
+    icon: type === 'flash' ? '⚡' : '🕹️',
+    type: type,
+    rom: romPath + filename,
+    width: 800, height: 620
+  };
+
+  // Guardar en FLASH_TEMP si es flash y no está en GAMES
+  if (!gid && type === 'flash') FLASH_TEMP[id] = game;
+
+  const win = createWindow(id, game);
+  document.body.appendChild(win);
+  windows[id] = win;
+  addTaskbarItem(id, game);
+  focusWindow(id);
+  setTimeout(() => loadEmulator(id, game), 100);
 }
 
-.flash-rating {
-  color: #f5a623;
-  font-size: 16px;
-  letter-spacing: 2px;
+function iconColor(type) {
+  const map = {
+    mame:  { c1: '#1a1a1a', c2: '#8B0000' },
+    flash: { c1: '#e63946', c2: '#c1121f' }
+  };
+  return map[type] || { c1: '#444', c2: '#222' };
 }
 
-.flash-category {
-  background: #316AC5;
-  color: white;
-  font-size: 10px;
-  padding: 2px 8px;
-  border-radius: 10px;
+// ─── DRAG & RESIZE ────────────────────────────────────────────
+let dragging = null, dragOX = 0, dragOY = 0;
+let resizing = null, resizeOX = 0, resizeOY = 0, resizeW = 0, resizeH = 0;
+
+function startDrag(e, id) {
+  if (e.target.classList.contains('win-btn')) return;
+  const win = document.getElementById('win-' + id);
+  dragging = win;
+  dragOX = e.clientX - win.offsetLeft;
+  dragOY = e.clientY - win.offsetTop;
+  e.preventDefault();
 }
 
-.flash-preview-right {
-  flex: 1;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  overflow-y: auto;
+function startResize(e, id) {
+  const win = document.getElementById('win-' + id);
+  resizing = win;
+  resizeOX = e.clientX;
+  resizeOY = e.clientY;
+  resizeW = win.offsetWidth;
+  resizeH = win.offsetHeight;
+  e.preventDefault();
+  e.stopPropagation();
 }
 
-.flash-title {
-  font-size: 18px;
-  color: #003080;
-  border-bottom: 2px solid #316AC5;
-  padding-bottom: 6px;
+document.addEventListener('mousemove', e => {
+  if (dragging) {
+    dragging.style.left = (e.clientX - dragOX) + 'px';
+    dragging.style.top = Math.max(0, e.clientY - dragOY) + 'px';
+  }
+  if (resizing) {
+    resizing.style.width = Math.max(400, resizeW + (e.clientX - resizeOX)) + 'px';
+    resizing.style.height = Math.max(300, resizeH + (e.clientY - resizeOY)) + 'px';
+  }
+});
+
+document.addEventListener('mouseup', () => { dragging = null; resizing = null; });
+
+// ─── WINDOW ACTIONS ───────────────────────────────────────────
+function focusWindow(id) {
+  Object.keys(windows).forEach(k => {
+    const w = windows[k];
+    if (w) { w.classList.remove('active'); w.style.zIndex = 100; }
+  });
+  const win = windows[id];
+  if (win) { win.classList.add('active'); win.style.zIndex = ++windowZ; }
+  document.querySelectorAll('.taskbar-item').forEach(el => el.classList.remove('active'));
+  const tb = document.getElementById('tb-' + id);
+  if (tb) tb.classList.add('active');
+  activeWindow = id;
 }
 
-.flash-desc {
-  font-size: 12px;
-  color: #333;
-  line-height: 1.6;
+function minimizeWindow(id) {
+  const win = windows[id];
+  if (win) win.classList.add('minimized');
+  const tb = document.getElementById('tb-' + id);
+  if (tb) tb.classList.remove('active');
 }
 
-.flash-info {
-  font-size: 11px;
-  color: #555;
-  background: white;
-  border: 1px solid #c0d0e0;
-  padding: 6px 10px;
-  border-radius: 3px;
+function restoreWindow(id) {
+  const win = windows[id];
+  if (win) win.classList.remove('minimized');
 }
 
-.flash-play-btn {
-  margin-top: auto;
-  background: linear-gradient(to bottom, #57a428, #3d8216);
-  color: white;
-  border: none;
-  padding: 10px 24px;
-  font-size: 14px;
-  font-weight: bold;
-  font-family: 'Tahoma', sans-serif;
-  cursor: pointer;
-  border-radius: 3px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-  align-self: flex-start;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
-}
-.flash-play-btn:hover { filter: brightness(1.15); }
-.flash-play-btn:active { filter: brightness(0.9); transform: translateY(1px); }
-
-/* ─── ICONOS CON IMAGEN ─── */
-.icon-img-img {
-  width: 28px;
-  height: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.icon-img-img img {
-  width: 28px;
-  height: 28px;
-  object-fit: contain;
-  image-rendering: pixelated;
+let maximized = {};
+function maximizeWindow(id) {
+  const win = windows[id];
+  if (!win) return;
+  if (maximized[id]) {
+    Object.assign(win.style, maximized[id]);
+    delete maximized[id];
+  } else {
+    maximized[id] = { left: win.style.left, top: win.style.top, width: win.style.width, height: win.style.height };
+    win.style.left = '0';
+    win.style.top = '0';
+    win.style.width = '100vw';
+    win.style.height = 'calc(100vh - 30px)';
+  }
 }
 
-/* Start button con imagen */
-#start-btn {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  height: 100%;
-  display: flex;
-  align-items: center;
+function closeWindow(id) {
+  const win = windows[id];
+  if (win) { win.remove(); delete windows[id]; }
+  const tb = document.getElementById('tb-' + id);
+  if (tb) tb.remove();
+  delete maximized[id];
 }
-#start-btn:hover { filter: brightness(1.1); }
+
+// ─── TASKBAR ──────────────────────────────────────────────────
+function addTaskbarItem(id, game) {
+  const items = document.getElementById('taskbar-items');
+  const item = document.createElement('div');
+  item.className = 'taskbar-item active';
+  item.id = 'tb-' + id;
+  item.innerHTML = game.icon + ' ' + game.title;
+  item.onclick = () => {
+    const win = windows[id];
+    if (!win) return;
+    if (win.classList.contains('minimized')) { restoreWindow(id); focusWindow(id); }
+    else if (activeWindow === id) { minimizeWindow(id); }
+    else { focusWindow(id); }
+  };
+  items.appendChild(item);
+}
+
+// ─── CLOCK ────────────────────────────────────────────────────
+function updateClock() {
+  const now = new Date();
+  const h = String(now.getHours()).padStart(2, '0');
+  const m = String(now.getMinutes()).padStart(2, '0');
+  document.getElementById('clock').textContent = h + ':' + m;
+}
+updateClock();
+setInterval(updateClock, 10000);
+
+// ─── ICON SELECT ──────────────────────────────────────────────
+function selectIcon(el) {
+  document.querySelectorAll('.icon').forEach(i => i.classList.remove('selected'));
+  el.classList.add('selected');
+}
+
+// ─── CONTEXT MENU ─────────────────────────────────────────────
+document.getElementById('desktop').addEventListener('contextmenu', e => {
+  e.preventDefault();
+  const menu = document.getElementById('ctx-menu');
+  menu.style.display = 'block';
+  menu.style.left = e.clientX + 'px';
+  menu.style.top = e.clientY + 'px';
+});
+document.addEventListener('click', () => {
+  document.getElementById('ctx-menu').style.display = 'none';
+  document.querySelectorAll('.icon').forEach(i => i.classList.remove('selected'));
+});
