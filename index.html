@@ -3,58 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval' data: blob:;">
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval' data: blob:; script-src * 'unsafe-inline' 'unsafe-eval' blob: 'wasm-unsafe-eval'; worker-src * blob: 'self';">
   <title>Windows XP</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <div id="desktop">
-
   <div class="icon" onclick="selectIcon(this); openFolder('mame')">
     <div class="icon-img-img"><img src="img/carpeta.png" alt="MAME"></div>
     <div class="icon-label">MAME</div>
   </div>
-
   <!-- Papelera -->
   <div class="icon" onclick="selectIcon(this)">
     <div class="icon-img-img"><img src="img/papelera de resiclaje.png" alt="Papelera"></div>
     <div class="icon-label">Papelera de reciclaje</div>
   </div>
-
   <div class="icon" onclick="selectIcon(this); openFolder('flash')">
     <div class="icon-img-img"><img src="img/internet explorer.png" alt="Flash"></div>
     <div class="icon-label">Flash Games</div>
   </div>
-
   <!-- Paint -->
   <div class="icon" onclick="selectIcon(this); openWebApp('paint')">
     <div class="icon-img-img"><img src="img/internet explorer.png" alt="Paint"></div>
     <div class="icon-label">Paint</div>
   </div>
-
   <!-- Counter Strike -->
   <div class="icon" onclick="selectIcon(this); openWebApp('cs')">
     <div class="icon-img-img"><img src="img/internet explorer.png" alt="CS"></div>
     <div class="icon-label">Counter Strike</div>
   </div>
-
-
-
 </div>
-
 <div id="taskbar">
-
   <div id="taskbar-items"></div>
   <div id="clock">00:00</div>
 </div>
-
 <div id="ctx-menu">
   <div class="ctx-item">Actualizar escritorio</div>
   <div class="ctx-sep"></div>
   <div class="ctx-item">Propiedades de pantalla</div>
 </div>
-
 <script src="main.js"></script>
 </body>
 </html>
