@@ -353,10 +353,21 @@ function loadRuffle(container, game) {
     player.style.position = 'absolute';
     player.style.top = '0';
     player.style.left = '0';
+    player.style.opacity = '0';
     container.style.position = 'relative';
-    container.innerHTML = '';
+    container.innerHTML = '<div class="emu-loading" id="ruffle-loader" style="position:absolute;top:0;left:0;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#000;z-index:10"><span class="spinner">⚙️</span>Cargando...</div>';
     container.appendChild(player);
     player.load(game.rom);
+    player.addEventListener('loadeddata', () => {
+      player.style.opacity = '1';
+      const loader = document.getElementById('ruffle-loader');
+      if (loader) loader.remove();
+    });
+    setTimeout(() => {
+      player.style.opacity = '1';
+      const loader = document.getElementById('ruffle-loader');
+      if (loader) loader.remove();
+    }, 4000);
   }
 
   // Si Ruffle ya está cargado, usarlo directamente
