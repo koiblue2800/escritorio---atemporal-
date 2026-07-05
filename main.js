@@ -126,6 +126,12 @@ const WEBAPPS = {
     url: 'https://dos.zone/revcdos/',
     width: 1024, height: 700,
     newTab: true
+  },
+  solitario: {
+    title: 'Spider Solitaire',
+    icon: '🃏',
+    url: 'https://www.squidbyte.com/games/spidersolitairewindowsxp/',
+    width: 900, height: 650
   }
 };
 
