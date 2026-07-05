@@ -116,14 +116,14 @@ const WEBAPPS = {
   cs: {
     title: 'Counter-Strike 1.6',
     icon: '🔫',
-    url: 'https://dos.zone/mp/?lobby=cs16',
+    url: 'https://playcsonline.com/',
     width: 1024, height: 700,
     newTab: true
   },
   gta: {
     title: 'GTA Vice City',
     icon: '🚗',
-    url: 'https://dos.zone/revcdos/',
+    url: 'https://gtabrowser.vercel.app/',
     width: 1024, height: 700,
     newTab: true
   },
