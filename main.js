@@ -117,13 +117,22 @@ const WEBAPPS = {
     title: 'Counter-Strike 1.6',
     icon: '🔫',
     url: 'https://dos.zone/mp/?lobby=cs16',
-    width: 1024, height: 700
+    width: 1024, height: 700,
+    newTab: true
+  },
+  gta: {
+    title: 'GTA Vice City',
+    icon: '🚗',
+    url: 'https://dos.zone/revcdos/',
+    width: 1024, height: 700,
+    newTab: true
   }
 };
 
 function openWebApp(appId) {
   const app = WEBAPPS[appId];
   if (!app) return;
+  if (app.newTab) { window.open(app.url, '_blank'); return; }
   if (windows[appId]) { restoreWindow(appId); focusWindow(appId); return; }
 
   const win = document.createElement('div');
