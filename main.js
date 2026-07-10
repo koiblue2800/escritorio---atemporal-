@@ -132,6 +132,12 @@ const WEBAPPS = {
     icon: '🃏',
     url: 'https://www.squidbyte.com/games/spidersolitairewindowsxp/',
     width: 900, height: 650
+  },
+  pinball: {
+    title: '3D Pinball Space Cadet',
+    icon: '🚀',
+    url: 'pinball/3DPinballSpaceCadet.htm',
+    width: 1024, height: 700
   }
 };
 
