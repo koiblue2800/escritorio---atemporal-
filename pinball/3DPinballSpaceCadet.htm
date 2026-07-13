@@ -18,6 +18,10 @@
 			.gui_controls{position:fixed;left:0;right:0;bottom:85px;z-index:99;text-align:center;line-height:2;font-family:Arial;font-size:16px;color:white}
 			.gui_controls_key{color:gray}
 
+			.gui_topbar{position:fixed;left:0;right:0;top:0;z-index:9999;text-align:center;line-height:2.4;font-family:Arial;font-size:13px;color:white;background:rgba(0,0,0,0.6)}
+			.gui_sound_toggle{margin-left:15px;padding:2px 8px;background:rgba(255,255,255,0.15);border-radius:4px;cursor:pointer}
+			.gui_sound_toggle:hover{background:rgba(255,255,255,0.3)}
+
 			.pleasewait{position:fixed;width:64px;height:64px;left:0;right:0;top:0;bottom:0;margin:auto auto;border:0;display:none}
 			.lds-spinner{color:white;display:inline-block;position:relative;width:64px;height:64px}
 			.lds-spinner div{transform-origin:32px 32px;animation:lds-spinner 1.2s linear infinite}
@@ -42,7 +46,14 @@
 		<canvas id="canvas"></canvas>
 		<div class="gui_container">
 			<div class="gui_background"></div>
-			<div class="gui_controls"><span class="gui_controls_key">LEFT FLIPPER = </span>Z&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="gui_controls_key">RIGHT FLIPPER = </span>C<br><span class="gui_controls_key">TILT FLIPPER TABLE = </span>X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="gui_controls_key">LAUNCH BALL = </span>SPACE<br><span class="gui_controls_key">RESTART GAME = </span>R&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="gui_controls_key">ENABLE/DISABLE SOUND = </span>T</div>
+			<div class="gui_topbar">
+				<span class="gui_controls_key">IZQUIERDA</span> Z&nbsp;&nbsp;
+				<span class="gui_controls_key">DERECHA</span> C&nbsp;&nbsp;
+				<span class="gui_controls_key">TILT</span> X&nbsp;&nbsp;
+				<span class="gui_controls_key">LANZAR</span> ESPACIO&nbsp;&nbsp;
+				<span class="gui_controls_key">REINICIAR</span> R&nbsp;&nbsp;
+				<span id="sound_toggle" class="gui_sound_toggle">🔊 Sonido</span>
+			</div>
 			<div class="gui_email"><a href="mailto:info@lrusso.com">info@lrusso.com</a></div>
 			<div class="gui_start"></div>
 		</div>
@@ -82,28 +93,35 @@
 					}
 				else if (event.key === "t")
 					{
-					if (!Module.SDL2) {
-						return;
-					}
-
-					GAME_SOUND_ENABLED = !GAME_SOUND_ENABLED;
-					setBooleanSetting("GAME_SOUND_ENABLED", GAME_SOUND_ENABLED);
-
-					try
-						{
-						if (!GAME_SOUND_ENABLED)
-							{
-							Module.SDL2.audioContext.suspend();
-							}
-						else
-							{
-							Module.SDL2.audioContext.resume();
-							}
-						} catch( err)
-						{
-						}
+					toggleSound();
 					}
 				});
+
+			function toggleSound()
+				{
+				if (!Module.SDL2) {
+					return;
+				}
+
+				GAME_SOUND_ENABLED = !GAME_SOUND_ENABLED;
+				setBooleanSetting("GAME_SOUND_ENABLED", GAME_SOUND_ENABLED);
+
+				try
+					{
+					if (!GAME_SOUND_ENABLED)
+						{
+						Module.SDL2.audioContext.suspend();
+						document.getElementById("sound_toggle").textContent = "🔇 Sonido";
+						}
+					else
+						{
+						Module.SDL2.audioContext.resume();
+						document.getElementById("sound_toggle").textContent = "🔊 Sonido";
+						}
+					} catch( err)
+					{
+					}
+				}
 
 			document.getElementById("canvas").addEventListener("contextmenu", function(event)
 				{
@@ -114,10 +132,13 @@
 				{
 				document.getElementById("canvas").style.height = (window.innerHeight + 20) + "px";
 
+				document.getElementById("sound_toggle").addEventListener("click", toggleSound);
+
 				// Listener del boton de play (se agrega SIEMPRE, incluso dentro de un iframe)
 				document.getElementsByClassName("gui_start")[0].addEventListener("click", function(event)
 					{
-					document.getElementsByClassName("gui_container")[0].style.display = "none";
+					document.getElementsByClassName("gui_background")[0].style.display = "none";
+					document.getElementsByClassName("gui_start")[0].style.display = "none";
 					document.getElementsByClassName("pleasewait")[0].style.display = "block";
 
 					const scriptGame = document.createElement("script");
@@ -127,6 +148,15 @@
 
 				// AUTO-START: dispara el click del boton de play automaticamente al cargar
 				document.getElementsByClassName("gui_start")[0].click();
+
+				// Forzar foco en el canvas para que las teclas funcionen dentro del iframe
+				const gameCanvas = document.getElementById("canvas");
+				gameCanvas.setAttribute("tabindex", "1");
+				setTimeout(function() { gameCanvas.focus(); }, 500);
+
+				document.addEventListener("click", function() {
+					gameCanvas.focus();
+				});
 				});
 
 			window.addEventListener("resize", function()
