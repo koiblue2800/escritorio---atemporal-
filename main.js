@@ -79,7 +79,7 @@ const GAMES = {
     title: 'Teen Titans Go: Teenage Warriors',
     icon: '🦸',
     type: 'html',
-    rom: 'roms/flash/teen titans/dist/index.html', // ajustar si el index.html esta en otra ruta
+    rom: 'roms/flash/teen titans/index.html',
     width: 900, height: 650
   }
 };
