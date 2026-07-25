@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<data> 
+    <character id="0">
+        <states id="0" onFinishDoState="0" allowInterruption="1">
+			<state type="stand" params="time:2000;facing:true" />
+        </states>	
+		
+		<states id="1" onFinishDoState="2" allowInterruption="0">
+			<state type="stand" params="time:2000;facing:true" />
+			<state type="move" params="speed:0.2;x:500" />
+			<state type="stand" params="time:1000;facing:true" />
+        </states>	
+		
+        <states id="2" onFinishDoState="2" allowInterruption="1">
+			<state type="shoot_rock" params="speed:0.02;" />
+			<state type="stand" params="time:3000;facing:true" />
+			<state type="shoot_rock" params="speed:0.02;" />
+			<state type="stand" params="time:3000;facing:true" />
+        </states>			
+		
+        <states id="3" onFinishDoState="4" allowInterruption="0">
+			<state type="stand" params="time:500;facing:true" />
+			<state type="shoot_rock" params="speed:0.02;" />
+			<state type="stand" params="time:500;facing:true" />
+			<state type="shoot_rock" params="speed:0.02;" />
+			<state type="stand" params="time:500;facing:true" />
+        </states>		
+
+		<states id="4" onFinishDoState="2" allowInterruption="0">
+			<state type="stand" params="time:3000;facing:true" />
+        </states>
+		
+		<states id="5" onFinishDoState="6" allowInterruption="0">
+			<state type="burn" params="" />		
+        </states>
+		
+		<states id="6" onFinishDoState="7" allowInterruption="0">
+			<state type="stand" params="time:3000;facing:true" />
+        </states>		
+		
+		<states id="7" onFinishDoState="8" allowInterruption="0">
+			<state type="up_attack" params="speed:0.4;distance:1000" />
+			<state type="stand" params="time:1500;facing:true" />
+			<state type="up_attack" params="speed:0.4;distance:1000" />
+			<state type="stand" params="time:1500;facing:true" />
+			<state type="up_attack" params="speed:0.4;distance:1000" />
+			<state type="stand" params="time:1500;facing:true" />
+			<state type="burn_out" params="" />	
+        </states>
+
+		<states id="8" onFinishDoState="9" allowInterruption="0">
+			<state type="stand" params="time:3000;facing:true" />
+        </states>
+		
+		<states id="9" onFinishDoState="9" allowInterruption="1">
+			<state type="stand" params="time:1000;facing:true" />
+        </states>
+
+		<states id="10" onFinishDoState="11" allowInterruption="0">
+			<state type="burn" params="" />		
+        </states>		
+
+		<states id="11" onFinishDoState="12" allowInterruption="0">
+			<state type="stand" params="time:3000;facing:true" />
+        </states>		
+		
+		<states id="12" onFinishDoState="13" allowInterruption="0">
+			<state type="down_attack" params="speed:0.4;distance:1000" />
+			<state type="stand" params="time:1500;facing:true" />
+			<state type="down_attack" params="speed:0.4;distance:1000" />
+			<state type="stand" params="time:1500;facing:true" />
+			<state type="down_attack" params="speed:0.4;distance:1000" />
+			<state type="burn_going_up" params="" />
+			<state type="stand" params="time:1500;facing:true" />
+			<state type="burn_out" params="" />	
+        </states>
+		
+		<states id="13" onFinishDoState="14" allowInterruption="0">
+			<state type="stand" params="time:3000;facing:true" />
+        </states>
+		
+		<states id="14" onFinishDoState="14" allowInterruption="1">
+			<state type="stand" params="time:1000;facing:true" />
+        </states>	
+
+		<states id="15" onFinishDoState="16" allowInterruption="0">
+			<state type="burn" params="" />	
+        </states>		
+		
+		<states id="16" onFinishDoState="17" allowInterruption="0">
+			<state type="stand" params="time:2000;facing:true" />
+			<state type="ultimate" params="speed:0.4;distance:700;ultimateTime:4000;dizzyTime:6000" />
+        </states>
+
+		<states id="17" onFinishDoState="18" allowInterruption="0">
+			<state type="burn" params="" />
+			<state type="stand" params="time:2000;facing:true" />
+        </states>		
+		
+		<states id="18" onFinishDoState="16" allowInterruption="0">
+			<state type="up_attack" params="speed:0.4;distance:1000" />
+			<state type="stand" params="time:1000;facing:true" />
+			<state type="down_attack" params="speed:0.4;distance:1000" />
+			<state type="burn_going_up" params="" />
+			<state type="stand" params="time:1000;facing:true" />
+			<state type="up_attack" params="speed:0.4;distance:1000" />
+			<state type="stand" params="time:1000;facing:true" />
+			<state type="down_attack" params="speed:0.4;distance:1000" />
+			<state type="burn_going_up" params="" />	
+        </states>
+
+		<states id="19" onFinishDoState="0" allowInterruption="0">
+			<state type="stand" params="time:9000;facing:true" />
+			<state type="burn_out" params="" />	
+        </states>		
+        
+        <onInterruptedState statesID="0" doStatesID="1" />
+		<onInterruptedState statesID="2" doStatesID="3" />
+		<onInterruptedState statesID="9" doStatesID="10" />
+		<onInterruptedState statesID="14" doStatesID="5" />
+			
+		<onCustomInterruption type="health" params="checkSign:less;value:1200" doStatesID="5" />	
+		<onCustomInterruption type="health" params="checkSign:less;value:800" doStatesID="15" />	
+		<onCustomInterruption type="distanceX" params="type:minorThan;value:600" doStatesID="19" />
+	
+    </character>
+</data>

@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<player>
+		<gravity> 0.0013 </gravity>
+		<elasticity> 0.1 </elasticity>
+		<friction> 0.020 </friction>
+		<slopeFriction> 0.05 </slopeFriction>
+		<maxVerletUpDisplace> 23 </maxVerletUpDisplace>
+		<maxVerletDownDisplace> 17 </maxVerletDownDisplace>
+		<maxVerletHorizontalDisplace> 17 </maxVerletHorizontalDisplace>
+
+		<debugSpeed> 2.6 </debugSpeed>
+		<walkSpeed> 0.0045 </walkSpeed>
+		<airSpeed> 0.0058 </airSpeed>
+		<runFactor> 1.6 </runFactor>
+		<maxSpeedFloor> 8 </maxSpeedFloor>
+		<maxSpeedAir> 7.5 </maxSpeedAir>
+		<jumpInitSpeed> 0.75 </jumpInitSpeed>
+		<jumpRunInitSpeed> 1.1 </jumpRunInitSpeed>
+		<smallJumpTime> 200 </smallJumpTime>
+		<smallJumpSpeed> 0.6 </smallJumpSpeed>
+		<canRun> 0 </canRun>
+		<doubleJumpStart> 0 </doubleJumpStart>
+		<doubleJumpEnd> 1000 </doubleJumpEnd>
+		<doubleJumpSpeed> 0.75 </doubleJumpSpeed>
+	</player>
+
+	<playerTest>
+		<gravity> 0.0009 </gravity>
+		<elasticity> 0.2 </elasticity>
+		<friction> 0.009 </friction>
+		<slopeFriction> 0.4 </slopeFriction>
+		<maxVerletUpDisplace> 30 </maxVerletUpDisplace>
+		<maxVerletDownDisplace> 23 </maxVerletDownDisplace>
+		<maxVerletHorizontalDisplace> 22 </maxVerletHorizontalDisplace>
+
+		<debugSpeed> 1.0 </debugSpeed>
+		<walkSpeed> 0.0075 </walkSpeed>
+		<airSpeed> 0.0005 </airSpeed>
+		<runFactor> 1.6 </runFactor>
+		<maxSpeedFloor> 9 </maxSpeedFloor>
+		<maxSpeedAir> 4.5 </maxSpeedAir>
+		<jumpInitSpeed> 0.9 </jumpInitSpeed>
+		<jumpRunInitSpeed> 1.1 </jumpRunInitSpeed>
+		<smallJumpTime> 100 </smallJumpTime>
+		<smallJumpSpeed> 0.7 </smallJumpSpeed>
+		<canRun> 1 </canRun>
+		<doubleJumpStart> 0 </doubleJumpStart>
+		<doubleJumpEnd> 2000 </doubleJumpEnd>
+		<doubleJumpSpeed> 1.1 </doubleJumpSpeed>
+	</playerTest>
+
+	<playerIlana>
+		<gravity> 0.0005 </gravity>
+		<elasticity> 0.1 </elasticity>
+		<friction> 0.020 </friction>
+		<slopeFriction> 0.10 </slopeFriction>
+		<maxVerletUpDisplace> 28 </maxVerletUpDisplace>
+		<maxVerletDownDisplace> 15 </maxVerletDownDisplace>
+		<maxVerletHorizontalDisplace> 23 </maxVerletHorizontalDisplace>
+
+		<debugSpeed> 1.6 </debugSpeed>
+		<walkSpeed> 0.040 </walkSpeed>
+		<airSpeed> 0.0058 </airSpeed>
+		<runFactor> 1.6 </runFactor>
+		<maxSpeedFloor> 10 </maxSpeedFloor>
+		<maxSpeedAir> 7 </maxSpeedAir>
+		<jumpInitSpeed> 0.45 </jumpInitSpeed>
+		<jumpRunInitSpeed> 1.1 </jumpRunInitSpeed>
+		<smallJumpTime> 200 </smallJumpTime>
+		<smallJumpSpeed> 0.6 </smallJumpSpeed>
+		<canRun> 1 </canRun>
+		<doubleJumpStart> 0 </doubleJumpStart>
+		<doubleJumpEnd> 1000 </doubleJumpEnd>
+		<doubleJumpSpeed> 0.45 </doubleJumpSpeed>
+	</playerIlana>
+
+    <spring>
+        <jumpSpeed> 1.6 </jumpSpeed>
+    </spring>
+
+    <star>
+        <score> 15 </score>
+    </star>
+	
+	<IlanaShieldChargeTime>1000</IlanaShieldChargeTime>
+	<IlanaShieldTimeLimit>3000</IlanaShieldTimeLimit>
+	
+	<bossDamageHit>10</bossDamageHit>
+	<bossDamageBulletStone>15</bossDamageBulletStone>
+	<bossDamageBulletFire>20</bossDamageBulletFire>
+	<bossDamageBulletFireSpecial>20</bossDamageBulletFireSpecial>
+	<playerDamageBoss>50</playerDamageBoss>
+	<playerHP>200</playerHP>
+	<bossHP>1700</bossHP>
+</data>

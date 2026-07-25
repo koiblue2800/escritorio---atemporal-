@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<player>
+		<gravity> 0.0013 </gravity>
+		<elasticity> 0.1 </elasticity>
+		<friction> 0.020 </friction>
+		<slopeFriction> 0.05 </slopeFriction>
+		<maxVerletUpDisplace> 23 </maxVerletUpDisplace>
+		<maxVerletDownDisplace> 17 </maxVerletDownDisplace>
+		<maxVerletHorizontalDisplace> 17 </maxVerletHorizontalDisplace>
+
+		<debugSpeed> 2.6 </debugSpeed>
+		<walkSpeed> 0.0045 </walkSpeed>
+		<airSpeed> 0.0058 </airSpeed>
+		<runFactor> 1.6 </runFactor>
+		<maxSpeedFloor> 15 </maxSpeedFloor>
+		<maxSpeedAir> 7.5 </maxSpeedAir>
+		<jumpInitSpeed> 0.85 </jumpInitSpeed>
+		<jumpRunInitSpeed> 1.1 </jumpRunInitSpeed>
+		<smallJumpTime> 200 </smallJumpTime>
+		<smallJumpSpeed> 0.6 </smallJumpSpeed>
+		<canRun> 0 </canRun>
+		<doubleJumpStart> 0 </doubleJumpStart>
+		<doubleJumpEnd> 1000 </doubleJumpEnd>
+		<doubleJumpSpeed> 0.80 </doubleJumpSpeed>
+        <jumpDownTime> 350 </jumpDownTime>
+	</player>
+	
+	<playerLance_1b>
+		<gravity> 0.0013 </gravity>
+		<elasticity> 0.1 </elasticity>
+		<friction> 0.020 </friction>
+		<slopeFriction> 0.05 </slopeFriction>
+		<maxVerletUpDisplace> 23 </maxVerletUpDisplace>
+		<maxVerletDownDisplace> 17 </maxVerletDownDisplace>
+		<maxVerletHorizontalDisplace> 17 </maxVerletHorizontalDisplace>
+
+		<debugSpeed> 2.6 </debugSpeed>
+		<walkSpeed> 0.0045 </walkSpeed>
+		<airSpeed> 0.0058 </airSpeed>
+		<runFactor> 1.6 </runFactor>
+		<maxSpeedFloor> 8 </maxSpeedFloor>
+		<maxSpeedAir> 7.5 </maxSpeedAir>
+		<jumpInitSpeed> 0.85 </jumpInitSpeed>
+		<jumpRunInitSpeed> 1.1 </jumpRunInitSpeed>
+		<smallJumpTime> 200 </smallJumpTime>
+		<smallJumpSpeed> 0.6 </smallJumpSpeed>
+		<canRun> 0 </canRun>
+		<doubleJumpStart> 0 </doubleJumpStart>
+		<doubleJumpEnd> 1000 </doubleJumpEnd>
+		<doubleJumpSpeed> 0.8 </doubleJumpSpeed>
+        <jumpDownTime> 350 </jumpDownTime>
+	</playerLance_1b>
+
+	<playerTest>
+		<gravity> 0.0009 </gravity>
+		<elasticity> 0.2 </elasticity>
+		<friction> 0.009 </friction>
+		<slopeFriction> 0.4 </slopeFriction>
+		<maxVerletUpDisplace> 30 </maxVerletUpDisplace>
+		<maxVerletDownDisplace> 23 </maxVerletDownDisplace>
+		<maxVerletHorizontalDisplace> 22 </maxVerletHorizontalDisplace>
+
+		<debugSpeed> 1.0 </debugSpeed>
+		<walkSpeed> 0.0075 </walkSpeed>
+		<airSpeed> 0.0005 </airSpeed>
+		<runFactor> 1.6 </runFactor>
+		<maxSpeedFloor> 9 </maxSpeedFloor>
+		<maxSpeedAir> 4.5 </maxSpeedAir>
+		<jumpInitSpeed> 0.9 </jumpInitSpeed>
+		<jumpRunInitSpeed> 1.1 </jumpRunInitSpeed>
+		<smallJumpTime> 100 </smallJumpTime>
+		<smallJumpSpeed> 0.7 </smallJumpSpeed>
+		<canRun> 0 </canRun>
+		<doubleJumpStart> 0 </doubleJumpStart>
+		<doubleJumpEnd> 2000 </doubleJumpEnd>
+		<doubleJumpSpeed> 1.1 </doubleJumpSpeed>
+        <jumpDownTime> 350 </jumpDownTime>
+	</playerTest>
+
+	<playerIlana>
+		<gravity> 0.0005 </gravity>
+		<elasticity> 0.1 </elasticity>
+		<friction> 0.020 </friction>
+		<slopeFriction> 0.10 </slopeFriction>
+		<maxVerletUpDisplace> 28 </maxVerletUpDisplace>
+		<maxVerletDownDisplace> 15 </maxVerletDownDisplace>
+		<maxVerletHorizontalDisplace> 23 </maxVerletHorizontalDisplace>
+
+		<debugSpeed> 1.6 </debugSpeed>
+		<walkSpeed> 0.040 </walkSpeed>
+		<airSpeed> 0.0058 </airSpeed>
+		<runFactor> 1.6 </runFactor>
+		<maxSpeedFloor> 10 </maxSpeedFloor>
+		<maxSpeedAir> 7 </maxSpeedAir>
+		<jumpInitSpeed> 0.45 </jumpInitSpeed>
+		<jumpRunInitSpeed> 1.1 </jumpRunInitSpeed>
+		<smallJumpTime> 200 </smallJumpTime>
+		<smallJumpSpeed> 0.6 </smallJumpSpeed>
+		<canRun> 0 </canRun>
+		<doubleJumpStart> 0 </doubleJumpStart>
+		<doubleJumpEnd> 1000 </doubleJumpEnd>
+		<doubleJumpSpeed> 0.45 </doubleJumpSpeed>
+	</playerIlana>
+
+    <spring>
+        <jumpSpeed> 1.6 </jumpSpeed>
+    </spring>
+
+    <star>
+        <score> 15 </score>
+    </star>
+	
+	<checkPoints>
+		<pos x="4455" y="1770"/>
+		<pos x="11300" y="2760"/>
+		<pos x="19000" y="1160"/>
+    </checkPoints>
+	
+	<IlanaShieldChargeTime>1000</IlanaShieldChargeTime>
+	<IlanaShieldTimeLimit>3000</IlanaShieldTimeLimit>
+	
+	<cameraSpeed cameraInitSpeed="0.1" player="Lance">
+		<reachX value="100" cameraSpeed="0.04" maxSpeedAir="7.5" walkSpeed="0.015" maxSpeedFloor="8" slopeFriction="0.001" />
+		<reachX value="250" cameraSpeed="0.06" maxSpeedAir="7.5" walkSpeed="0.015" maxSpeedFloor="8" slopeFriction="0.001" />
+		<reachX value="350" cameraSpeed="0.07" maxSpeedAir="7.5" walkSpeed="0.015" maxSpeedFloor="8" slopeFriction="0.001" />
+		<reachX value="500" cameraSpeed="0.10" maxSpeedAir="7.5" walkSpeed="0.015" maxSpeedFloor="8" slopeFriction="0.001" />
+		<reachX value="1000" cameraSpeed="0.18" maxSpeedAir="7.5" walkSpeed="0.015" maxSpeedFloor="8" slopeFriction="0.001" />
+		<reachX value="2370" cameraSpeed="0.13" maxSpeedAir="7.5" walkSpeed="0.025" maxSpeedFloor="8" slopeFriction="0.001"/>
+		<reachX value="4500" cameraSpeed="0.18" maxSpeedAir="7.5" walkSpeed="0.015" maxSpeedFloor="8" slopeFriction="0.001" />
+		<reachX value="6100" cameraSpeed="0.20" maxSpeedAir="9.7" walkSpeed="0.020" maxSpeedFloor="9.7" slopeFriction="0.001"/>
+		<reachX value="11200" cameraSpeed="0.22" maxSpeedAir="10.2" walkSpeed="0.020" maxSpeedFloor="10.7" slopeFriction="0.001"/>
+		<reachX value="15300" cameraSpeed="0.18" maxSpeedAir="7.5" walkSpeed="0.025" maxSpeedFloor="8" slopeFriction="0.001"/>
+		<reachX value="21600" cameraSpeed="0.26" maxSpeedAir="13.1" walkSpeed="0.025" maxSpeedFloor="13.1" slopeFriction="0.001"/>
+		<reachX value="24000" cameraSpeed="0.34" maxSpeedAir="14.8" walkSpeed="0.025" maxSpeedFloor="14.8" slopeFriction="0.001"/>
+		<reachX value="27000" cameraSpeed="0.5" maxSpeedAir="18.2" walkSpeed="0.1" maxSpeedFloor="18.7" slopeFriction="0.001"/>
+	</cameraSpeed>
+	
+	<cameraSpeed cameraInitSpeed="0.1" player="Ilana">
+		<reachX value="100" cameraSpeed="0.04" maxSpeedAir="7.5" walkSpeed="0.015" maxSpeedFloor="8" slopeFriction="0.001" />
+		<reachX value="250" cameraSpeed="0.06" maxSpeedAir="7.5" walkSpeed="0.015" maxSpeedFloor="8" slopeFriction="0.001" />
+		<reachX value="350" cameraSpeed="0.07" maxSpeedAir="7.5" walkSpeed="0.015" maxSpeedFloor="8" slopeFriction="0.001" />
+		<reachX value="500" cameraSpeed="0.10" maxSpeedAir="7.5" walkSpeed="0.015" maxSpeedFloor="8" slopeFriction="0.001" />
+		<reachX value="1000" cameraSpeed="0.18" maxSpeedAir="7.5" walkSpeed="0.015" maxSpeedFloor="8" slopeFriction="0.001" />
+		<reachX value="2370" cameraSpeed="0.13" maxSpeedAir="7.5" walkSpeed="0.025" maxSpeedFloor="8" slopeFriction="0.001"/>
+		<reachX value="4500" cameraSpeed="0.18" maxSpeedAir="7.5" walkSpeed="0.015" maxSpeedFloor="8" slopeFriction="0.001" />
+		<reachX value="6100" cameraSpeed="0.20" maxSpeedAir="9.7" walkSpeed="0.020" maxSpeedFloor="9.7" slopeFriction="0.001"/>
+		<reachX value="11200" cameraSpeed="0.22" maxSpeedAir="10.2" walkSpeed="0.020" maxSpeedFloor="10.7" slopeFriction="0.001"/>
+		<reachX value="15300" cameraSpeed="0.18" maxSpeedAir="7.5" walkSpeed="0.025" maxSpeedFloor="8" slopeFriction="0.001"/>
+		<reachX value="21600" cameraSpeed="0.26" maxSpeedAir="13.1" walkSpeed="0.025" maxSpeedFloor="13.1" slopeFriction="0.001"/>
+		<reachX value="24000" cameraSpeed="0.34" maxSpeedAir="14.8" walkSpeed="0.025" maxSpeedFloor="14.8" slopeFriction="0.001"/>
+		<reachX value="27000" cameraSpeed="0.5" maxSpeedAir="18.2" walkSpeed="0.1" maxSpeedFloor="18.7" slopeFriction="0.001"/>
+	</cameraSpeed>
+</data>

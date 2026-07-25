@@ -1,0 +1,88 @@
+<world>
+	<properties>
+		<width> 1520 </width>
+		<height> 780 </height>
+		<cameraWidth> 600 </cameraWidth>
+		<cameraHeight> 400 </cameraHeight>
+		<cameraScreenX> 0 </cameraScreenX>
+		<cameraScreenY> 40 </cameraScreenY>
+		<cameraYMin> 0.25 </cameraYMin>
+		<cameraYMax> 0.6 </cameraYMax>
+		<cameraXMin> 0.2 </cameraXMin>
+		<cameraXMax> 0.25 </cameraXMax>
+		<showCollisions> 0 </showCollisions>
+        <playerX> 100 </playerX>
+		<playerY> 100 </playerY>
+        <useEmbeddedAssets> 1 </useEmbeddedAssets>
+	</properties>
+	
+	<layer type="collision" name="collisions" cols="76" rows="39" tileW="20" tileH="20" map="mc_map_lvl03_collisions" width="1520" height="780" >
+	</layer>
+	
+	<layer type="cell" name="foreground2" cols="9" rows="3" tileW="256" tileH="256" map="mc_map_lvl03_foreground2" width="2304" height="780" >
+		<set name="mct_lvl03_foreground2" />
+		<tile set="0" frame="4" />
+		<tile set="0" frame="5" />
+		<tile set="0" frame="1" />
+		<tile set="0" frame="2" />
+		<tile set="0" frame="3" />
+	</layer>
+	
+	<layer type="player" name="player" >
+	</layer>
+	
+	<layer type="objects" name="items" cols="192" rows="40" tileW="20" tileH="20" map="mc_map_lvl03_items" step="128" width="3880" height="780" >
+		<object x="500" y="200" id="400" depth="-1" />
+	</layer>
+	
+	
+	<layer type="cell" name="foreground1" cols="6" rows="3" tileW="256" tileH="256" map="mc_map_lvl03_foreground1" width="1536" height="780" >
+		<set name="mct_lvl03_foreground1" />
+		<tile set="0" frame="1" />
+		<tile set="0" frame="2" />
+		<tile set="0" frame="3" />
+		<tile set="0" frame="4" />
+		<tile set="0" frame="5" />
+		<tile set="0" frame="6" />
+	</layer>
+	
+	<layer type="cell" name="background2" cols="7" rows="3" tileW="256" tileH="256" map="mc_map_lvl03_background2" width="1500" height="800" >
+		<set name="mct_lvl03_background2" />
+		<tile set="0" frame="1" />
+		<tile set="0" frame="2" />
+		<tile set="0" frame="3" />
+		<tile set="0" frame="4" />
+		<tile set="0" frame="5" />
+		<tile set="0" frame="6" />
+		<tile set="0" frame="7" />
+	</layer>
+
+	<layer type="cell" name="background1" cols="8" rows="3" tileW="256" tileH="256" map="mc_map_lvl03_background1" width="900" height="800" >
+		<set name="mct_lvl03_background1" />
+		<tile set="0" frame="3" />
+		<tile set="0" frame="6" />
+		<tile set="0" frame="9" />
+		<tile set="0" frame="12" />
+		<tile set="0" frame="15" />
+		<tile set="0" frame="18" />
+		<tile set="0" frame="21" />
+		<tile set="0" frame="24" />
+		<tile set="0" frame="2" />
+		<tile set="0" frame="5" />
+		<tile set="0" frame="8" />
+		<tile set="0" frame="11" />
+		<tile set="0" frame="14" />
+		<tile set="0" frame="17" />
+		<tile set="0" frame="20" />
+		<tile set="0" frame="23" />
+		<tile set="0" frame="1" />
+		<tile set="0" frame="4" />
+		<tile set="0" frame="7" />
+		<tile set="0" frame="10" />
+		<tile set="0" frame="13" />
+		<tile set="0" frame="16" />
+		<tile set="0" frame="19" />
+		<tile set="0" frame="22" />
+	</layer>
+</world>
+

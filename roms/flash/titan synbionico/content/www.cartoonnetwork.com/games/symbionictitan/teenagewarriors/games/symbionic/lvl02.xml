@@ -1,0 +1,791 @@
+<world>
+	<properties>
+		<width> 10800 </width>
+		<height> 2880 </height>
+		<cameraWidth> 600 </cameraWidth>
+		<cameraHeight> 400 </cameraHeight>
+		<cameraScreenX> 0 </cameraScreenX>
+		<cameraScreenY> 0 </cameraScreenY>
+		<cameraYMin> 0.5 </cameraYMin>
+		<cameraYMax> 0.9 </cameraYMax>
+		<cameraXMin> 0.3 </cameraXMin>
+		<cameraXMax> 0.5 </cameraXMax>
+		<showCollisions> 0 </showCollisions>
+		<playerX> 100 </playerX>
+		<playerY> 2500 </playerY>
+        <useEmbeddedAssets> 1 </useEmbeddedAssets>
+	</properties>
+	<layer type="player" name="player" >
+	</layer>
+	
+	<layer type="objects" name="items2" >
+		<object x="1414" y="2007" id="504" params="depth:1;explosiveID:0;waitToExplode:750" />
+		<object x="5653" y="1208" id="504" params="depth:1;explosiveID:1;waitToExplode:750" />
+		<object x="7653" y="807" id="504" params="depth:1;explosiveID:2;waitToExplode:750" />
+		
+		<object x="8482" y="2418" id="506" params="depth:1;" />
+		<object x="8570" y="1466" id="506" params="depth:1;" />
+		<object x="9037" y="1628" id="506" params="depth:1;" />
+		<object x="9044" y="2030" id="506" params="depth:1;" />
+		<object x="9284" y="1465" id="506" params="depth:1;" />
+		<object x="9358" y="1956" id="506" params="depth:1;" />
+		<object x="9364" y="751" id="506" params="depth:1;" />
+		<object x="9768" y="985" id="506" params="depth:1;" />
+		<object x="9838" y="436" id="506" params="depth:1;" />
+		<object x="10003" y="2268" id="506" params="depth:1;" />
+		<object x="10005" y="1550" id="506" params="depth:1;" />
+		
+		<object x="3440" y="1440" id="509" params="depth:1;" />
+	</layer>
+	
+	<layer type="objects" name="items" >
+		<object x="306" y="1738" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="307" y="1633" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="307" y="1684" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="308" y="631" id="203" params="depth:1;name:mc1up;score:0" />
+		<object x="326" y="2400" id="501" params="depth:1;item:HEART;nameClip:ST_Guy" />
+		<object x="340" y="2540" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="364" y="2495" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="381" y="2539" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="401" y="1738" id="210" params="depth:1;life:2;intro:0" />
+		<object x="432" y="605" id="210" params="depth:1;life:2;intro:0" />
+		<object x="459" y="2552" id="201" params="depth:1;life:2;intro:0" />
+		<object x="495" y="922" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="542" y="863" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="605" y="2542" id="262" params="depth:1;type:7" />
+		<object x="614" y="819" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="624" y="598" id="201" params="depth:1;life:2;intro:0" />
+		<object x="686" y="866" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="738" y="921" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="769" y="2135" id="210" params="depth:1;life:2;intro:0" />
+		<object x="781" y="1322" id="201" params="depth:1;life:2;intro:0" />
+		<object x="825" y="1723" id="201" params="depth:1;life:2;intro:0" />
+		<object x="831" y="2548" id="502" depth="0" />
+		<object x="836" y="2546" id="262" params="depth:0;type:6" />
+		<object x="840" y="2512" id="508" params="depth:0;index:0;modo:duo" />
+		<object x="904" y="794" id="501" params="depth:1;item:HEART;nameClip:ST_Granny" />
+		<object x="952" y="612" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="999" y="553" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="1003" y="1716" id="201" params="depth:1;life:2;intro:0" />
+		<object x="1049" y="2537" id="201" params="depth:1;life:2;intro:0" />
+		<object x="1071" y="509" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="1143" y="556" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="1195" y="612" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="1297" y="1349" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="1319" y="885" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="1319" y="938" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="1319" y="996" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="1319" y="1047" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="1319" y="1100" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="1319" y="1158" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="1324" y="1307" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="1351" y="1354" id="200" params="depth:1;name:mcEnergyBall;score:10" />
+		<object x="1373" y="629" id="204" params="depth:1;name:mcHP;score:0" />
+		<object x="1427" y="2098" id="503" params="depth:1" />
+		<object x="1979" y="1861" id="501" params="depth:1;item:HEART;nameClip:ST_Granny" />
+		<object x="1995" y="2553" id="204" params="depth:1;name:mcHP;score:0" />
+		<object x="1997" y="2500" id="200" params="depth:1;name:mcEnergyBall;score:10" />
+		<object x="2053" y="2529" id="200" params="depth:1;name:mcEnergyBall;score:10" />
+		<object x="2094" y="1849" id="210" params="depth:1;life:2;intro:0" />
+		<object x="2106" y="2561" id="200" params="depth:1;name:mcEnergyBall;score:10" />
+		<object x="2133" y="2147" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="2160" y="2104" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="2184" y="2147" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="2322" y="2241" id="201" params="depth:1;life:2;intro:0" />
+		<object x="2373" y="1835" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="2400" y="1792" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="2424" y="1833" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="2724" y="2136" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="2753" y="1959" id="201" params="depth:1;life:2;intro:0" />
+		<object x="2772" y="2137" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="2827" y="2148" id="501" params="depth:1;item:HEART;nameClip:ST_Guy" />
+		<object x="2837" y="2544" id="502" depth="-1" />
+		<object x="2838" y="2527" id="508" params="depth:0;index:0;modo:duo" />
+		<object x="2883" y="2146" id="501" params="depth:1;item:HEART;nameClip:ST_Girl" />
+		<object x="2930" y="2137" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="2980" y="2137" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="3411" y="1516" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="3438" y="1473" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="3462" y="1514" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="3615" y="2547" id="200" params="depth:1;name:mcEnergyBall;score:10" />
+		<object x="3635" y="2235" id="201" params="depth:1;life:2;intro:0" />
+		<object x="3643" y="2035" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="3651" y="2499" id="200" params="depth:1;name:mcEnergyBall;score:10" />
+		<object x="3670" y="1992" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="3686" y="2546" id="203" params="depth:1;name:mc1up;score:0" />
+		<object x="3692" y="2035" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="3704" y="2464" id="200" params="depth:1;name:mcEnergyBall;score:10" />
+		<object x="3723" y="1390" id="503" params="depth:1" />
+		<object x="3724" y="1295" id="503" params="depth:1" />
+		<object x="4126" y="2548" id="201" params="depth:0;life:2;intro:0" />
+		<object x="4386" y="2531" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="4391" y="950" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="4417" y="2489" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="4418" y="907" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="4440" y="2531" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="4442" y="948" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="4443" y="757" id="501" params="depth:1;item:HEART;nameClip:ST_Guy" />
+		<object x="4513" y="1732" id="210" params="depth:1;life:2;intro:0" />
+		<object x="4560" y="1743" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="4568" y="2533" id="201" params="depth:1;life:2;intro:0" />
+		<object x="4607" y="1684" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="4679" y="1640" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="4691" y="1330" id="201" params="depth:1;life:2;intro:0" />
+		<object x="4694" y="2530" id="201" params="depth:1;life:2;intro:0" />
+		<object x="4751" y="1687" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="4754" y="2124" id="201" params="depth:1;life:2;intro:0" />
+		<object x="4770" y="740" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="4803" y="1743" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="4810" y="694" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="4865" y="664" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="4909" y="920" id="201" params="depth:1;life:2;intro:0" />
+		<object x="4933" y="1741" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="4937" y="661" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="4963" y="1338" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="5004" y="1742" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="5008" y="662" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="5009" y="2541" id="502" depth="-1" />
+		<object x="5000" y="2500" id="508" params="depth:0;index:0;;modo:duo" />
+		<object x="5034" y="1339" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="5071" y="1742" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="5075" y="662" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="5078" y="1713" id="201" params="depth:1;life:2;intro:0" />
+		<object x="5101" y="1339" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="5140" y="665" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="5149" y="922" id="201" params="depth:1;life:2;intro:0" />
+		<object x="5183" y="2133" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="5188" y="1341" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="5192" y="693" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="5225" y="736" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="5230" y="2074" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="5235" y="1282" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="5302" y="2030" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="5307" y="1238" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="5374" y="2077" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="5379" y="1285" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="5426" y="2133" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="5431" y="1341" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="5524" y="2138" id="210" params="depth:1;life:2;intro:0" />
+		<object x="5543" y="751" id="501" params="depth:1;item:HEART;nameClip:ST_Granny" />
+		<object x="5559" y="1020" id="204" params="depth:1;name:mcHP;score:0" />
+		<object x="5664" y="1285" id="503" params="depth:-1" />
+		<object x="6229" y="2599" id="207" depth="-1" />
+		<object x="6387" y="773" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="6389" y="622" id="501" params="depth:1;item:HEART;nameClip:ST_Girl" />
+		<object x="6391" y="2536" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="6392" y="1098" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="6392" y="2394" id="501" params="depth:1;item:HEART;nameClip:ST_Guy" />
+		<object x="6396" y="1494" id="508" params="depth:0;index:0;modo:ilana" />
+		<object x="6397" y="2226" id="508" params="depth:0;index:0;modo:ilana" />
+		<object x="6398" y="2242" id="505" params="depth:0;player:ILANA" />
+		<object x="6400" y="1519" id="505" params="depth:-1;player:ILANA" />
+		<object x="6425" y="2496" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="6439" y="2273" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="6439" y="2315" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="6448" y="2536" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="6482" y="2496" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="6506" y="2537" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="6540" y="2497" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="6561" y="636" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="6608" y="577" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="6680" y="533" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="6690" y="2541" id="201" params="depth:1;life:2;intro:0" />
+		<object x="6752" y="580" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="6796" y="1242" id="201" params="depth:1;life:2;intro:0" />
+		<object x="6804" y="636" id="200" params="depth:1;name:mcEnergyBall" />
+<!--	<object x="6831" y="611" id="262" params="depth:1;type:8" /> 		-->
+		<object x="6832" y="1870" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="6849" y="2208" id="201" params="depth:1;life:2;intro:0" />
+		<object x="6855" y="1910" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="6866" y="941" id="210" params="depth:1;life:2;intro:0" />
+		<object x="6889" y="1870" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="6910" y="2220" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="6913" y="1911" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="6944" y="2180" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="6946" y="1550" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="6947" y="1871" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="6957" y="1569" id="210" params="depth:1;life:2;intro:0" />
+		<object x="6967" y="2220" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="6969" y="1590" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="7001" y="2180" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="7003" y="1550" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="7009" y="1892" id="201" params="depth:1;life:2;intro:0" />
+		<object x="7025" y="2221" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="7027" y="1591" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="7059" y="2181" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="7061" y="1551" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="7078" y="2212" id="210" params="depth:1;life:2;intro:0" />
+		<object x="7080" y="2531" id="502" depth="-1" />
+		<object x="7082" y="2507" id="508" params="depth:0;index:0;modo:lance" />
+		<object x="7087" y="2222" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="7099" y="1241" id="201" params="depth:1;life:2;intro:0" />
+		<object x="7110" y="605" id="201" params="depth:1;life:2;intro:0" />
+		<object x="7112" y="1872" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="7135" y="1912" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="7169" y="1872" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="7193" y="1913" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="7227" y="1873" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="7489" y="895" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="7489" y="2192" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="7512" y="935" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="7512" y="2232" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="7523" y="513" />
+		<object x="7546" y="895" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="7546" y="2192" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="7565" y="688" id="204" params="depth:1;name:mcHP;score:0" />
+		<object x="7568" y="741" id="200" params="depth:1;name:mcEnergyBall;score:10" />
+		<object x="7568" y="787" id="200" params="depth:1;name:mcEnergyBall;score:10" />
+		<object x="7570" y="936" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="7570" y="2233" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="7601" y="1260" id="501" params="depth:1;item:HEART;nameClip:ST_Granny" />
+		<object x="7604" y="896" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="7604" y="2193" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="7667" y="886" id="503" params="depth:-1" />
+		<object x="8249" y="2599" id="207" depth="-1" />
+		<object x="8393" y="2541" id="501" params="depth:1;item:HEART;nameClip:ST_Girl" />
+		<object x="8399" y="1736" id="210" params="depth:1;life:2;intro:0" />
+		<object x="8449" y="2540" id="501" params="depth:1;item:HEART;nameClip:ST_Granny" />
+		<object x="8486" y="2441" />
+		<object x="8501" y="2540" id="501" params="depth:1;item:HEART;nameClip:ST_Guy" />
+		<object x="8503" y="924" id="201" params="depth:1;life:2;intro:0" />
+		<object x="8553" y="1476" />
+		<object x="8674" y="758" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="8674" y="1234" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="8677" y="2201" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="8681" y="1716" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="8731" y="758" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="8731" y="1234" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="8734" y="2201" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="8738" y="1716" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="8749" y="590" id="508" params="depth:0;index:0;modo:duo" />
+		<object x="8757" y="614" id="502" depth="-1" />
+		<object x="8768" y="1682" id="201" params="depth:0;life:2;intro:0" />
+		<object x="8787" y="758" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="8787" y="1234" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="8790" y="2201" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="8794" y="1716" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="8826" y="932" id="262" params="depth:1;type:9" />
+		<object x="8843" y="758" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="8843" y="1234" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="8846" y="2201" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="8849" y="2394" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="8850" y="1716" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="8858" y="2528" id="201" params="depth:0;life:2;intro:0" />
+		<object x="8883" y="2354" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="8907" y="2395" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="9026" y="2031" />
+		<object x="9027" y="1627" />
+		<object x="9079" y="2540" id="204" params="depth:1;name:mcHP;score:0" />
+		<object x="9095" y="929" id="262" params="depth:1;type:9" />
+		<object x="9152" y="1475" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="9157" y="1951" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="9160" y="517" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="9161" y="993" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="9178" y="609" id="201" params="depth:0;life:2;intro:0" />
+		<object x="9209" y="1475" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="9214" y="1951" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="9217" y="517" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="9218" y="993" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="9247" y="921" id="201" params="depth:1;life:2;intro:0" />
+		<object x="9248" y="960" id="201" params="depth:0;life:2;intro:0" />
+		<object x="9265" y="1475" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="9270" y="1951" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="9273" y="517" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="9274" y="993" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="9300" y="1473" />
+		<object x="9321" y="1475" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="9326" y="1951" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="9329" y="517" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="9330" y="993" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="9359" y="1957" />
+		<object x="9364" y="759" />
+		<object x="9424" y="2543" id="201" params="depth:0;life:2;intro:0" />
+		<object x="9640" y="2004" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="9641" y="1899" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="9641" y="1950" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="9641" y="2429" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="9642" y="2269" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="9642" y="2324" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="9642" y="2375" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="9643" y="2164" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="9643" y="2215" id="200" params="depth:1;name:mcEnergyBall" />
+		<object x="9713" y="1679" id="201" params="depth:0;life:2;intro:0" />
+		<object x="9715" y="1090" id="262" params="depth:1;type:9" />
+		<object x="9763" y="994" />
+		<object x="9842" y="434" />
+		<object x="9998" y="2272" />
+		<object x="10008" y="1557" />
+		<object x="10083" y="2522" id="507" params="depth:1;" />
+		<object x="10094" y="2315" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="10145" y="2294" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="10200" y="2337" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="10235" y="2402" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="10339" y="2496" id="204" params="depth:0;name:mcHP;score:0" />
+		<object x="10339" y="2539" id="203" params="depth:0;name:mc1up;score:0" />
+	</layer>
+	<layer type="collision" name="out_collisions" cols="540" rows="144" tileW="20" tileH="20" map="mc_map_lvl02_out_collisions" width="10800" height="2880" >
+	</layer>
+	<layer type="sprites" name="out_sprites" width="10800" height="2880" >
+		<set name="mcs_lvl02_out_sprites" />
+		<gpx x="219" y="2548" f="0" />
+		<gpx x="725" y="2579" f="1" />
+		<gpx x="952" y="2578" f="2" />
+		<gpx x="1022" y="2547" f="3" />
+		<gpx x="1194" y="2523" f="4" />
+		<gpx x="1401" y="2537" f="3" />
+		<gpx x="1561" y="2525" f="4" />
+		<gpx x="1763" y="2582" f="5" />
+		<gpx x="1832" y="2581" f="2" />
+		<gpx x="1969" y="2485" f="6" />
+		<gpx x="2065" y="1884" f="7" />
+		<gpx x="2137" y="2233" f="8" />
+		<gpx x="2267" y="2500" f="9" />
+		<gpx x="2328" y="1884" f="10" />
+		<gpx x="2401" y="2522" f="4" />
+		<gpx x="2439" y="2233" f="8" />
+		<gpx x="2569" y="2500" f="9" />
+		<gpx x="2683" y="2516" f="11" />
+		<gpx x="2839" y="2232" f="8" />
+		<gpx x="2998" y="2517" f="11" />
+		<gpx x="3116" y="2500" f="9" />
+		<gpx x="3234" y="2232" f="8" />
+		<gpx x="3257" y="2520" f="4" />
+		<gpx x="3318" y="1878" f="10" />
+		<gpx x="3416" y="2500" f="9" />
+		<gpx x="3546" y="2233" f="8" />
+		<gpx x="3587" y="1878" f="7" />
+		<gpx x="3643" y="2576" f="5" />
+		<gpx x="3757" y="2485" f="6" />
+		<gpx x="3974" y="2114" f="12" />
+		<gpx x="3974" y="2394" f="13" />
+		<gpx x="4124" y="2579" f="2" />
+		<gpx x="4224" y="2517" f="4" />
+		<gpx x="4347" y="2537" f="3" />
+		<gpx x="4810" y="2577" f="5" />
+		<gpx x="4910" y="2521" f="4" />
+		<gpx x="4935" y="2527" f="3" />
+		<gpx x="5103" y="2522" f="4" />
+		<gpx x="5384" y="2545" f="3" />
+		<gpx x="5570" y="2580" f="2" />
+		<gpx x="5717" y="2544" f="0" />
+		<gpx x="5797" y="2621" f="1" />
+		<gpx x="6296" y="2521" f="4" />
+		<gpx x="6353" y="2577" f="5" />
+		<gpx x="6419" y="2483" f="6" />
+		<gpx x="6537" y="2547" sx="1.09091" f="3" />
+		<gpx x="6604" y="1013" f="14" />
+		<gpx x="6606" y="1499" f="14" />
+		<gpx x="6609" y="2454" f="14" />
+		<gpx x="6610" y="569" f="14" />
+		<gpx x="6621" y="1986" f="14" />
+		<gpx x="6712" y="1248" f="14" />
+		<gpx x="6714" y="2545" f="3" />
+		<gpx x="6718" y="804" f="14" />
+		<gpx x="6718" y="1747" f="15" />
+		<gpx x="6722" y="2216" f="14" />
+		<gpx x="6794" y="1499" f="15" />
+		<gpx x="6799" y="1012" f="14" />
+		<gpx x="6800" y="2455" f="14" />
+		<gpx x="6805" y="568" f="14" />
+		<gpx x="6816" y="1985" f="14" />
+		<gpx x="7015" y="2530" f="3" />
+		<gpx x="7027" y="1747" f="14" />
+		<gpx x="7036" y="1257" f="15" />
+		<gpx x="7042" y="813" f="15" />
+		<gpx x="7058" y="2221" f="15" />
+		<gpx x="7228" y="2540" f="3" />
+		<gpx x="7263" y="1014" f="14" />
+		<gpx x="7265" y="1500" f="14" />
+		<gpx x="7269" y="570" f="14" />
+		<gpx x="7280" y="1987" f="14" />
+		<gpx x="7309" y="2451" f="14" />
+		<gpx x="7377" y="1253" f="14" />
+		<gpx x="7383" y="809" f="14" />
+		<gpx x="7383" y="1741" f="15" />
+		<gpx x="7391" y="2226" f="15" />
+		<gpx x="7456" y="1501" f="14" />
+		<gpx x="7459" y="1013" f="15" />
+		<gpx x="7465" y="569" f="15" />
+		<gpx x="7471" y="1988" f="14" />
+		<gpx x="7533" y="2452" f="14" />
+		<gpx x="7631" y="2538" f="3" />
+		<gpx x="9981" y="2554" f="16" />
+		<gpx x="10331" y="2578" f="1" />
+	</layer>
+	<layer type="cell" name="out_tiles" cols="45" rows="12" tileW="240" tileH="240" map="mc_map_lvl02_out_tiles" width="10800" height="2880" >
+		<set name="mct_lvl02_out_tiles" />
+		<tile set="0" frame="4" />
+		<tile set="0" frame="3" />
+		<tile set="0" frame="2" />
+		<tile set="0" frame="27" />
+		<tile set="0" frame="28" />
+		<tile set="0" frame="29" />
+		<tile set="0" frame="38" />
+		<tile set="0" frame="39" />
+		<tile set="0" frame="37" />
+		<tile set="0" frame="53" />
+		<tile set="0" frame="55" />
+		<tile set="0" frame="56" />
+		<tile set="0" frame="54" />
+		<tile set="0" frame="61" />
+		<tile set="0" frame="60" />
+		<tile set="0" frame="5" />
+		<tile set="0" frame="7" />
+		<tile set="0" frame="6" />
+		<tile set="0" frame="24" />
+		<tile set="0" frame="25" />
+		<tile set="0" frame="26" />
+		<tile set="0" frame="34" />
+		<tile set="0" frame="35" />
+		<tile set="0" frame="40" />
+		<tile set="0" frame="49" />
+		<tile set="0" frame="47" />
+		<tile set="0" frame="57" />
+		<tile set="0" frame="51" />
+		<tile set="0" frame="46" />
+		<tile set="0" frame="52" />
+		<tile set="0" frame="36" />
+		<tile set="0" frame="12" />
+		<tile set="0" frame="19" />
+		<tile set="0" frame="14" />
+		<tile set="0" frame="59" />
+		<tile set="0" frame="11" />
+		<tile set="0" frame="8" />
+		<tile set="0" frame="64" />
+		<tile set="0" frame="9" />
+		<tile set="0" frame="10" />
+		<tile set="0" frame="13" />
+		<tile set="0" frame="15" />
+		<tile set="0" frame="16" />
+		<tile set="0" frame="17" />
+		<tile set="0" frame="18" />
+		<tile set="0" frame="20" />
+		<tile set="0" frame="22" />
+		<tile set="0" frame="21" />
+		<tile set="0" frame="23" />
+		<tile set="0" frame="30" />
+		<tile set="0" frame="31" />
+		<tile set="0" frame="58" />
+		<tile set="0" frame="33" />
+		<tile set="0" frame="41" />
+		<tile set="0" frame="42" />
+		<tile set="0" frame="43" />
+		<tile set="0" frame="44" />
+		<tile set="0" frame="62" />
+		<tile set="0" frame="63" />
+	</layer>
+	<layer type="collision" name="in_collisions" cols="540" rows="144" tileW="20" tileH="20" map="mc_map_lvl02_in_collisions" width="10800" height="2880" >
+	</layer>
+	<layer type="sprites" name="in_sprites" width="10800" height="2880" >
+		<set name="mcs_lvl02_in_sprites" />
+		<gpx x="393" y="1275" sx="0.917031" sy="0.916667" f="0" />
+		<gpx x="397" y="2077" sx="0.925764" sy="0.933333" f="0" />
+		<gpx x="398" y="2492" sx="1.95" sy="1.74468" f="1" />
+		<gpx x="432" y="925" f="2" />
+		<gpx x="442" y="1738" f="3" />
+		<gpx x="596" y="2527" f="2" />
+		<gpx x="609" y="1075" sx="0.899563" sy="0.925" f="4" />
+		<gpx x="614" y="1878" sy="0.958333" f="4" />
+		<gpx x="620" y="1325" f="2" />
+		<gpx x="634" y="2129" f="2" />
+		<gpx x="655" y="432" f="5" />
+		<gpx x="659" y="1423" f="5" />
+		<gpx x="702" y="704" f="5" />
+		<gpx x="713" y="2223" f="5" />
+		<gpx x="856" y="1024" f="5" />
+		<gpx x="862" y="1423" f="5" />
+		<gpx x="869" y="1823" f="5" />
+		<gpx x="891" y="430" f="5" />
+		<gpx x="900" y="703" f="5" />
+		<gpx x="904" y="2126" f="2" />
+		<gpx x="931" y="1726" f="2" />
+		<gpx x="950" y="2222" f="5" />
+		<gpx x="981" y="887" sx="1.95" sy="1.6383" f="1" />
+		<gpx x="1004" y="2527" f="2" />
+		<gpx x="1043" y="785" sx="1.2" sy="1.27536" f="6" />
+		<gpx x="1071" y="2276" sx="0.951965" sy="0.933333" f="0" />
+		<gpx x="1074" y="1477" sx="0.908297" sy="0.916666" f="0" />
+		<gpx x="1076" y="1823" f="5" />
+		<gpx x="1115" y="1726" f="2" />
+		<gpx x="1128" y="428" f="5" />
+		<gpx x="1161" y="924" sx="1.2" sy="1.27536" f="6" />
+		<gpx x="1270" y="2478" sx="0.975257" sy="0.984589" f="4" />
+		<gpx x="1286" y="1677" sx="0.943231" sy="0.941667" f="4" />
+		<gpx x="1304" y="1023" f="5" />
+		<gpx x="1304" y="1327" f="2" />
+		<gpx x="1319" y="704" f="5" />
+		<gpx x="1995" y="2193" f="7" />
+		<gpx x="2008" y="1846" f="8" />
+		<gpx x="2054" y="2233" sx="0.931678" sy="1.07802" f="9" />
+		<gpx x="2081" y="2482" f="10" />
+		<gpx x="2106" y="1856" f="7" />
+		<gpx x="2161" y="2124" f="11" />
+		<gpx x="2201" y="2494" f="12" />
+		<gpx x="2238" y="1863" sx="0.750001" sy="0.785" f="13" />
+		<gpx x="2273" y="2092" sx="1.1871" sy="1.19277" f="14" />
+		<gpx x="2361" y="2492" f="15" />
+		<gpx x="2394" y="2204" f="16" />
+		<gpx x="2420" y="1953" f="17" />
+		<gpx x="2558" y="2498" f="18" />
+		<gpx x="2609" y="2356" sx="0.929032" sy="0.951807" f="19" />
+		<gpx x="2621" y="1750" f="20" />
+		<gpx x="2625" y="1938" f="18" />
+		<gpx x="2718" y="2328" f="21" />
+		<gpx x="2754" y="2111" f="22" />
+		<gpx x="2828" y="2491" sx="1.05806" sy="1.03614" f="19" />
+		<gpx x="2853" y="1922" f="10" />
+		<gpx x="2871" y="2132" f="7" />
+		<gpx x="2902" y="2291" f="23" />
+		<gpx x="3002" y="1930" sx="1.09677" sy="1.10843" f="14" />
+		<gpx x="3023" y="1760" f="23" />
+		<gpx x="3094" y="2492" sx="1.03226" sy="1.04819" f="14" />
+		<gpx x="3121" y="2148" f="15" />
+		<gpx x="3138" y="1954" f="22" />
+		<gpx x="3202" y="2330" f="21" />
+		<gpx x="3232" y="1772" sx="1.1871" sy="1.16867" f="14" />
+		<gpx x="3311" y="2357" sx="0.954838" sy="0.891566" f="14" />
+		<gpx x="3329" y="1608" f="21" />
+		<gpx x="3361" y="2032" f="17" />
+		<gpx x="3401" y="2483" f="16" />
+		<gpx x="3464" y="2251" f="7" />
+		<gpx x="3521" y="1867" sx="0.775" sy="0.785" f="24" />
+		<gpx x="3641" y="2436" f="20" />
+		<gpx x="3641" y="2515" f="22" />
+		<gpx x="3656" y="2018" f="7" />
+		<gpx x="3659" y="2245" f="11" />
+		<gpx x="4382" y="1823" f="5" />
+		<gpx x="4385" y="1429" f="7" />
+		<gpx x="4397" y="2124" f="11" />
+		<gpx x="4474" y="1279" sx="0.934498" sy="0.925" f="0" />
+		<gpx x="4478" y="2079" sx="0.960699" sy="0.941667" f="0" />
+		<gpx x="4484" y="1727" f="2" />
+		<gpx x="4521" y="2548" f="25" />
+		<gpx x="4522" y="2223" f="5" />
+		<gpx x="4608" y="874" sx="0.925762" sy="0.933333" f="4" />
+		<gpx x="4677" y="1423" f="5" />
+		<gpx x="4681" y="2222" f="5" />
+		<gpx x="4685" y="1875" sx="0.960699" sy="0.95" f="4" />
+		<gpx x="4687" y="2126" f="2" />
+		<gpx x="4691" y="1076" sx="0.925764" sy="0.941667" f="4" />
+		<gpx x="4693" y="1350" f="25" />
+		<gpx x="4762" y="1723" f="11" />
+		<gpx x="4836" y="1300" f="7" />
+		<gpx x="4838" y="1423" f="5" />
+		<gpx x="4838" y="2144" f="3" />
+		<gpx x="4841" y="2223" f="5" />
+		<gpx x="4859" y="1023" f="5" />
+		<gpx x="4930" y="1335" f="3" />
+		<gpx x="4934" y="2126" f="8" />
+		<gpx x="4969" y="1750" f="25" />
+		<gpx x="4970" y="1823" f="5" />
+		<gpx x="4997" y="1422" f="5" />
+		<gpx x="4999" y="2529" f="2" />
+		<gpx x="5052" y="1327" f="2" />
+		<gpx x="5093" y="2150" f="25" />
+		<gpx x="5099" y="1023" f="5" />
+		<gpx x="5110" y="1823" f="5" />
+		<gpx x="5162" y="1697" f="7" />
+		<gpx x="5268" y="1815" f="5" />
+		<gpx x="5316" y="1478" sx="0.934498" sy="0.933333" f="0" />
+		<gpx x="5317" y="2278" sx="0.925764" sy="0.916667" f="0" />
+		<gpx x="5333" y="1747" f="25" />
+		<gpx x="5337" y="1023" f="5" />
+		<gpx x="5390" y="877" sx="0.925764" sy="0.933333" f="0" />
+		<gpx x="5426" y="1815" f="5" />
+		<gpx x="5513" y="1326" f="8" />
+		<gpx x="5523" y="2477" sx="0.925764" sy="0.916667" f="4" />
+		<gpx x="5526" y="1678" sx="0.951966" sy="0.941667" f="4" />
+		<gpx x="5559" y="2223" f="5" />
+		<gpx x="6468" y="2487" sx="1.95" sy="1.6383" f="1" />
+		<gpx x="6494" y="2177" sx="1.07097" sy="1.06024" f="19" />
+		<gpx x="6495" y="1214" sx="1.08387" sy="1.08434" f="19" />
+		<gpx x="6497" y="896" sx="1.10968" sy="1.10843" f="19" />
+		<gpx x="6499" y="1859" sx="1.09678" sy="1.12048" f="19" />
+		<gpx x="6588" y="1738" f="7" />
+		<gpx x="6702" y="2306" f="7" />
+		<gpx x="6704" y="1696" sx="1.07097" sy="1.08434" f="14" />
+		<gpx x="6705" y="736" sx="1.05806" sy="1.03614" f="14" />
+		<gpx x="6706" y="1055" sx="1.05806" sy="1.06024" f="14" />
+		<gpx x="6706" y="2015" sx="1.07097" sy="1.06024" f="14" />
+		<gpx x="7079" y="2067" f="7" />
+		<gpx x="7292" y="1375" sx="1.04516" sy="1.03614" f="19" />
+		<gpx x="7292" y="2333" sx="1.04516" sy="1.04819" f="19" />
+		<gpx x="7293" y="1697" sx="1.03226" sy="1.06024" f="19" />
+		<gpx x="7356" y="943" f="6" />
+		<gpx x="7409" y="1980" f="7" />
+		<gpx x="7505" y="1534" sx="1.04516" sy="1.03614" f="14" />
+		<gpx x="7507" y="1854" sx="1.05806" sy="1.07229" f="14" />
+		<gpx x="7509" y="2495" sx="1.12258" sy="1.12048" f="14" />
+		<gpx x="7606" y="1421" f="7" />
+		<gpx x="7612" y="1104" f="7" />
+		<gpx x="7614" y="1886" f="7" />
+		<gpx x="8406" y="2154" f="7" />
+		<gpx x="8596" y="1686" sx="1.04348" sy="1.19149" f="9" />
+		<gpx x="8838" y="1531" sx="1.13043" sy="1.24823" f="9" />
+		<gpx x="8923" y="1367" sx="1.05589" sy="1.20567" f="26" />
+		<gpx x="8927" y="1848" sx="1.13044" sy="1.23404" f="26" />
+		<gpx x="8996" y="1049" sx="1.09317" sy="1.21986" f="9" />
+	</layer>
+	<layer type="cell" name="in_tiles" cols="135" rows="36" tileW="80" tileH="80" map="mc_map_lvl02_in_tiles" width="10800" height="2880" >
+		<set name="mct_lvl02_in_tiles" />
+		<tile set="0" frame="104" />
+		<tile set="0" frame="99" />
+		<tile set="0" frame="106" />
+		<tile set="0" frame="97" />
+		<tile set="0" frame="98" />
+		<tile set="0" frame="105" />
+		<tile set="0" frame="36" />
+		<tile set="0" frame="37" />
+		<tile set="0" frame="38" />
+		<tile set="0" frame="39" />
+		<tile set="0" frame="100" />
+		<tile set="0" frame="87" />
+		<tile set="0" frame="80" />
+		<tile set="0" frame="81" />
+		<tile set="0" frame="86" />
+		<tile set="0" frame="76" />
+		<tile set="0" frame="77" />
+		<tile set="0" frame="101" />
+		<tile set="0" frame="103" />
+		<tile set="0" frame="10" />
+		<tile set="0" frame="13" />
+		<tile set="0" frame="11" />
+		<tile set="0" frame="12" />
+		<tile set="0" frame="14" />
+		<tile set="0" frame="40" />
+		<tile set="0" frame="41" />
+		<tile set="0" frame="102" />
+		<tile set="0" frame="70" />
+		<tile set="0" frame="6" />
+		<tile set="0" frame="7" />
+		<tile set="0" frame="8" />
+		<tile set="0" frame="9" />
+		<tile set="0" frame="68" />
+		<tile set="0" frame="85" />
+		<tile set="0" frame="78" />
+		<tile set="0" frame="15" />
+		<tile set="0" frame="17" />
+		<tile set="0" frame="20" />
+		<tile set="0" frame="18" />
+		<tile set="0" frame="96" />
+		<tile set="0" frame="19" />
+		<tile set="0" frame="21" />
+		<tile set="0" frame="16" />
+		<tile set="0" frame="25" />
+		<tile set="0" frame="26" />
+		<tile set="0" frame="95" />
+		<tile set="0" frame="23" />
+		<tile set="0" frame="24" />
+		<tile set="0" frame="83" />
+		<tile set="0" frame="75" />
+		<tile set="0" frame="82" />
+		<tile set="0" frame="72" />
+		<tile set="0" frame="34" />
+		<tile set="0" frame="74" />
+		<tile set="0" frame="35" />
+		<tile set="0" frame="79" />
+		<tile set="0" frame="69" />
+		<tile set="0" frame="84" />
+		<tile set="0" frame="22" />
+		<tile set="0" frame="73" />
+		<tile set="0" frame="42" />
+		<tile set="0" frame="43" />
+		<tile set="0" frame="44" />
+		<tile set="0" frame="45" />
+		<tile set="0" frame="46" />
+		<tile set="0" frame="47" />
+		<tile set="0" frame="1" />
+		<tile set="0" frame="91" />
+		<tile set="0" frame="94" />
+		<tile set="0" frame="89" />
+		<tile set="0" frame="27" />
+		<tile set="0" frame="92" />
+		<tile set="0" frame="51" />
+		<tile set="0" frame="53" />
+		<tile set="0" frame="90" />
+		<tile set="0" frame="93" />
+		<tile set="0" frame="48" />
+		<tile set="0" frame="49" />
+		<tile set="0" frame="55" />
+		<tile set="0" frame="67" />
+		<tile set="0" frame="52" />
+		<tile set="0" frame="54" />
+		<tile set="0" frame="50" />
+		<tile set="0" frame="88" />
+		<tile set="0" frame="56" />
+		<tile set="0" frame="57" />
+		<tile set="0" frame="58" />
+		<tile set="0" frame="2" />
+		<tile set="0" frame="3" />
+		<tile set="0" frame="4" />
+		<tile set="0" frame="5" />
+		<tile set="0" frame="59" />
+		<tile set="0" frame="60" />
+		<tile set="0" frame="61" />
+		<tile set="0" frame="64" />
+		<tile set="0" frame="62" />
+		<tile set="0" frame="66" />
+		<tile set="0" frame="65" />
+	</layer>
+	<layer type="cell" name="background2" cols="12" rows="8" tileW="256" tileH="256" map="mc_map_lvl02_background2" width="2830" height="2200" >
+		<set name="mct_lvl02_background2" />
+		<tile set="0" frame="20" />
+		<tile set="0" frame="21" />
+		<tile set="0" frame="17" />
+		<tile set="0" frame="18" />
+		<tile set="0" frame="19" />
+		<tile set="0" frame="15" />
+		<tile set="0" frame="16" />
+		<tile set="0" frame="12" />
+		<tile set="0" frame="13" />
+		<tile set="0" frame="14" />
+		<tile set="0" frame="10" />
+		<tile set="0" frame="24" />
+		<tile set="0" frame="1" />
+		<tile set="0" frame="8" />
+		<tile set="0" frame="9" />
+		<tile set="0" frame="5" />
+		<tile set="0" frame="6" />
+		<tile set="0" frame="23" />
+		<tile set="0" frame="3" />
+		<tile set="0" frame="4" />
+	</layer>
+	<layer type="cell" name="background" cols="5" rows="8" tileW="256" tileH="256" map="mc_map_lvl02_background" width="1220" height="2048" >
+		<set name="mct_lvl02_background" />
+		<tile set="0" frame="33" />
+		<tile set="0" frame="34" />
+		<tile set="0" frame="35" />
+		<tile set="0" frame="36" />
+		<tile set="0" frame="37" />
+		<tile set="0" frame="28" />
+		<tile set="0" frame="29" />
+		<tile set="0" frame="30" />
+		<tile set="0" frame="31" />
+		<tile set="0" frame="32" />
+		<tile set="0" frame="23" />
+		<tile set="0" frame="24" />
+		<tile set="0" frame="25" />
+		<tile set="0" frame="26" />
+		<tile set="0" frame="27" />
+		<tile set="0" frame="18" />
+		<tile set="0" frame="19" />
+		<tile set="0" frame="20" />
+		<tile set="0" frame="21" />
+		<tile set="0" frame="22" />
+		<tile set="0" frame="13" />
+		<tile set="0" frame="14" />
+		<tile set="0" frame="15" />
+		<tile set="0" frame="16" />
+		<tile set="0" frame="17" />
+		<tile set="0" frame="8" />
+		<tile set="0" frame="9" />
+		<tile set="0" frame="10" />
+		<tile set="0" frame="11" />
+		<tile set="0" frame="12" />
+		<tile set="0" frame="3" />
+		<tile set="0" frame="4" />
+		<tile set="0" frame="5" />
+		<tile set="0" frame="6" />
+		<tile set="0" frame="7" />
+	</layer>
+</world>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<data>
+    <urls>urls.xml</urls>
+    <size>143335</size>
+    <useConsole>0</useConsole>
+    <traceLog>1</traceLog>
+    <appWidth>600</appWidth>
+    <appHeight>400</appHeight>
+    <framerate>30</framerate>
+    <quality>medium</quality>
+    <appName>Application_01</appName>
+</data>

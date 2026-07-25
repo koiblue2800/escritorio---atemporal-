@@ -1,0 +1,28 @@
+{"frames": {
+
+"bg_lose":
+{
+	"frame": {"x":1,"y":1,"w":600,"h":400},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":600,"h":400},
+	"sourceSize": {"w":600,"h":400}
+},
+"bg_win":
+{
+	"frame": {"x":603,"y":1,"w":600,"h":400},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":600,"h":400},
+	"sourceSize": {"w":600,"h":400}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "robin_end.png",
+	"format": "RGBA8888",
+	"size": {"w":1204,"h":402},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:ee2b9961c1b655876f13a1bd9ebd92a2:4c37a5b34bb497e6c7b20362951784e7:534660279d9e51ede659b3a65abb2e33$"
+}
+}

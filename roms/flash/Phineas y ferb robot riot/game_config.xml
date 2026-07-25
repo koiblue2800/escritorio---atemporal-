@@ -1,0 +1,1009 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Game Name:       Phineas & Ferb Robot Riot
+    Game ID:         phf_spl_str_robotriot
+    Version:         DVC (for Disney.com)
+    AS Version:      AS3
+    Game Size:       750x500
+    Game Studio:     The Usual Monkeys, LLC
+    Studio Producer: Patricia Wible (patricia@theusualmonkeys.com <http://theusualmonkeys.com> )
+    Flash Engineer:  Wayne Steinert (wayne@theusualmonkeys.com <http://theusualmonkeys.com> )
+    Disney Producer: Josh Horowitz (josh.x.horowitz.-nd@disney.com <http://disney.com> )
+    Date             12/01/2010
+-->
+<game_config>
+	<!-- Enable debug hot keys (Shift+0-9, Shift+T, Shift+W) -->
+	<Debug_Enable>false</Debug_Enable>
+	
+	<!-- Set music volume -->
+	<MUSIC_VOLUME>0.6</MUSIC_VOLUME>
+
+	<!-- Set music volume -->
+	<FX_VOLUME>0.75</FX_VOLUME>
+
+	<Intro>
+		<!-- Game menus -->
+		<Resource type="Class" id="Transition" url="./phf_spl_str_robotriot_ui.swf" />
+		<Resource type="Class" id="TITLE" url="./phf_spl_str_robotriot_ui.swf" />
+		<Resource type="Picture" id="TITLE_BG" url="./phf_spl_str_robotriot_title.jpg" />
+		
+		<Resource type="Class" id="MAP" url="./phf_spl_str_robotriot_ui.swf" />
+		<Resource type="Class" id="Map_Sequence_Level1" url="./phf_spl_str_robotriot_ui.swf" />
+		<Resource type="Class" id="Map_Sequence_Level2" url="./phf_spl_str_robotriot_ui.swf" />
+		<Resource type="Class" id="Map_Sequence_Level3" url="./phf_spl_str_robotriot_ui.swf" />
+		<Resource type="Class" id="Map_Sequence_Level4" url="./phf_spl_str_robotriot_ui.swf" />
+		<Resource type="Class" id="Map_Sequence_Level5" url="./phf_spl_str_robotriot_ui.swf" />
+		<Resource type="Class" id="Map_Sequence_Level6" url="./phf_spl_str_robotriot_ui.swf" />
+		<Resource type="Class" id="Map_Sequence_Level7" url="./phf_spl_str_robotriot_ui.swf" />
+		<Resource type="Class" id="Map_Sequence_Level8" url="./phf_spl_str_robotriot_ui.swf" />
+		<Resource type="Class" id="Map_Sequence_Level9" url="./phf_spl_str_robotriot_ui.swf" />
+		<Resource type="Class" id="Map_Sequence_Level10" url="./phf_spl_str_robotriot_ui.swf" />
+		
+		<Resource type="Class" id="Survival_Mode" url="./phf_spl_str_robotriot_ui.swf" />
+		<Resource type="Class" id="MENU" url="./phf_spl_str_robotriot_ui.swf" />
+		<Resource type="Class" id="Help_Screen" url="./phf_spl_str_robotriot_ui.swf" />
+		<Resource type="Class" id="GameUI" url="./phf_spl_str_robotriot_ui.swf" />
+		<Resource type="Class" id="Bar_Marker" url="./phf_spl_str_robotriot_ui.swf" />
+		<Resource type="Class" id="MESSAGE" url="./phf_spl_str_robotriot_ui.swf" />
+		<Resource type="Class" id="BIGMESSAGE" url="./phf_spl_str_robotriot_ui.swf" />
+		<Resource type="Class" id="POPUP" url="./phf_spl_str_robotriot_ui.swf" />
+		<Resource type="Class" id="End_Screen" url="./phf_spl_str_robotriot_ui.swf" />
+		<Resource type="Class" id="Ouch" url="./phf_spl_str_robotriot_ui.swf" />
+
+		<Resource type="Class" id="Intro_Scene" url="./phf_spl_str_robotriot_intro.swf" />
+		<Resource type="Sound" id="TitleMusic" url="./phf_spl_str_robotriot_intro.swf" />
+		<Resource type="Sound" id="BestFriend" url="./phf_spl_str_robotriot_intro.swf" />
+	</Intro>
+
+	<Resources>
+		
+		<Resource type="Class" id="PFBox" url="./phf_spl_str_robotriot_friends.swf" />
+		<Resource type="Class" id="Phinedroid" url="./phf_spl_str_robotriot_friends.swf" />
+		<Resource type="Class" id="Ferbot" url="./phf_spl_str_robotriot_friends.swf" />
+		
+		<Resource type="Class" id="STODoom" url="./phf_spl_str_robotriot_friends.swf" />
+		
+		<Resource type="Class" id="Block" url="./phf_spl_str_robotriot_friends.swf" />
+
+		<Resource type="Class" id="FSMilly" url="./phf_spl_str_robotriot_friends.swf" />
+		<Resource type="Class" id="FSKatie" url="./phf_spl_str_robotriot_friends.swf" />
+		<Resource type="Class" id="FSGinger" url="./phf_spl_str_robotriot_friends.swf" />
+		<Resource type="Class" id="FSHolly" url="./phf_spl_str_robotriot_friends.swf" />
+		<Resource type="Class" id="FSGretchen" url="./phf_spl_str_robotriot_friends.swf" />
+		<Resource type="Class" id="FSCandace" url="./phf_spl_str_robotriot_friends.swf" />
+		<Resource type="Class" id="FSBaseball" url="./phf_spl_str_robotriot_friends.swf" />
+
+		<Resource type="Class" id="AgentD" url="./phf_spl_str_robotriot_friends.swf" />
+		<Resource type="Class" id="AgentPanda" url="./phf_spl_str_robotriot_friends.swf" />
+		<Resource type="Class" id="AgentRat" url="./phf_spl_str_robotriot_friends.swf" />
+		
+		<Resource type="Class" id="Yogurt_Shooter" 	url="./phf_spl_str_robotriot_friends.swf" />
+		<Resource type="Class" id="Yogurt_Berry" 	url="./phf_spl_str_robotriot_friends.swf" />
+		<Resource type="Class" id="Yogurt_Blueberry" url="./phf_spl_str_robotriot_friends.swf" />
+		<Resource type="Class" id="Yogurt_Chocolate" url="./phf_spl_str_robotriot_friends.swf" />
+		<Resource type="Class" id="Yogurt_Strawberry" url="./phf_spl_str_robotriot_friends.swf" />
+		<Resource type="Class" id="Yogurt_Vanilla" 	url="./phf_spl_str_robotriot_friends.swf" />
+
+		<Resource type="Class" id="GoAwayinator" 	url="./phf_spl_str_robotriot_friends.swf" />
+		<Resource type="Class" id="GoAwayinator_Ray" url="./phf_spl_str_robotriot_friends.swf" />
+
+		<Resource type="Class" id="MCPlatypult" url="./phf_spl_str_robotriot_friends.swf" />
+		<Resource type="Class" id="ShuttleCock_EW" url="./phf_spl_str_robotriot_friends.swf" />
+		<Resource type="Class" id="ShuttleCock_NS" url="./phf_spl_str_robotriot_friends.swf" />
+
+		<Resource type="Class" id="Unicorn" url="./phf_spl_str_robotriot_friends.swf" />
+		<Resource type="Class" id="BowlingBall" url="./phf_spl_str_robotriot_friends.swf" />
+		<Resource type="Class" id="AgentRacoon" url="./phf_spl_str_robotriot_friends.swf" />
+		<Resource type="Class" id="AgentT" url="./phf_spl_str_robotriot_friends.swf" />
+		
+		<Resource type="Class" id="BullBot" url="./phf_spl_str_robotriot_friends.swf" />
+		<Resource type="Class" id="BullBot_Ferb" url="./phf_spl_str_robotriot_friends.swf" />
+
+		<Resource type="Class" id="FussballShooter" url="./phf_spl_str_robotriot_friends.swf" />
+		<Resource type="Class" id="Fussball" url="./phf_spl_str_robotriot_friends.swf" />
+		<Resource type="Class" id="Platybutt" url="./phf_spl_str_robotriot_friends.swf" />
+		<Resource type="Class" id="DogBot" url="./phf_spl_str_robotriot_friends.swf" />
+		<Resource type="Class" id="Shark" url="./phf_spl_str_robotriot_friends.swf" />
+		<Resource type="Class" id="Beak" url="./phf_spl_str_robotriot_friends.swf" />
+		<Resource type="Class" id="Rollercoaster_1" url="./phf_spl_str_robotriot_friends.swf" />
+		<Resource type="Class" id="Rollercoaster_2" url="./phf_spl_str_robotriot_friends.swf" />
+		<Resource type="Class" id="Rollercoaster_3" url="./phf_spl_str_robotriot_friends.swf" />
+		<Resource type="Class" id="Rollercoaster_Baseball" url="./phf_spl_str_robotriot_friends.swf" />
+		
+		<Resource type="Class" id="Copter" url="./phf_spl_str_robotriot_friends.swf" />
+		
+		<Resource type="Class" id="Level_1" url="./phf_spl_str_robotriot_resources.swf" />
+		<Resource type="Class" id="Level_2" url="./phf_spl_str_robotriot_resources.swf" />
+		<Resource type="Class" id="Level_3" url="./phf_spl_str_robotriot_resources.swf" />
+		<Resource type="Class" id="Level_4" url="./phf_spl_str_robotriot_resources.swf" />
+		<Resource type="Class" id="Level_5" url="./phf_spl_str_robotriot_resources.swf" />
+		<Resource type="Class" id="Level_6" url="./phf_spl_str_robotriot_resources.swf" />
+		<Resource type="Class" id="Level_7" url="./phf_spl_str_robotriot_resources.swf" />
+		<Resource type="Class" id="Level_8" url="./phf_spl_str_robotriot_resources.swf" />
+		<Resource type="Class" id="Level_9" url="./phf_spl_str_robotriot_resources.swf" />
+		<Resource type="Class" id="Level_10" url="./phf_spl_str_robotriot_resources.swf" />
+
+		<Resource type="Class" id="Entry" url="./phf_spl_str_robotriot_resources.swf" />
+		<Resource type="Class" id="Exit" url="./phf_spl_str_robotriot_resources.swf" />
+		
+		<Resource type="Class" id="Normbot_Main" url="./phf_spl_str_robotriot_resources.swf" />
+		<Resource type="Class" id="Normbot_Head" url="./phf_spl_str_robotriot_resources.swf" />
+		<Resource type="Class" id="Normbot_Laser" url="./phf_spl_str_robotriot_resources.swf" />
+		<Resource type="Class" id="Normbot_Laser_Zap" url="./phf_spl_str_robotriot_resources.swf" />
+
+		<Resource type="Class" id="AgentP_Intro" url="./phf_spl_str_robotriot_platyborg.swf" />
+		<Resource type="Class" id="Platyborg_Intro" url="./phf_spl_str_robotriot_platyborg.swf" />
+		<Resource type="Class" id="Platyborg_Attack_1" url="./phf_spl_str_robotriot_platyborg.swf" />
+		<Resource type="Class" id="Platyborg_Attack_2" url="./phf_spl_str_robotriot_platyborg.swf" />
+		<Resource type="Class" id="Platyborg_VS_agentP_MC_1" url="./phf_spl_str_robotriot_platyborg.swf" />
+		<Resource type="Class" id="Platyborg_VS_agentP_MC_2" url="./phf_spl_str_robotriot_platyborg.swf" />
+		
+		<Resource type="Sound" id="Bang" url="./phf_spl_str_robotriot_effects.swf" />
+		<Resource type="Sound" id="Pew" url="./phf_spl_str_robotriot_effects.swf" />
+		<Resource type="Sound" id="Chopper" url="./phf_spl_str_robotriot_effects.swf" />
+		<Resource type="Sound" id="Fart" url="./phf_spl_str_robotriot_effects.swf" />
+		<Resource type="Sound" id="GoAway" url="./phf_spl_str_robotriot_effects.swf" />
+		<Resource type="Sound" id="Impact" url="./phf_spl_str_robotriot_effects.swf" />
+		<Resource type="Sound" id="Junk" url="./phf_spl_str_robotriot_effects.swf" />
+		<Resource type="Sound" id="Laser" url="./phf_spl_str_robotriot_effects.swf" />
+		<Resource type="Sound" id="Saw" url="./phf_spl_str_robotriot_effects.swf" />
+		<Resource type="Sound" id="Slam" url="./phf_spl_str_robotriot_effects.swf" />
+
+		<Resource type="Sound" id="platypult_fire" url="./phf_spl_str_robotriot_effects.swf" />
+		<Resource type="Sound" id="platypult_hit" url="./phf_spl_str_robotriot_effects.swf" />
+		
+		<Resource type="Sound" id="baseballgun_load" url="./phf_spl_str_robotriot_effects.swf" />
+		<Resource type="Sound" id="baseballgun_fire" url="./phf_spl_str_robotriot_effects.swf" />
+		<Resource type="Sound" id="baseballgun_catch" url="./phf_spl_str_robotriot_effects.swf" />
+		
+		<Resource type="Sound" id="beak_walk_loop" url="./phf_spl_str_robotriot_effects.swf" />
+		<Resource type="Sound" id="beak_punch" url="./phf_spl_str_robotriot_effects.swf" />
+
+		<Resource type="Sound" id="pfbotloop" url="./phf_spl_str_robotriot_effects.swf" />
+		<Resource type="Sound" id="stampede_loop" url="./phf_spl_str_robotriot_effects.swf" />
+
+		<Resource type="Sound" id="Crunch" url="./phf_spl_str_robotriot_effects.swf" />
+		
+		<Resource type="Sound" id="dogbot_bark" url="./phf_spl_str_robotriot_effects.swf" />
+		<Resource type="Sound" id="dogbot_crush" url="./phf_spl_str_robotriot_effects.swf" />
+		
+		<Resource type="Sound" id="BowlDrop" url="./phf_spl_str_robotriot_effects.swf" />
+		<Resource type="Sound" id="BowlStrike" url="./phf_spl_str_robotriot_effects.swf" />
+		<Resource type="Sound" id="BowlingRollLoop" url="./phf_spl_str_robotriot_effects.swf" />
+
+		<Resource type="Sound" id="Dropped" url="./phf_spl_str_robotriot_effects.swf" />
+
+		<Resource type="Sound" id="NewUnit" url="./phf_spl_str_robotriot_effects.swf" />
+		<Resource type="Sound" id="Cheer" url="./phf_spl_str_robotriot_effects.swf" />
+		<Resource type="Sound" id="Awww" url="./phf_spl_str_robotriot_effects.swf" />
+		
+		<Resource type="Sound" id="click" url="./phf_spl_str_robotriot_effects.swf" />
+		<Resource type="Sound" id="rollover" url="./phf_spl_str_robotriot_effects.swf" />
+		<Resource type="Sound" id="tally" url="./phf_spl_str_robotriot_effects.swf" />
+
+		<Resource type="Sound" id="FGames" url="./phf_spl_str_robotriot_music.swf" />
+		<Resource type="Sound" id="GoPhineas" url="./phf_spl_str_robotriot_music.swf" />
+		<Resource type="Sound" id="Bully" url="./phf_spl_str_robotriot_music.swf" />
+		<Resource type="Sound" id="PhinFerbots" url="./phf_spl_str_robotriot_music.swf" />
+		<Resource type="Sound" id="Squirrels" url="./phf_spl_str_robotriot_music.swf" />
+		<Resource type="Sound" id="RunCandace" url="./phf_spl_str_robotriot_music.swf" />
+
+		<Resource type="Sound" id="ambience1" url="./phf_spl_str_robotriot_effects.swf" />
+		<Resource type="Sound" id="ambience2" url="./phf_spl_str_robotriot_effects.swf" />
+
+		
+	</Resources>
+
+	<!--
+		This binds artwork to class handlers within the game.  Most of these
+		will be exactly the same throughout the game.  If not, bind a different
+		class to the same artwork, or different artwork to the same class.
+		
+		SUPER skinnable
+
+		<tag> Identifier of class
+			@class="shoot"		Class name of code handler
+			@icon="iFireside"	Resource ID of icon
+			@clip="mcFireside"	Resource ID of MovieClip
+		</tag>
+		
+		Classes matching 'clip' by name will be hooked to the 'class' type 
+		in the game code when the level is loaded.  Additional properties can 
+
+		Re-specifying class information in a level will re-define attributes 
+		of a class.		
+		
+		-->
+	<Classes>
+
+		<!-- 
+			List of block items available for placement 
+		-->
+		<BARRICADE Class="Blocker" clip="Block" icon="Block" health="1.25" DROP_FX="Junk"/>
+
+		<!-- 
+			List of goodguy items available for placement 
+		-->
+		<PFSPAWN Class="SpawnBox" clip="PFBox" icon="PFBox" firepower="0.25" AMMO="Phinedroid,Ferbot"  BANG_FX="Slam"/>
+		<STOD Class="STOD" clip="STODoom" icon="STODoom" firepower="0.025" scale="1.5" RELOAD_TIME="3000" RANGE="75" RUNNINGFX="Saw" />
+		
+		<!-- Fireside girls! -->
+		<FSMilly Class="FSGirl" clip="FSMilly" 		icon="FSMilly" firepower="0.2" speed="90" scale="0.5" AMMO="FSBaseball" RELOAD_TIME="100" />
+		<FSKatie Class="FSGirl" clip="FSKatie" 		icon="FSKatie" firepower="0.2" speed="90" scale="0.5" AMMO="FSBaseball" RELOAD_TIME="100" />
+		<FSGinger Class="FSGirl" clip="FSGinger" 	icon="FSGinger" firepower="0.2" speed="90" scale="0.5" AMMO="FSBaseball" RELOAD_TIME="100" />
+		<FSHolly Class="FSGirl" clip="FSHolly" 		icon="FSHolly" firepower="0.2" speed="90" scale="0.5" AMMO="FSBaseball" RELOAD_TIME="100" />
+		<FSGretchen Class="FSGirl" clip="FSGretchen" icon="FSGretchen" firepower="0.2" speed="90" scale="0.5" AMMO="FSBaseball" RELOAD_TIME="100" />
+		<FSCandace Class="FSGirl" clip="FSCandace" 	icon="FSCandace" firepower="0.5" speed="90" scale="0.5" AMMO="FSBaseball" RELOAD_TIME="100" />
+		<!-- Agents! -->
+		<AgentD 	Class="FSGirl" clip="AgentD" 		icon="AgentD" firepower="0.5" speed="99" scale="0.5" AMMO="FSBaseball" RELOAD_TIME="100" />
+		<AgentPanda Class="FSGirl" clip="AgentPanda" 	icon="AgentPanda" firepower="0.5" speed="99" scale="0.5" AMMO="FSBaseball" RELOAD_TIME="100" />
+		<AgentRat 	Class="FSGirl" clip="AgentRat" 		icon="AgentR" firepower="0.5" speed="99" scale="0.5" AMMO="FSBaseball" RELOAD_TIME="100" />
+
+		
+		<TheBeak Class="TheBeak" clip="Beak" 		icon="TheBeak" firepower="1" speed="90" RANGE="75" scale="1" RELOAD_TIME="100" health="5" />
+		<YOGURT Class="FixedShooter" clip="Yogurt_Shooter" icon="Yogurt_Shooter" firepower="0.1" speed="90" RANGE="300" AMMO="Yogurt_Berry,Yogurt_Blueberry,Yogurt_Chocolate,Yogurt_Strawberry,Yogurt_Vanilla" SHOOTFX="Fart" />
+		<GoAwayinator Class="GoAwayinator" clip="GoAwayinator" icon="GoAwayinator" orientations="8" RANGE="125" RELOAD_TIME="2000" RAY="GoAwayinator_Ray" SHOOTFX="GoAway" />
+		<Platypult Class="Platypult" clip="MCPlatypult" icon="Platypult" firepower="0.6" speed="60" RANGE="250" DAMAGE_RADIUS="100" RELOAD_TIME="2000" scale="0.6" SHOOTFX="platypult_fire" IMPACTFX="platypult_hit" />
+
+		<!--
+			Emplacements
+		-->		
+		<FussballShooter Class="FussballGun" clip="FussballShooter" Z="3" firepower="0.5" speed="90" RANGE="1000" AMMO="Fussball"/>
+		<Platybutt Class="Platybutt" clip="Platybutt" firepower="1" RELOAD_TIME="500" BANG_FX="Slam" />
+		<DogBot Class="DogBot" clip="DogBot" firepower="1" RELOAD_TIME="250" INTRO_FX="dogbot_bark" BANG_FX="dogbot_crush" />
+		<SharkBot Class="SharkBot" clip="Shark" firepower="1" RELOAD_TIME="250" BANG_FX="Crunch" RANGE="100" SHAKE_RANGE="33" />
+		
+
+
+		<!-- 
+			Cross-traffic enters, destroys every badguy in their path, then 
+			exits.  Good guy obstacles cause them to change direction.
+		-->
+		<AgentRacoon Class="CrossTraffic" clip="AgentRacoon" speed="5" scale="0.75" RANGE="50" move="" dir="" hit="" unique="true" />
+		<AgentT Class="CrossTraffic" clip="AgentT" speed="5" scale="0.75" RANGE="50" move="" dir="" hit="" unique="true" />
+		<Unicorn Class="CrossTraffic" clip="Unicorn" speed="5" scale="0.75" RANGE="50" move="" dir="" hit="" unique="true" />
+		<BowlingBall Class="CrossTraffic" clip="BowlingBall" speed="3" scale="1" RANGE="50" move="BowlingRollLoop" changedir="BowlDrop" hit="BowlStrike" />
+		<BullBot_Ferb Class="CrossTraffic" clip="BullBot_Ferb" speed="5" scale="0.75" RANGE="50" dir="" hit="" move="stampede_loop" unique="true" />
+		<BullBot Class="CrossTraffic" clip="BullBot" speed="5" scale="0.75" RANGE="50" move="" dir="" hit="" />
+
+		<!--
+			List of badguy items to spawn 
+		-->
+		<ROBOT Class="Badguy" clip="Normbot_Head" health="0.5" value="3" points="50" speed="30"/>
+		<ROBOT Class="Badguy" clip="Normbot_Main" health="1" value="3" points="75" speed="35"/>
+		<ROBOT Class="Badguy" clip="Normbot_Laser" health="1" value="3" points="150" speed="25" firepower="0.125" SHOT_SPEED="30" AMMO="Normbot_Laser_Zap" RELOAD_TIME="1000"/>
+
+		<!--
+			List of level features 
+		-->
+		<Entry Class="Indicator" clip="Entry" TIME="3000" Z="-1" />
+		<Exit  Class="Indicator" clip="Exit"  TIME="3000" Z="-1" />
+
+		<Platyborg_Intro Class="AirAttackSurvey" clip="Platyborg_Intro" />
+
+		<AgentP_Intro Class="AirAttackAnimation" clip="AgentP_Intro" />
+		<ChaseBorg1 Class="AirAttackAnimation" clip="Platyborg_VS_agentP_MC_1" />
+		<ChaseBorg2 Class="AirAttackAnimation" clip="Platyborg_VS_agentP_MC_2" />
+		
+		<AttackBorg1 Class="DeathFromAbove" clip="Platyborg_Attack_1" DAMAGE_RADIUS="125" DAMAGE="2" />
+		<AttackBorg2 Class="DeathFromAbove" clip="Platyborg_Attack_2" DAMAGE_RADIUS="125" DAMAGE="2" />
+		
+		<RollerCoaster1 Class="RollerCoaster" clip="Rollercoaster_1" attack="fire" reset="10000" />
+		<RollerCoaster2 Class="RollerCoaster" clip="Rollercoaster_2" attack="fire1,fire2" reset="10000" />
+		<RollerCoaster2 Class="RollerCoaster" clip="Rollercoaster_3" attack="fire" reset="10000" />
+		
+	</Classes>
+
+	<DefaultLevelProps>
+		<!-- Map Cell WIDTH,HEIGHT in screen coordinate pixels -->
+		<CELL_SIZE>50,50</CELL_SIZE>
+	
+		<!-- Scale wave bar contents to time -->
+        <WAVE_BAR_SCALE>0.01</WAVE_BAR_SCALE>
+
+        <!-- Smooth acceleration when bar is moved quickly -->
+        <WAVE_BAR_LAG>0.1</WAVE_BAR_LAG>
+
+        <!-- How many Normbots can escape -->
+        <MAX_ESCAPES>4</MAX_ESCAPES>
+        
+        <!-- Sound to loop -->
+        <LOOP>""</LOOP>
+
+	    <!-- How much resources do we have -->
+	    <ROBOT_GUTS>100</ROBOT_GUTS>
+
+	    <!-- Credit for removing placed items... -->
+	    <CREDIT_VALUE>1</CREDIT_VALUE>
+
+	    <!-- We get full credit until this expires -->
+	    <CREDIT_TIMEOUT>10000</CREDIT_TIMEOUT>
+
+		<!-- List of bad-guys to randomly spawn - bad to worst -->
+		<SURVIVAL_BADS>Normbot_Head,Normbot_Main,Normbot_Laser</SURVIVAL_BADS>
+
+		<!-- Rate to increase badder bad-guy odds (against time) -->
+		<SURVIVAL_BADS_SCALE>0.99</SURVIVAL_BADS_SCALE>
+
+		<!-- Rate to initially spawn bad guys -->
+		<SURVIVAL_FREQUENCY_BEGIN>2500</SURVIVAL_FREQUENCY_BEGIN>
+
+		<!-- Rate to increase frequency of spawning (against time) -->
+		<SURVIVAL_FREQUENCY_SCALE>0.99</SURVIVAL_FREQUENCY_SCALE>
+
+		<!-- Maximum number of badguys to have hanging around at a time -->
+		<SURVIVAL_MAX_POPULATION>100</SURVIVAL_MAX_POPULATION>
+
+		<!-- Initial delay to give player a chance to set something up -->
+		<SURVIVAL_DELAY>15000</SURVIVAL_DELAY>
+
+		<!-- Do air attacks infrequently -->
+		<SURVIVAL_AIR_DELAY>30000</SURVIVAL_AIR_DELAY>
+		
+		<!-- But do them more often -->
+		<SURVIVAL_AIR_DELAY_REDUCTION>1000</SURVIVAL_AIR_DELAY_REDUCTION>
+
+		<!-- Skip air attacks unless user has sufficient funds to attempt recovery -->
+		<SURVIVAL_AIR_MINCASH>250</SURVIVAL_AIR_MINCASH>
+
+		<!-- Air defense from Perry -->
+		<AIR_DEFENSE_COST>75</AIR_DEFENSE_COST>
+		
+		<SURVIVAL_MS_VICTORY>600000</SURVIVAL_MS_VICTORY>
+		
+	</DefaultLevelProps>
+
+	<!--
+		Units for survival mode menu
+		(Overrides level 'placeable' for survival mode 
+	-->
+	<SURVIVAL_UNITS>
+		<place id="BARRICADE" cost="5" />
+		<place id="STOD" cost="25" />
+		<place id="PFSPAWN" cost="25" />
+		<place id="YOGURT" cost="25" />
+		<place id="FSMilly,FSKatie,FSGinger,FSHolly,FSGretchen,FSCandace,AgentD,AgentPanda,AgentRat" cost="30" />
+		<place id="TheBeak" cost="50" max_unit="1" />
+		<place id="GoAwayinator" cost="25" />
+		<place id="Platypult" cost="75" />
+	</SURVIVAL_UNITS>
+	
+	<!--
+		List of levels in the game
+	-->
+	<Levels>
+		<Level>
+			<!-- Resource ID for level -->
+			<ART>Level_1</ART>
+
+			<!-- Sequence for level intro animation -->
+			<SEQUENCE>Map_Sequence_Level1</SEQUENCE>
+			
+			<!-- Music track for this level -->
+			<MUSIC>GoPhineas</MUSIC>
+			
+			<!-- How many resources we start with -->
+			<ROBOT_GUTS>100</ROBOT_GUTS>
+
+			<!-- Place some defenders -->
+			<INTRO>L1_PLACE_UNITS</INTRO>
+			
+			<!--
+				Overrides to data in Classes for this Level
+				Each item should match the name of something declared in Classes, above
+				Attributes matching public variables (including MovieClip, etc.) will be set
+			-->
+			<overrides>
+			</overrides>
+		
+			<!-- 
+				List of goodguy items available for placement
+				cost: How many resources it costs
+				max: How many you're allowed to have (leave blank for no max)
+			-->
+			<placeable>
+				<place id="FSMilly,FSKatie" cost="30" />
+				<place mstime="30000" id="BARRICADE" cost="5" />
+				<place mstime="60000" id="YOGURT" cost="25" />
+				
+			</placeable>
+			
+			<!--
+				Waves contain lists of things to spawn, per wave of bad guys
+				icon="id" Resource ID for icon to identify wave in march UI
+				mstime="time" Milliseconds after level starts to spawn wave
+				goal="id" ID of goal position in level 
+				
+				Additional generic attributes may be applied to badguy instances in this wave
+			-->
+			<waves>
+				<intro icon="" mstime="0" />
+				<spawn id="Rollercoaster_1" mstime="0" />
+				<hurry INTRO="L1_HURRY" mstime="15000" />
+				<wave1 INTRO="L1_BARRICATES" icon="Bar_Marker" mstime="30000" goal="Goal" />
+				<spawn INTRO="L1_TRAFFIC" id="AgentT" mstime="40000" x="375" y="-360" />
+				<wave2 INTRO="L1_MORE" icon="Bar_Marker" mstime="60000" goal="Goal"  />
+				<spawn id="AgentRacoon" mstime="71000" x="825" y="175" />
+				<wave3 INTRO="L1_CLICK" icon="Bar_Marker" mstime="90000" goal="Goal"  />
+				<wave4 icon="Bar_Marker" mstime="120000" goal="Goal"  />
+				<spawn id="AgentT" mstime="125000" x="325" y="-175" />
+			</waves>
+
+		</Level>
+		<Level>
+			<!-- Resource ID for level -->
+			<ART>Level_2</ART>
+			
+			<!-- Sequence for level intro animation -->
+			<SEQUENCE>Map_Sequence_Level2</SEQUENCE>
+
+			<!-- Music track for this level -->
+			<MUSIC>RunCandace</MUSIC>
+			
+			<!-- How many resources we start with -->
+			<ROBOT_GUTS>100</ROBOT_GUTS>
+
+			<!-- Tell the user to experiment -->
+			<INTRO>L2_EXPERIMENT</INTRO>
+			
+			<!--
+				Overrides to data in Classes for this Level
+				Each item should match the name of something declared in Classes, above
+				Attributes matching public variables (including MovieClip, etc.) will be set
+			-->
+			<overrides>
+			</overrides>
+		
+			<!-- 
+				List of goodguy items available for placement
+				cost: How many resources it costs
+				max: How many you're allowed to have (leave blank for no max)
+			-->
+			<placeable>
+				<place id="BARRICADE" cost="5" />
+				<place id="STOD" cost="25" />
+				<place id="PFSPAWN" cost="25" />
+				<place id="YOGURT" cost="25" />
+				<place id="FSMilly,FSKatie,FSGinger,FSHolly,FSGretchen" cost="30" />
+			</placeable>
+			
+			<!--
+				Waves contain lists of things to spawn, per wave of bad guys
+				icon="id" Resource ID for icon to identify wave in march UI
+				mstime="time" Milliseconds after level starts to spawn wave
+				goal="id" ID of goal position in level 
+				
+				Additional generic attributes may be applied to badguy instances in this wave
+			-->
+			<waves>
+				<intro icon="" mstime="0" />
+				<wave1 icon="Bar_Marker" mstime="30000" goal="Goal" />
+				<spawn id="AgentRacoon" mstime="40000" x="575" y="575" />
+				<wave2 icon="Bar_Marker" mstime="60000" goal="Goal"  />
+				<spawn id="AgentT" mstime="65000" x="575" y="625" />
+				<wave3 icon="Bar_Marker" mstime="90000" goal="Goal"  />
+				<wave4 icon="Bar_Marker" mstime="120000" goal="Goal"  />
+				<spawn id="Unicorn" mstime="125000" x="825" y="225" />
+			</waves>
+		</Level>
+
+		<Level>
+			<!-- Resource ID for level -->
+			<ART>Level_3</ART>
+
+			<!-- Sequence for level intro animation -->
+			<SEQUENCE>Map_Sequence_Level3</SEQUENCE>
+			
+			<!-- Music track for this level -->
+			<MUSIC>GoPhineas</MUSIC>
+			
+			<!-- How many resources we start with -->
+			<ROBOT_GUTS>100</ROBOT_GUTS>
+
+			<!-- Tell us about... -->
+			<INTRO>L3_DOGBOT</INTRO>
+			
+			<!--
+				Overrides to data in Classes for this Level
+				Each item should match the name of something declared in Classes, above
+				Attributes matching public variables (including MovieClip, etc.) will be set
+			-->
+			<overrides>
+			</overrides>
+		
+			<!-- 
+				List of goodguy items available for placement
+				cost: How many resources it costs
+				max: How many you're allowed to have (leave blank for no max)
+			-->
+			<placeable>
+				<place id="BARRICADE" cost="5" />
+				<place id="STOD" cost="25" />
+				<place id="PFSPAWN" cost="25" />
+				<place id="YOGURT" cost="25" />
+				<place id="FSMilly,FSKatie,FSGinger,FSHolly,FSGretchen,FSCandace" cost="30" />
+			</placeable>
+
+			<!--
+				Waves contain lists of things to spawn, per wave of bad guys
+				icon="id" Resource ID for icon to identify wave in march UI
+				mstime="time" Milliseconds after level starts to spawn wave
+				goal="id" ID of goal position in level 
+				
+				Additional generic attributes may be applied to badguy instances in this wave
+				
+				Isabella shows up on her unicorn over and over for this.
+			-->
+			<waves>
+				<intro icon="" mstime="0" />
+				<spawn id="DogBot" x="496" y="205" mstime="0" />
+				<wave1 icon="Bar_Marker" mstime="30000" goal="Goal" />
+				<spawn id="Unicorn" mstime="40000" x="475" y="-75" />
+				<wave2 icon="Bar_Marker" mstime="60000" goal="Goal"  />
+				<spawn id="Unicorn" mstime="70000" x="-75" y="325" />
+				<wave3 icon="Bar_Marker" mstime="90000" goal="Goal"  />
+				<spawn id="Unicorn" mstime="100000" x="575" y="575" />
+				<wave4 icon="Bar_Marker" mstime="120000" goal="Goal"  />
+				<spawn id="Unicorn" mstime="130000" x="825" y="125" />
+			</waves>
+		</Level>
+		<Level>
+
+			<!-- Resource ID for level -->
+			<ART>Level_4</ART>
+
+			<!-- Sequence for level intro animation -->
+			<SEQUENCE>Map_Sequence_Level4</SEQUENCE>
+			
+			<!-- Music track for this level -->
+			<MUSIC>Bully</MUSIC>
+			
+			<!-- How many resources we start with -->
+			<ROBOT_GUTS>100</ROBOT_GUTS>
+
+
+			<!-- Tell us about... -->
+			<INTRO>L4_PLATYBUTT</INTRO>
+
+			
+			<!--
+				Overrides to data in Classes for this Level
+				Each item should match the name of something declared in Classes, above
+				Attributes matching public variables (including MovieClip, etc.) will be set
+			-->
+			<overrides>
+			</overrides>
+		
+			<!-- 
+				List of goodguy items available for placement
+				cost: How many resources it costs
+				max: How many you're allowed to have (leave blank for no max)
+			-->
+			<placeable>
+				<place id="BARRICADE" cost="5" />
+				<place id="STOD" cost="25" />
+				<place id="PFSPAWN" cost="25" />
+				<place id="YOGURT" cost="25" />
+				<place id="FSMilly,FSKatie,FSGinger,FSHolly,FSGretchen,FSCandace" cost="30" />
+			</placeable>
+			
+			<!--
+				Waves contain lists of things to spawn, per wave of bad guys
+				icon="id" Resource ID for icon to identify wave in march UI
+				mstime="time" Milliseconds after level starts to spawn wave
+				goal="id" ID of goal position in level 
+				
+				Additional generic attributes may be applied to badguy instances in this wave
+			-->
+			<waves>
+				<intro icon="" mstime="0" />
+				<spawn id="Platybutt" x="370" y="260" mstime="0" />
+				<wave1 icon="Bar_Marker" mstime="30000" goal="Goal" />
+				<spawn id="AgentT" mstime="40000" x="-75" y="125" />
+				<wave2 icon="Bar_Marker" mstime="50000" goal="Goal2"  />
+				<spawn id="Unicorn" mstime="60000" x="275" y="-75" />
+				<wave3 icon="Bar_Marker" mstime="70000" goal="Goal"  />
+				<spawn id="AgentRacoon" x="475" y="575" mstime="140000" />
+		
+				<spawn INTRO="L4_BORG" id="Platyborg_Intro" mstime="80000" />
+				<wave4 icon="Bar_Marker" mstime="85000" goal="Goal2"  />
+				<spawn id="Platyborg_VS_agentP_MC_1" mstime="90000" />
+				<spawn id="Unicorn" mstime="100000" x="825" y="125" />
+			</waves>
+
+		</Level>
+
+		<Level>
+			<!-- Resource ID for level -->
+			<ART>Level_5</ART>
+
+			<!-- Sequence for level intro animation -->
+			<SEQUENCE>Map_Sequence_Level5</SEQUENCE>
+			
+			<!-- Music track for this level -->
+			<MUSIC>FGames</MUSIC>
+			
+			<!-- How many resources we start with -->
+			<ROBOT_GUTS>75</ROBOT_GUTS>
+			
+			<!--
+				Overrides to data in Classes for this Level
+				Each item should match the name of something declared in Classes, above
+				Attributes matching public variables (including MovieClip, etc.) will be set
+			-->
+			<overrides>
+			</overrides>
+
+			<!-- 
+				List of goodguy items available for placement
+				cost: How many resources it costs
+				max: How many you're allowed to have (leave blank for no max)
+			-->
+			<placeable>
+				<place id="BARRICADE" cost="5" />
+				<place id="STOD" cost="25" />
+				<place id="PFSPAWN" cost="25" />
+				<place id="YOGURT" cost="25" />
+				<place id="FSMilly,FSKatie,FSGinger,FSHolly,FSGretchen,FSCandace" cost="30" />
+				<place id="TheBeak" cost="50" max_unit="1" />
+			</placeable>
+			
+			<!--
+				Waves contain lists of things to spawn, per wave of bad guys
+				icon="id" Resource ID for icon to identify wave in march UI
+				mstime="time" Milliseconds after level starts to spawn wave
+				goal="id" ID of goal position in level 
+				
+				Additional generic attributes may be applied to badguy instances in this wave
+			-->
+			<waves>
+				<intro icon="" mstime="0" />
+				<wave1 icon="Bar_Marker" mstime="30000" goal="Goal" />
+				<spawn id="AgentT" mstime="40000" x="175" y="-75" />
+				<wave2 icon="Bar_Marker" mstime="45000" goal="Goal2"  />
+				<wave3 icon="Bar_Marker" mstime="60000" goal="Goal"  />
+				<spawn INTRO="L5_FUSSBALL" id="FussballShooter" x="160" y="-13" mstime="68000" />
+				<spawn id="Platyborg_Intro" mstime="70000" />
+				<spawn id="Unicorn" mstime="75000" x="825" y="175" />
+				<wave4 icon="Bar_Marker" mstime="75000" goal="Goal2"  />
+				<spawn id="Platyborg_VS_agentP_MC_2" mstime="90000" />
+				<spawn id="AgentRacoon" x="825" y="325" mstime="95000" />
+			</waves>
+
+		</Level>
+
+		<Level>
+			<!-- Resource ID for level -->
+			<ART>Level_6</ART>
+
+			<!-- Sequence for level intro animation -->
+			<SEQUENCE>Map_Sequence_Level6</SEQUENCE>
+			
+			<!-- Music track for this level -->
+			<MUSIC>PhinFerbots</MUSIC>
+			
+			<!-- How many resources we start with -->
+			<ROBOT_GUTS>75</ROBOT_GUTS>
+
+			<!--
+				Overrides to data in Classes for this Level
+				Each item should match the name of something declared in Classes, above
+				Attributes matching public variables (including MovieClip, etc.) will be set
+			-->
+			<overrides>
+			</overrides>
+		
+			<!-- 
+				List of goodguy items available for placement
+				cost: How many resources it costs
+				max: How many you're allowed to have (leave blank for no max)
+			-->
+			<placeable>
+				<place id="BARRICADE" cost="5" />
+				<place id="STOD" cost="25" />
+				<place id="PFSPAWN" cost="25" />
+				<place id="YOGURT" cost="25" />
+				<place id="FSMilly,FSKatie,FSGinger,FSHolly,FSGretchen,FSCandace" cost="30" />
+				<place id="TheBeak" cost="50" max_unit="1" />
+				<place id="GoAwayinator" cost="25" />
+			</placeable>
+			
+			<!--
+				Waves contain lists of things to spawn, per wave of bad guys
+				icon="id" Resource ID for icon to identify wave in march UI
+				mstime="time" Milliseconds after level starts to spawn wave
+				goal="id" ID of goal position in level 
+				
+				Additional generic attributes may be applied to badguy instances in this wave
+			-->
+			<waves>
+				<intro icon="" mstime="0" />
+				<spawn id="Rollercoaster_3" mstime="0" />
+				<wave1 icon="Bar_Marker" mstime="30000" goal="Goal" />
+				<spawn id="AgentT" x="-75" y="125" mstime="40000" />
+				<wave2 icon="Bar_Marker" mstime="45000" goal="Goal"  />
+				<wave3 icon="Bar_Marker" mstime="60000" goal="Goal"  />
+				<spawn id="AgentRacoon" x="225" y="575" mstime="70000" />
+				<wave4 icon="Bar_Marker" mstime="75000" goal="Goal"  />
+			</waves>
+
+		</Level>
+
+		<Level>
+			<!-- Resource ID for level -->
+			<ART>Level_7</ART>
+			
+			<!-- Sequence for level intro animation -->
+			<SEQUENCE>Map_Sequence_Level7</SEQUENCE>
+
+			<!-- Music track for this level -->
+			<MUSIC>Squirrels</MUSIC>
+			
+			<!-- How many resources we start with -->
+			<ROBOT_GUTS>75</ROBOT_GUTS>
+
+			<!-- Tell us about... -->
+			<INTRO>L7_SHARK</INTRO>
+
+			<!--
+				Overrides to data in Classes for this Level
+				Each item should match the name of something declared in Classes, above
+				Attributes matching public variables (including MovieClip, etc.) will be set
+			-->
+			<overrides>
+			</overrides>
+		
+			<!-- 
+				List of goodguy items available for placement
+				cost: How many resources it costs
+				max: How many you're allowed to have (leave blank for no max)
+			-->
+			<placeable>
+				<place id="BARRICADE" cost="5" />
+				<place id="STOD" cost="25" />
+				<place id="PFSPAWN" cost="25" />
+				<place id="YOGURT" cost="25" />
+				<place id="FSMilly,FSKatie,FSGinger,FSHolly,FSGretchen,FSCandace" cost="30" />
+				<place id="TheBeak" cost="50" max_unit="1" />
+				<place id="GoAwayinator" cost="25" />
+			</placeable>
+			
+			<!--
+				Waves contain lists of things to spawn, per wave of bad guys
+				icon="id" Resource ID for icon to identify wave in march UI
+				mstime="time" Milliseconds after level starts to spawn wave
+				goal="id" ID of goal position in level 
+				
+				Additional generic attributes may be applied to badguy instances in this wave
+			-->
+			<waves>
+				<intro icon="" mstime="0" />
+				<spawn id="Shark" x="350" y="250" mstime="0" />
+				<wave1 icon="Bar_Marker" mstime="30000" goal="Goal" />
+				<spawn id="Unicorn" mstime="35000" x="825" y="125" />
+				<wave2 icon="Bar_Marker" mstime="45000" goal="Goal"  />
+				<spawn id="AgentT" x="-75" y="125" mstime="50000" />
+				<wave3 icon="Bar_Marker" mstime="60000" goal="Goal"  />
+				<spawn id="Platyborg_Intro" mstime="65000" />
+				<spawn id="AgentRacoon" x="225" y="575" mstime="70000" />
+				<wave4 icon="Bar_Marker" mstime="75000" goal="Goal"  />
+			</waves>
+
+		</Level>
+		
+		<Level>
+			<!-- Resource ID for level -->
+			<ART>Level_8</ART>
+			
+			<!-- Sequence for level intro animation -->
+			<SEQUENCE>Map_Sequence_Level8</SEQUENCE>
+			
+			<!-- Music track for this level -->
+			<MUSIC>RunCandace</MUSIC>
+			
+			<!-- How many resources we start with -->
+			<ROBOT_GUTS>75</ROBOT_GUTS>
+
+			<!--
+				Overrides to data in Classes for this Level
+				Each item should match the name of something declared in Classes, above
+				Attributes matching public variables (including MovieClip, etc.) will be set
+			-->
+			<overrides>
+			</overrides>
+		
+			<!-- 
+				List of goodguy items available for placement
+				cost: How many resources it costs
+				max: How many you're allowed to have (leave blank for no max)
+			-->
+			<placeable>
+				<place id="BARRICADE" cost="5" />
+				<place id="STOD" cost="25" />
+				<place id="PFSPAWN" cost="25" />
+				<place id="YOGURT" cost="25" />
+				<place id="FSMilly,FSKatie,FSGinger,FSHolly,FSGretchen,FSCandace,AgentD,AgentPanda,AgentRat" cost="30" />
+				<place id="TheBeak" cost="50" max_unit="1" />
+				<place id="GoAwayinator" cost="25" />
+				<place id="Platypult" cost="75" />
+			</placeable>
+			
+			<!--
+				Waves contain lists of things to spawn, per wave of bad guys
+				icon="id" Resource ID for icon to identify wave in march UI
+				mstime="time" Milliseconds after level starts to spawn wave
+				goal="id" ID of goal position in level 
+				
+				Additional generic attributes may be applied to badguy instances in this wave
+			-->
+			<waves>
+				<intro icon="" mstime="0" />
+				<wave1 icon="Bar_Marker" mstime="30000" goal="Goal" />
+				<spawn id="AgentRacoon"  mstime="40000" x="475" y="-125" />
+				<wave2 icon="Bar_Marker" mstime="50000" goal="Goal"  />
+				<spawn id="AgentT" mstime="55000" x="575" y="575" />
+				<spawn id="Platyborg_Intro" mstime="60000" />
+				<wave3 icon="Bar_Marker" mstime="70000" goal="Goal"  />
+				<wave4 icon="Bar_Marker" mstime="75000" goal="Goal"  />
+			</waves>
+
+		</Level>
+		
+		<Level>
+			<!-- Resource ID for level -->
+			<ART>Level_9</ART>
+			
+			<!-- Sequence for level intro animation -->
+			<SEQUENCE>Map_Sequence_Level9</SEQUENCE>
+			
+			<!-- How many resources we start with -->
+			<ROBOT_GUTS>75</ROBOT_GUTS>
+
+			<!-- Music track for this level -->
+			<MUSIC>FGames</MUSIC>
+			
+			<!--
+				Overrides to data in Classes for this Level
+				Each item should match the name of something declared in Classes, above
+				Attributes matching public variables (including MovieClip, etc.) will be set
+			-->
+			<overrides>
+			</overrides>
+		
+			<!-- 
+				List of goodguy items available for placement
+				cost: How many resources it costs
+				max: How many you're allowed to have (leave blank for no max)
+			-->
+			<placeable>
+				<place id="BARRICADE" cost="5" />
+				<place id="STOD" cost="25" />
+				<place id="PFSPAWN" cost="25" />
+				<place id="YOGURT" cost="25" />
+				<place id="FSMilly,FSKatie,FSGinger,FSHolly,FSGretchen,FSCandace,AgentD,AgentPanda,AgentRat" cost="30" />
+				<place id="TheBeak" cost="50" max_unit="1" />
+				<place id="GoAwayinator" cost="25" />
+				<place id="Platypult" cost="75" />
+			</placeable>
+			
+			<!--
+				Waves contain lists of things to spawn, per wave of bad guys
+				icon="id" Resource ID for icon to identify wave in march UI
+				mstime="time" Milliseconds after level starts to spawn wave
+				goal="id" ID of goal position in level 
+				
+				Additional generic attributes may be applied to badguy instances in this wave
+			-->
+			<waves>
+				<intro icon="" mstime="0" />
+				<spawn id="Rollercoaster_2" mstime="0" />
+				<wave1 icon="Bar_Marker" mstime="30000" goal="Goal" />
+				<spawn id="Platyborg_Intro" mstime="40000" />
+				<wave2 icon="Bar_Marker" mstime="45000" goal="Goal"  />
+				<spawn id="BowlingBall" x="275" y="600" mstime="50000" />
+				<spawn id="BowlingBall" x="175" y="-125" mstime="50000" />
+				<wave3 icon="Bar_Marker" mstime="60000" goal="Goal"  />
+				<spawn id="BowlingBall" x="-275" y="325" mstime="70000" />
+				<spawn id="BowlingBall" x="875" y="175" mstime="70000" />
+				<wave4 icon="Bar_Marker" mstime="75000" goal="Goal"  />
+			</waves>
+
+		</Level>
+		
+		<Level>
+			<!-- Resource ID for level -->
+			<ART>Level_10</ART>
+
+			<!-- Sequence for level intro animation -->
+			<SEQUENCE>Map_Sequence_Level10</SEQUENCE>
+
+			<!-- Music track for this level -->
+			<MUSIC>TitleMusic</MUSIC>
+			
+			<!-- How many resources we start with -->
+			<ROBOT_GUTS>75</ROBOT_GUTS>
+
+			<!--
+				Overrides to data in Classes for this Level
+				Each item should match the name of something declared in Classes, above
+				Attributes matching public variables (including MovieClip, etc.) will be set
+			-->
+			<overrides>
+			</overrides>
+		
+			<!-- 
+				List of goodguy items available for placement
+				cost: How many resources it costs
+				max: How many you're allowed to have (leave blank for no max)
+			-->
+			<placeable>
+				<place id="BARRICADE" cost="5" />
+				<place id="STOD" cost="25" />
+				<place id="PFSPAWN" cost="25" />
+				<place id="YOGURT" cost="25" />
+				<place id="FSMilly,FSKatie,FSGinger,FSHolly,FSGretchen,FSCandace,AgentD,AgentPanda,AgentRat" cost="30" />
+				<place id="TheBeak" cost="50" max_unit="1" />
+				<place id="GoAwayinator" cost="25" />
+				<place id="Platypult" cost="75" />
+			</placeable>
+			
+			<!--
+				Waves contain lists of things to spawn, per wave of bad guys
+				icon="id" Resource ID for icon to identify wave in march UI
+				mstime="time" Milliseconds after level starts to spawn wave
+				goal="id" ID of goal position in level 
+				
+				Additional generic attributes may be applied to badguy instances in this wave
+			-->
+			<waves>
+				<intro icon="" mstime="0" />
+				<wave1 icon="Bar_Marker" mstime="30000" goal="Goal" />
+				<wave2 icon="Bar_Marker" mstime="45000" goal="Goal2"  />
+				<spawn id="Platyborg_Intro" mstime="50000" />
+				<wave3 icon="Bar_Marker" mstime="60000" goal="Goal"  />
+				<wave4 icon="Bar_Marker" mstime="75000" goal="Goal2"  />
+				
+				<spawn id="BullBot" x="275" y="-130" mstime="85000" />
+				<spawn id="BullBot" x="325" y="-180" mstime="85001" />
+				<spawn id="BullBot" x="375" y="-130" mstime="85002" />
+				<spawn id="BullBot" x="425" y="-180" mstime="85003" />
+				<spawn id="BullBot" x="475" y="-130" mstime="85004" />
+				
+				<spawn id="BullBot" x="275" y="-300" mstime="85000" />
+				<spawn id="BullBot" x="325" y="-350" mstime="85001" />
+				<spawn id="BullBot_Ferb" x="375" y="-280" mstime="85002" />
+				<spawn id="BullBot" x="425" y="-350" mstime="85003" />
+				<spawn id="BullBot" x="475" y="-255" mstime="85004" />
+
+				<spawn id="BullBot" x="-75" y="125" mstime="95000" />
+				<spawn id="BullBot" x="-125" y="175" mstime="95001" />
+				<spawn id="BullBot" x="-75" y="225" mstime="95002" />
+				<spawn id="BullBot" x="-125" y="275" mstime="95003" />
+				<spawn id="BullBot" x="-75" y="325" mstime="95004" />
+				<spawn id="BullBot" x="-125" y="375" mstime="95004" />
+
+				<spawn id="BullBot" x="-225" y="125" mstime="95000" />
+				<spawn id="BullBot" x="-275" y="175" mstime="95001" />
+				<spawn id="BullBot" x="-225" y="225" mstime="95002" />
+				<spawn id="BullBot" x="-275" y="275" mstime="95003" />
+				<spawn id="BullBot" x="-225" y="325" mstime="95004" />
+				<spawn id="BullBot" x="-275" y="375" mstime="95004" />
+				
+				
+			</waves>
+
+		</Level>
+		
+	</Levels>
+
+	<text>
+		<!--
+			Here are the text strings
+
+			If you don't want them in a separate file, just remove the 
+			'XMLMerge' line and copy/paste them here.
+		-->
+		<XMLMerge url="./strings/strings.xml" />
+	</text>
+</game_config>
+

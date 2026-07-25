@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<data>
+    <!-- MAIN MENU-->
+    <text id="TXT_MM_TITLE_GAME"><![CDATA[TEENAGE WARRIORS]]></text>
+    <text id="TXT_MM_BTN_PLAY"><![CDATA[PLAY]]></text>
+    <text id="TXT_MM_BTN_INSTRUCTIONS"><![CDATA[INSTRUCTIONS]]></text>
+	
+    <!-- INSTRUCTIONS  -->
+    <text id="TXT_INS_TITLE"><![CDATA[INSTRUCTIONS]]></text>
+	<text id="TXT_INS_LINE_1"><![CDATA[Press and hold]]></text>
+    <text id="TXT_INS_LINE_2"><![CDATA[Attack]]></text>
+    <text id="TXT_INS_LINE_3"><![CDATA[Move]]></text>
+    <text id="TXT_INS_LINE_4"><![CDATA[Special Attack]]></text>
+    <text id="TXT_INS_LINE_5"><![CDATA[Jump (double tap to double jump)]]></text>
+    <text id="TXT_INS_LINE_6"><![CDATA[Enter buildings]]></text>
+    <text id="TXT_INS_LINE_7"><![CDATA[Health]]></text>
+    <text id="TXT_INS_LINE_8"><![CDATA[Collect 50= \n extra life]]></text>
+    <text id="TXT_INS_BNT_PLAY"><![CDATA[PLAY]]></text>
+
+    <!-- MAIN MENU POPUP -->
+    <text id="TXT_POPUP_EXIT"><![CDATA[EXIT]]></text>
+
+    <!-- TRY AGAIN -->
+    <text id="TXT_TRY_TITLE"><![CDATA[TRY AGAIN]]></text>
+    <text id="TXT_TRY_BTN_CONTINUE"><![CDATA[CONTINUE]]></text>
+    <text id="TXT_TRY_BTN_MENU"><![CDATA[MAIN MENU]]></text>
+
+    <!-- POPUP HELP -->
+    <text id="TXT_POPUP_HELP_INSTRUCTIONS"><![CDATA[INSTRUCTIONS]]></text>
+    <text id="TXT_POPUP_BTN_BACK"><![CDATA[BACK]]></text>
+
+    <!-- CUTSCENES -->
+    <text id="TXT_POPUP_BTN_NEXT"><![CDATA[NEXT]]></text>
+    <text id="TXT_POPUP_BTN_CONTINUE"><![CDATA[CONTINUE]]></text>
+
+    <!-- SELECT CHARACTER -->
+    <text id="TXT_TITLE_SELECT"><![CDATA[SELECT YOUR CHARACTER]]></text>
+    <text id="TXT_INFO_LANCE"><![CDATA[In the MANUS armor system, Lance has very powerful attacks best suited to intense, up-close combat.  \nHis power slash special attack can break through some types of doors.]]></text>
+    <text id="TXT_INFO_ILANA"><![CDATA[In the CORUS armor system, Ilana becomes a fast and versatile combatant with long-range attacks. \nHer electrostatic shield special attack can both protect her and damage her enemies.]]></text>
+
+    <!-- SCORE CARD -->
+    <text id="TXT_TITLE_SCORECARD"><![CDATA[LEVEL CLEAR!]]></text>
+    <text id="TXT_TITLE_SCORECARD_2"><![CDATA[CONGRATULATIONS!]]></text>
+    <text id="TXT_BTN_SC_CONTINUE"><![CDATA[CONTINUE]]></text>
+    <text id="TXT_BTN_SC_AGAIN"><![CDATA[PLAY AGAIN]]></text>
+    <text id="TXT_BTN_SC_OK"><![CDATA[OK]]></text>
+    <text id="TXT_INFO_ORBS"><![CDATA[Items collected]]></text>
+    <text id="TXT_INFO_MUTRADI"><![CDATA[Mutraddi Beasts \ndefeated]]></text>
+    <text id="TXT_INFO_EARTH"><![CDATA[Earthlings saved]]></text>
+    <text id="TXT_INFO_TOTAL_SCORE"><![CDATA[Total score]]></text>
+    <text id="TXT_INFO_MUTRADI_BOSS"><![CDATA[Mutraddi \nMega-Beast defeated]]></text>
+    <text id="TXT_INFO_MSG"><![CDATA[The Earth is saved!]]></text>
+
+    <!-- TRY AGAIN -->
+    <text id="TXT_TITLE_TRYAGAIN"><![CDATA[TRY AGAIN]]></text>
+    <text id="TXT_BTN_TRY_CONTINUE"><![CDATA[CONTINUE]]></text>
+    <text id="TXT_BTN_TRY_MENU"><![CDATA[MAIN MENU]]></text>
+
+    <!-- POPUP DIALOGUE -->
+    <text id="TXT_POP_ZONE_LIMITATION"><![CDATA[You can't go further until you rescue all humans!]]></text>
+	
+    <text id="TXT_POP_BNT_OK"><![CDATA[OK]]></text>
+    <text id="TXT_POP_BTS_LANCE_INTRO"><![CDATA[Lance! I activated my electrostatic shield to stop these Mutraddi beasts, but there are too many of them!]]></text>
+    <text id="TXT_POP_BTS_LANCE_END"><![CDATA[I’ll take care of it, Princess Ilana!]]></text>
+    <text id="TXT_POP_BTS_ILANA_INTRO"><![CDATA[Go ahead, Princess! I’ll try to hold them off for you.]]></text>
+    <text id="TXT_POP_BTS_ILANA_END"><![CDATA[Thanks, Lance. I’ll help you out!]]></text>
+
+    <text id="TXT_POP_SPRING"><![CDATA[I don't think you can break those doors, Ilana. \nUse your jump thrusters to look for another way around.]]></text>
+    <text id="TXT_POP_ZONE_TRAP"><![CDATA[It's a trap! Quick, take them out!]]></text>
+    <text id="TXT_POP_DESTROY_DOOR"><![CDATA[You can destroy these doors, Lance. \n "Z" to use your power slash special attack.]]></text>
+    <text id="TXT_POP_ILANA_SMALL"><![CDATA[Looks like you are too big to fit through here, Lance.  \n Maybe Ilana would be small enough.]]></text>
+    <text id="TXT_POP_SWITCH_DOOR_LANCE"><![CDATA[You won't fit through that hole, Lance. \nOnly Ilana can fit through them.]]></text>
+    <text id="TXT_POP_SWITCH_DOOR_ILANA"><![CDATA[You can fit through these holes, Ilana.]]></text>
+    <text id="TXT_POP_ZONESMALL_ILANA"><![CDATA[You can fit through these holes, Ilana, \nUse your electrostatic shield to pass through flames.]]></text>
+
+    <text id="TXT_POP_ZONE_FIRE_LANCE"><![CDATA[This place is collapsing! We must get Ilana out of here! Hurry, Lance!]]></text>
+    <text id="TXT_POP_ZONE_FIRE_ILANA"><![CDATA[This place is collapsing! We must reach the escape ship immediately. Hurry, princess!]]></text>
+	
+    <text id="TXT_POP_INTRO_DOOR"><![CDATA[While standing in front of a door, \npress “down arrow” to enter buildings.]]></text>
+    <text id="TXT_POP_BUILDING_ENTRY_LANCE"><![CDATA[Those dirty Mutraddi beasts are threatening Earthlings! \n Let's take them out!]]></text>
+    <text id="TXT_POP_BUILDING_ENTRY_ILANA"><![CDATA[Earthlings are in danger. \nWe must help them!]]></text>
+    <!--
+	<text id="TXT_POP_BUILDING_UP_LANCE"><![CDATA[A rift gate has been opened. \nGeneral Modula is sending his beasts to get you, Ilana. \nWe must fight back and protect the Earth!]]></text>
+    <text id="TXT_POP_BUILDING_UP_ILANA"><![CDATA[A rift gate has been opened. \nGeneral Modula is sending his beasts to get you, Ilana. \nWe must fight back and protect the Earth!]]></text>
+	-->
+    <text id="TXT_POP_BUILDING_DOWN_LANCE"><![CDATA[A rift gate has been opened. \nGeneral Modula is sending his beasts to get Ilana. \nWe must regroup at the bottom of this building!]]></text>
+    <text id="TXT_POP_BUILDING_DOWN_ILANA"><![CDATA[A rift gate has been opened. \nGeneral Modula is sending his beasts to get you, Ilana. \nWe must regroup at the bottom of this building!]]></text>
+    <text id="TXT_POP_BUILDING_OCTUS"><![CDATA[\nSym-bionic defense mode initiated. Octus unit, MAGNIFY!]]></text>
+    <text id="TXT_POP_BUILDING_LANCE"><![CDATA[That Mutraddi Mega-Beast is too strong, even for my MANUS armor. \nWe need to find another way to stop it.]]></text>
+    <text id="TXT_POP_BUILDING_ILANA"><![CDATA[We can’t defeat that Mutraddi Mega-Beast. It’s too powerful! There must be another way. The Earthlings are depending on us! ]]></text>
+    <text id="TXT_POP_ZONE_BATTLE_BOSS"><![CDATA[Mutraddi Mega-Beast located. Engaging battle. \nThe Titan can cover himself by pressing the "down arrow".]]></text>
+    <text id="TXT_POP_ALL_HUMANS_RESCUES"><![CDATA[NA_text]]></text>
+    <text id="TXT_POP_HUMANS_HELP"><![CDATA[HELP!!! \nSomebody help me! \nPlease save us!]]></text>
+    <text id="TXT_POP_ATTACK_G3_ILANA"><![CDATA[\nThe Earthlings are attacking us!]]></text>
+    <text id="TXT_POP_ATTACK_G3_LANCE"><![CDATA[\nAttacking us? We're trying to help them!]]></text>
+    <text id="TXT_POP_ATTACK_G3_OCTUS"><![CDATA[\nI don’t think they realize that.]]></text>
+    <text id="TXT_POP_ATTACK_BOSS"><![CDATA[\nMutraddi Mega-Beast located. Engaging battle.]]></text>
+    <text id="TXT_POP_DOOR_ILANA"><![CDATA[\nYou can’t pass through these doors, Ilana.]]></text>
+    <text id="TXT_POP_DOOR_LANCE"><![CDATA[\nYour MANUS armor can break cracked doors by touching them.]]></text>
+</data>

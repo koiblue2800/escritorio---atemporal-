@@ -1,0 +1,338 @@
+{
+  "resources": [
+    "sfx.ogg",
+    "sfx.mp3"
+  ],
+  "spritemap": {
+    "100_zbonus": {
+      "start": 0,
+      "end": 0.6530612244897959,
+      "loop": false
+    },
+    "101_zhit": {
+      "start": 2,
+      "end": 2.809795918367347,
+      "loop": false
+    },
+    "102_zshot": {
+      "start": 4,
+      "end": 4.731428571428571,
+      "loop": false
+    },
+    "103_zloop": {
+      "start": 6,
+      "end": 17.415510204081635,
+      "loop": true
+    },
+    "104_zboss": {
+      "start": 19,
+      "end": 30.415510204081635,
+      "loop": true
+    },
+    "105_zlose": {
+      "start": 32,
+      "end": 43.415510204081635,
+      "loop": true
+    },
+    "106_zwin": {
+      "start": 45,
+      "end": 56.415510204081635,
+      "loop": true
+    },
+    "96_zboom": {
+      "start": 58,
+      "end": 59.56734693877551,
+      "loop": false
+    },
+    "97_zboom3": {
+      "start": 61,
+      "end": 62.98530612244898,
+      "loop": false
+    },
+    "98_zpunch": {
+      "start": 64,
+      "end": 66.11591836734694,
+      "loop": false
+    },
+    "99_zfall": {
+      "start": 68,
+      "end": 70.50775510204082,
+      "loop": false
+    },
+    "bb_zbonus": {
+      "start": 72,
+      "end": 72.65306122448979,
+      "loop": false
+    },
+    "bb_zboom1": {
+      "start": 74,
+      "end": 75.56734693877551,
+      "loop": false
+    },
+    "bb_zdooropen": {
+      "start": 77,
+      "end": 80.5265306122449,
+      "loop": false
+    },
+    "bb_zhit": {
+      "start": 82,
+      "end": 82.80979591836734,
+      "loop": false
+    },
+    "bb_zhit2": {
+      "start": 84,
+      "end": 84.47020408163266,
+      "loop": false
+    },
+    "bb_zliftclose": {
+      "start": 86,
+      "end": 86.9404081632653,
+      "loop": false
+    },
+    "bb_zliftopen": {
+      "start": 88,
+      "end": 88.83591836734693,
+      "loop": false
+    },
+    "bb_zloop": {
+      "start": 90,
+      "end": 106.82285714285715,
+      "loop": true
+    },
+    "bb_ztransform": {
+      "start": 108,
+      "end": 108.15673469387755,
+      "loop": false
+    },
+    "bb_ztyping": {
+      "start": 110,
+      "end": 111.77632653061224,
+      "loop": false
+    },
+    "mm_zclick": {
+      "start": 113,
+      "end": 113.26122448979592,
+      "loop": false
+    },
+    "mm_zloop": {
+      "start": 115,
+      "end": 126.41551020408163,
+      "loop": true
+    },
+    "mm_zover": {
+      "start": 128,
+      "end": 128.15673469387755,
+      "loop": false
+    },
+    "rb_rico1": {
+      "start": 130,
+      "end": 130.54857142857142,
+      "loop": false
+    },
+    "rb_zbigexplosion": {
+      "start": 132,
+      "end": 134.22040816326532,
+      "loop": false
+    },
+    "rb_zbikeslow": {
+      "start": 136,
+      "end": 141.14612244897958,
+      "loop": false
+    },
+    "rb_zbikestop": {
+      "start": 143,
+      "end": 144.82857142857142,
+      "loop": false
+    },
+    "rb_zblast3": {
+      "start": 146,
+      "end": 147.01877551020408,
+      "loop": false
+    },
+    "rb_zbonus": {
+      "start": 149,
+      "end": 149.6530612244898,
+      "loop": false
+    },
+    "rb_zboom2": {
+      "start": 151,
+      "end": 152.28,
+      "loop": false
+    },
+    "rb_zboost": {
+      "start": 154,
+      "end": 155.12326530612245,
+      "loop": false
+    },
+    "rb_zboss": {
+      "start": 157,
+      "end": 172.12489795918367,
+      "loop": true
+    },
+    "rb_zbothit": {
+      "start": 174,
+      "end": 174.39183673469387,
+      "loop": false
+    },
+    "rb_zbump": {
+      "start": 176,
+      "end": 177.14938775510205,
+      "loop": false
+    },
+    "rb_zcarbump": {
+      "start": 179,
+      "end": 179.94040816326532,
+      "loop": false
+    },
+    "rb_zhc": {
+      "start": 181,
+      "end": 181.6530612244898,
+      "loop": false
+    },
+    "rb_zhcgun": {
+      "start": 183,
+      "end": 183.26122448979592,
+      "loop": false
+    },
+    "rb_zhitcar": {
+      "start": 185,
+      "end": 186.48897959183674,
+      "loop": false
+    },
+    "rb_zloop": {
+      "start": 188,
+      "end": 202.88979591836735,
+      "loop": true
+    },
+    "rb_zmissile": {
+      "start": 204,
+      "end": 205.0448979591837,
+      "loop": false
+    },
+    "rb_zmotor": {
+      "start": 207,
+      "end": 213.24326530612245,
+      "loop": true
+    },
+    "rb_zmotorjump": {
+      "start": 215,
+      "end": 218.13469387755103,
+      "loop": false
+    },
+    "rb_zrico2": {
+      "start": 220,
+      "end": 220.47020408163266,
+      "loop": false
+    },
+    "rb_zrico3": {
+      "start": 222,
+      "end": 222.6008163265306,
+      "loop": false
+    },
+    "rb_zshoot": {
+      "start": 224,
+      "end": 224.3134693877551,
+      "loop": false
+    },
+    "rb_zufo": {
+      "start": 226,
+      "end": 226.3657142857143,
+      "loop": false
+    },
+    "rv_zbonus": {
+      "start": 228,
+      "end": 228.6530612244898,
+      "loop": false
+    },
+    "rv_zboss": {
+      "start": 230,
+      "end": 249.12163265306123,
+      "loop": true
+    },
+    "rv_zhit": {
+      "start": 251,
+      "end": 251.80979591836734,
+      "loop": false
+    },
+    "rv_zloop": {
+      "start": 253,
+      "end": 274.4465306122449,
+      "loop": true
+    },
+    "rv_zrock": {
+      "start": 276,
+      "end": 278.06367346938777,
+      "loop": false
+    },
+    "rv_zshrink": {
+      "start": 280,
+      "end": 284.2318367346939,
+      "loop": false
+    },
+    "rv_zSpeaker": {
+      "start": 286,
+      "end": 287.09714285714284,
+      "loop": false
+    },
+    "rv_zsplash": {
+      "start": 289,
+      "end": 290.2538775510204,
+      "loop": false
+    },
+    "rv_ztv": {
+      "start": 292,
+      "end": 293.5412244897959,
+      "loop": false
+    },
+    "rv_zwater": {
+      "start": 295,
+      "end": 295.9926530612245,
+      "loop": false
+    },
+    "srb_zrico4": {
+      "start": 297,
+      "end": 297.4440816326531,
+      "loop": false
+    },
+    "st_blast1": {
+      "start": 299,
+      "end": 299.47020408163263,
+      "loop": false
+    },
+    "st_blast2": {
+      "start": 301,
+      "end": 302.3322448979592,
+      "loop": false
+    },
+    "st_bonus": {
+      "start": 304,
+      "end": 304.6530612244898,
+      "loop": false
+    },
+    "st_boom2": {
+      "start": 306,
+      "end": 307.28,
+      "loop": false
+    },
+    "st_boss": {
+      "start": 309,
+      "end": 323.55020408163267,
+      "loop": true
+    },
+    "st_hit": {
+      "start": 325,
+      "end": 325.80979591836734,
+      "loop": false
+    },
+    "st_loop": {
+      "start": 327,
+      "end": 341.78530612244896,
+      "loop": true
+    },
+    "st_wand": {
+      "start": 343,
+      "end": 344.0448979591837,
+      "loop": false
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{"frames": {
+
+"continue":
+{
+	"frame": {"x":1,"y":805,"w":151,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":151,"h":22},
+	"sourceSize": {"w":151,"h":22}
+},
+"LOSE":
+{
+	"frame": {"x":1,"y":1,"w":600,"h":400},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":600,"h":400},
+	"sourceSize": {"w":600,"h":400}
+},
+"startover":
+{
+	"frame": {"x":154,"y":805,"w":151,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":151,"h":22},
+	"sourceSize": {"w":151,"h":22}
+},
+"WIN":
+{
+	"frame": {"x":1,"y":403,"w":600,"h":400},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":600,"h":400},
+	"sourceSize": {"w":600,"h":400}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "bbend.png",
+	"format": "RGBA8888",
+	"size": {"w":602,"h":828},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:efd9aacae1c26ecf1e116a3224354907:99dd1d256181d53bd643a08723b2f6c2:acfd213eea058d771f462b18e001f872$"
+}
+}

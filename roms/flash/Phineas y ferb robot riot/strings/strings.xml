@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Game Name:       Phineas & Ferb Robot Riot
+    Game ID:         phf_spl_str_robotriot
+    Version:         DVC (for Disney.com)
+    AS Version:      AS3
+    Game Size:       750x500
+    Game Studio:     The Usual Monkeys, LLC
+    Studio Producer: Patricia Wible (patricia@theusualmonkeys.com <http://theusualmonkeys.com> )
+    Flash Engineer:  Wayne Steinert (wayne@theusualmonkeys.com <http://theusualmonkeys.com> )
+    Disney Producer: Josh Horowitz (josh.x.horowitz.-nd@disney.com <http://disney.com> )
+    Date             12/01/2010
+-->
+<strings>
+<!--
+	Translation notes
+
+	Strings in this file are html.  Be sure to wrap any text containing HTML
+	formatting with <![CDATA[]]>, or the text may be truncated, due to the way
+	that XML interprets tags in tags, versus strings.
+	
+	The cut scene word balloons have text fields as large as the bubbles them-
+	selves.  Generally, this text is centered, and vertically centered (i.e. 
+	if it's one or two lines, it should be centered, unless the artist has 
+	scaled the text, which buggers the calculation.)  Put manual line breaks
+	(i.e. <br/>) into the text to break the lines to conform to the balloon 
+	shapes.  
+	
+	Where text is 'too big', you can resize the font with the appropriate HTML
+	font tag.  
+	<TOO_BIG><![CDATA[<font size="8">Was too big, now very small</font>]]></TOO_BIG>
+
+	Text like '%TAGS%' should NOT be translated.  This is a placeholder where 
+	a value or string will be substituted into the string.
+
+	Where multiple copies of the same text identifier exist, the game 
+	automatically cycles through them, randomly.  For variety.
+-->
+
+	<!-- TITLE -->
+	<szTITLE><![CDATA[PHINEAS & FERB<br/>ROBOT RIOT]]></szTITLE>
+	<bPLAY>PLAY</bPLAY>
+
+	<!-- MAP -->
+	<szMap>MAP</szMap>
+	<szChooseLevel>CHOOSE AN AREA</szChooseLevel>
+	<level1>AREA 1</level1>
+	<level2>AREA 2</level2>
+	<level3>AREA 3</level3>
+	<level4>AREA 4</level4>
+	<level5>AREA 5</level5>
+	<level6>AREA 6</level6>
+	<level7>AREA 7</level7>
+	<level8>AREA 8</level8>
+	<level9>AREA 9</level9>
+	<level10>AREA 10</level10>
+	<szMapScore><![CDATA[<font color="#FFCC00">SCORE: %SCORE%</font>]]></szMapScore>
+
+	<leftColumn><![CDATA[<font size="28">SCORE:</font><br/>AREA:<br/>TIME:<br/>NORMBOTS:<br/>DEFENDERS:<br/>EXTRA GEARS:]]></leftColumn>
+	<rightColumn><![CDATA[<font size="28">%SCORE%</font><br/>%LEVEL%<br/>%MINUTES%:%SECONDS%<br/>%NORMBOTS%<br/>%UNITS%<br/>%GEARS%]]></rightColumn>
+	<title_win>NORMBOTS DEFEATED</title_win>
+	<title_fail>NORMBOTS VICTORIOUS</title_fail>
+
+	<!-- Only for new game (no previous run history) -->
+	<szMapIntro><![CDATA[Soon the<br/>Tri-State Area<br/>will be mine!]]></szMapIntro>
+
+	<!-- As many 'Darn, I lost' statements as you like -->	
+	<szMapWon><![CDATA[I can't believe I lost!]]></szMapWon>
+	<szMapWon><![CDATA[I lost!  I lost!<br/>I know!  MORE NORMBOTS!]]></szMapWon>
+	<szMapWon><![CDATA[Where's my warranty card?]]></szMapWon>
+	
+	<!-- As many 'Yay, I won' statements as you like -->	
+	<szMapLost><![CDATA[I WIN!  I WIN!]]></szMapLost>
+	<szMapLost><![CDATA[I WON!<br/>I'm a tactical genius!]]></szMapLost>
+	<szMapLost><![CDATA[I wonder what I'll do with all of those captured parts?]]></szMapLost>
+
+	<!-- Our forces -->
+	<OF_NORMBOTS><![CDATA[OUR FORCES:<br/><br/>PHASE 1<br/>NORMBOTS]]></OF_NORMBOTS>
+	<OF_NORMBOTS2><![CDATA[OUR FORCES:<br/><br/>PHASE 2<br/>NORMBOTS<br/><font size="23">(FASTER AND MEANER)</font>]]></OF_NORMBOTS2>
+	<OF_NORMBOTS3><![CDATA[OUR FORCES:<br/><br/>PHASE 3<br/>NORMBOTS<br/><font size="23">(REALLY NASTY)</font>]]></OF_NORMBOTS3>
+	<OF_PLATYBORG><![CDATA[OUR FORCES:<br/><br/>THE PLATYBORG]]></OF_PLATYBORG>
+
+	<szWARNING>WARNING</szWARNING>
+	<szWARNING_UNIT><![CDATA[WARNING:<br/><br/>THE RESISTANCE<br/>FIGHTERS<br/>HAVE A NEW<br/>SPECIAL WEAPON!]]></szWARNING_UNIT>
+
+	<NF_NSE><![CDATA[NORMBOTS ATTACK FROM THE<br/>NORTH, SOUTH AND EAST]]></NF_NSE>
+	<NF_NE><![CDATA[NORMBOTS ATTACK FROM THE<br/>NORTH AND EAST]]></NF_NE>
+	<NF_NS><![CDATA[NORMBOTS ATTACK FROM THE<br/>NORTH AND SOUTH]]></NF_NS>
+	<NF_NWS><![CDATA[NORMBOTS ATTACK FROM THE<br/>NORTH, WEST AND SOUTH]]></NF_NWS>
+	<NF_NES><![CDATA[NORMBOTS ATTACK FROM THE<br/>NORTH, EAST AND SOUTH]]></NF_NES>
+	<NF_NS><![CDATA[NORMBOTS ATTACK FROM THE<br/>NORTH AND SOUTH]]></NF_NS>
+	<NF_SWE><![CDATA[NORMBOTS ATTACK FROM THE<br/>SOUTH, WEST AND EAST]]></NF_SWE>
+	<NF_NW><![CDATA[NORMBOTS ATTACK FROM THE<br/>NORTH AND WEST]]></NF_NW>
+
+	<szSELF_DESTRUCT>SELF DESTRUCT</szSELF_DESTRUCT>
+	<szCONFIRM_DESTRUCT><![CDATA[THIS WILL RESET EVERYTHING!<br/><br/>ARE YOU SURE?]]></szCONFIRM_DESTRUCT>
+	
+	<!-- Game MODE -->
+	<szNormal><![CDATA[<font size="26">NORMAL MODE<br/></font>Limited waves of attack<br/>vs.<br/>Your Defenders]]></szNormal>
+	<bNormal>NORMAL</bNormal>	
+	<szSurvival><![CDATA[<font size="26">SURVIVAL MODE<br/></font>Ten minutes of attack<br/>vs.<br/>Your Defenders]]></szSurvival>
+	<szSurvivalDisabled><![CDATA[<font size="26">SURVIVAL MODE<br/></font><br/>Available when<br/>you complete this area]]></szSurvivalDisabled>
+	<bSurvival>SURVIVAL</bSurvival>	
+	
+	
+	<!-- HUD -->	
+	<bMenu>MENU</bMenu>
+	<levelnum>AREA %LEVEL%</levelnum>
+	<szSCORE>SCORE</szSCORE>
+	<iScore>0</iScore>
+	<survival_timer>SURVIVAL: %MM%:%SS%</survival_timer>
+
+	<!-- Pause Menu Popup -->
+	<szMenu>MENU</szMenu>
+	<szRUSURE>Are you sure you want to quit?</szRUSURE>
+	<btn_continue>RESUME</btn_continue>
+
+	<bNext>NEXT!</bNext>	
+	
+	<!-- Tell us about blocking -->
+	<szDETOUR>IF YOU BLOCK THE STREET, NORMBOTS WILL BYPASS THIS POSITION!</szDETOUR>
+	<szDETOUR>WE ARE DESTROYING NORMBOTS, NOT DETOURING THEM!</szDETOUR>
+	<szDETOUR>WRECKING NORMBOTS IS MORE FUN THAN SENDING THEM ELSEWHERE!</szDETOUR>
+	
+	<!-- Inter-level menu -->
+	<szLevelFmt>AREA %LEVEL%</szLevelFmt>
+	<szScoreFmt><![CDATA[<font color="#ffffff">SCORE:</font> <font color="#ffff00">%SCORE%</font>]]></szScoreFmt>
+	<szNewHeroes><![CDATA[New heroes have been added to your team!]]></szNewHeroes>
+	<szGamma><![CDATA[Gamma Monsters made it through!]]></szGamma>
+	<btn_quit>QUIT</btn_quit>
+	<btn_done>CONTINUE</btn_done>
+	<btn_retry>RETRY</btn_retry>
+
+	<bYES>YES</bYES>
+	<bNO>NO</bNO>
+	
+	
+	<!-- Game Over -->
+	<szMission><![CDATA[<font size="40">WE DID IT!</font><br/><br/>WE STOPPED THE ROBOT INVASION!]]></szMission>
+	<szQuitter><![CDATA[<font size="40">OH NO!</font><br/><br/>DANVILLE IS DOOMED!]]></szQuitter>
+	<szEndScore><![CDATA[SCORE:<br/>%SCORE%]]></szEndScore>
+	<bPLAY_AGAIN><![CDATA[PLAY AGAIN]]></bPLAY_AGAIN>
+
+	<!-- Help UI -->
+	<bHelpNext>NEXT</bHelpNext>	
+	<bHelpBack>BACK</bHelpBack>
+	<bHelpPlay>PLAY</bHelpPlay>
+	
+	<!-- Help text -->
+ 	<Help_Resources><![CDATA[Collect gears by destroying Normbots!]]></Help_Resources>
+ 	<Help_Units><![CDATA[Spend gears to bring units into battle!]]></Help_Units>
+	<Help_Badguys><![CDATA[Don't let any Normbots<br/>get past you.]]></Help_Badguys>
+	<Help_Escapes><![CDATA[This shows how many<br/>Normbots got through.<br/>Keep it low!]]></Help_Escapes>
+	<Help_Wave><![CDATA[This shows the next<br/>wave of Normbots.]]></Help_Wave>
+	<Help_Waves><![CDATA[Click the arrows to skip<br/>to the next wave.]]></Help_Waves>
+	<Help_Recall><![CDATA[Watch your defenders' health!  Click a unit to remove it.]]></Help_Recall>
+	
+	<!-- Descriptions for units -->
+	<UnitPopupText></UnitPopupText>
+	<PFBox>Phinedroid Ferbot Factory</PFBox>	
+	<STODoom>Spinning Top Of Doom</STODoom>
+	<FSMilly>Milly</FSMilly>
+	<FSKatie>Katie</FSKatie>
+	<FSGinger>Ginger</FSGinger>
+	<FSHolly>Holly</FSHolly>
+	<FSGretchen>Gretchen</FSGretchen>
+	<FSCandace>Candace 2</FSCandace>
+	<Yogurt_Shooter>Frozen Yogurt Machine</Yogurt_Shooter>
+	<GoAwayinator>Goawayinator</GoAwayinator>
+	<Block>Debris</Block>
+	<Platypult>Platypult</Platypult>
+	<TheBeak>The Beak</TheBeak>
+	<AgentD>Agent D</AgentD>
+	<AgentPanda>Peter the Panda</AgentPanda>
+	<AgentR>Agent R</AgentR>
+
+	<!-- WIN/FAIL -->
+	<VICTORY><![CDATA[VICTORY!]]></VICTORY>
+	<DEFEAT><![CDATA[THE NORMBOTS GOT THROUGH!]]></DEFEAT>
+	
+	<!-- Intro -->
+	<INTRO_01><![CDATA[WHAT IN THE...?]]></INTRO_01>
+	<INTRO_02><![CDATA[WHOAH!<br/>CHECK OUT<br/>CANDACE'S<br/>OUTFIT!]]></INTRO_02>
+	<INTRO_03><![CDATA[PHINEAS!<br/>FERB!<br/>I NEED<br/>YOUR HELP!]]></INTRO_03>
+	<INTRO_04><![CDATA[WHY ARE<br/>YOU DRESSED<br/>LIKE THAT?]]></INTRO_04>
+	<INTRO_05><![CDATA[I'M CANDACE<br/>FROM ANOTHER<br/>DIMENSION.]]></INTRO_05>
+	<INTRO_06><![CDATA[RIIIIIIGHT...]]></INTRO_06>
+	<INTRO_07><![CDATA[THERE'S<br/>NO TIME TO<br/>EXPLAIN...]]></INTRO_07>
+	<INTRO_08><![CDATA[THE EVIL<br/>DR. DOOFENSHMIRTZ<br/>FROM MY DIMENSION<br/>IS PLANNING TO<br/>TAKE OVER YOURS!]]></INTRO_08>
+	<INTRO_09><![CDATA[WE HAVE<br/>TO STOP<br/>HIM!!!]]></INTRO_09>
+	<INTRO_10><![CDATA[HEY,<br/>WHERE'S<br/>PERRY?]]></INTRO_10>
+	<INTRO_11><![CDATA[HAHA!<br/>NOW WITH MY<br/>ARMY OF NORMBOTS<br/>I WILL TAKE OVER<br/>THE WORLD!]]></INTRO_11>
+	<INTRO_12><![CDATA[NOW<br/>DR. DOOF!<br/>UNLEASH THE<br/>NORMBOTS!]]></INTRO_12>
+	<INTRO_13><![CDATA[SECRET AGENT P HAS<br/>CONFIRMED THAT BOTH DOOFS<br/>HAVE UNLEASHED AN ARMY OF<br/>NORMBOTS TO DESTROY<br/>THE CITY!]]></INTRO_13>
+	<INTRO_13a><![CDATA[PERRY'S A SECRET AGENT?<br/><font size="30">COOL!!</font>]]></INTRO_13a>
+	<INTRO_14><![CDATA[LUCKILY FOR US,<br/>AGENT P HAD ALL OF YOUR<br/>INVENTIONS IN STORAGE<br/>READY FOR BATTLE!]]></INTRO_14>
+	<INTRO_15><![CDATA[ALL UNITS<br/>READY FOR ACTION!<br/>LET'S STOP THOSE<br/>NORMBOTS!]]></INTRO_15>
+
+	<L1_PLACE_UNITS><![CDATA[PLACE SOME DEFENDERS!]]></L1_PLACE_UNITS>
+	<L1_HURRY><![CDATA[TOO SLOW?  FAST FORWARD THE AREA!]]></L1_HURRY>	
+	<L1_BARRICATES><![CDATA[SLOW AND DIVERT NORMBOTS WITH DEBRIS!]]></L1_BARRICATES>	
+	<L1_TRAFFIC><![CDATA[SOME FRIENDLY UNITS CAN BE DIVERTED WITH BARRICADES.]]></L1_TRAFFIC>
+	<L1_MORE><![CDATA[YOU'LL NEED MORE DEFENDERS!]]></L1_MORE>
+	<L1_CLICK><![CDATA[NEED TO MOVE?  CLICK ON A DEFENDER TO RECALL IT!]]></L1_CLICK>
+	
+	<L2_EXPERIMENT><![CDATA[GOT A NEW UNIT?  TRY IT OUT!]]></L2_EXPERIMENT>
+
+	<L3_DOGBOT><![CDATA[STAY, DOGBOT!  FEED DOGBOT ROBOTS!]]></L3_DOGBOT>
+	<L4_PLATYBUTT><![CDATA[BUFORD CRUSH!  GET HIM VICTIMS!]]></L4_PLATYBUTT>
+	
+	<L4_BORG><![CDATA[CALL AGENT P TO INTERCEPT THE PLATYBORG!]]></L4_BORG>
+	<L5_FUSSBALL><![CDATA[THAT FOOSBALL TURRET WILL HELP OUT!]]></L5_FUSSBALL>	
+	
+	<L7_SHARK><![CDATA[THE SHARK HUNGERS!]]></L7_SHARK>
+</strings>
+

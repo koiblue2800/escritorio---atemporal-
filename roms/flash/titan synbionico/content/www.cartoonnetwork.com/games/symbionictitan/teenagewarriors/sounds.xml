@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<data>
+    <!-- TITLE CARD -->
+    <sound linked="snd_ST_titlecard" vol="1" bg="1" />
+
+    <!-- PLAYER ILANA -->
+    <sound linked="sndIlanaCharge" vol="1.6" bg="0" />
+    <sound linked="sndIlanaCombo01" vol="1" bg="0" />
+    <sound linked="sndIlanaCombo02" vol="1" bg="0" />
+    <sound linked="sndIlanaCombo03" vol="1" bg="0" />
+    <sound linked="sndIlanaDefeat" vol="1" bg="0" />
+    <sound linked="sndIlanaHit" vol="1" bg="0" />
+    <sound linked="sndIlanaJumpAttack" vol="1" bg="0" />
+    <sound linked="sndIlanaJumpUp" vol="0.8" bg="0" />
+    <sound linked="sndIlanaLand" vol="1" bg="0" />
+    <sound linked="sndIlanaRun" vol="0.9" bg="1" />
+    <sound linked="sndIlanaShield" vol="1" bg="0" />
+    <sound linked="sndIlanaShieldOff" vol="1" bg="0" />
+    <sound linked="sndIlanaShieldStand" vol="2" bg="1" />
+
+    <!-- PLAYER LANCE -->
+    <sound linked="sndLanceCharge" vol="1" bg="0" />
+    <sound linked="sndLanceCombo01" vol="1" bg="0" />
+    <sound linked="sndLanceCombo02" vol="1" bg="0" />
+    <sound linked="sndLanceCombo03" vol="1.2" bg="0" />
+    <sound linked="sndLanceDash" vol="1" bg="0" />
+    <sound linked="sndLanceDefeat" vol="1" bg="0" />
+    <sound linked="sndLanceHit" vol="1" bg="0" />
+    <sound linked="sndLanceJumpUp" vol="1" bg="0" />
+    <sound linked="sndLanceLand" vol="1.2" bg="0" />
+    <sound linked="sndLanceWalk" vol="0.6" bg="1" />
+
+    <!-- PLAYER TITAN -->
+    <sound linked="sndTitanCombo1" vol="1" bg="0" />
+    <sound linked="sndTitanCombo2" vol="1" bg="0" />
+    <sound linked="sndTitanCombo3" vol="1" bg="0" />
+    <sound linked="sndTitanDefeat" vol="1" bg="0" />
+    <sound linked="sndTitanHit" vol="1" bg="0" />
+    <sound linked="sndTitanJumpUp" vol="1" bg="0" />
+    <sound linked="sndTitanLand" vol="0.7" bg="0" />
+    <sound linked="sndTitanRun" vol="1" bg="1" />
+    <sound linked="sndTitanShieldStand" vol="1" bg="1" />
+
+    <!-- ENEMIES MUTRADI_/_G3 -->
+    <sound linked="sndG3Alert" vol="0.2" bg="0" />
+    <sound linked="sndG3Attack" vol="0.5" bg="0" />
+    <sound linked="sndG3Exit" vol="0.8" bg="0" />
+    <sound linked="snd_st_mutradibeast_attack" vol="0.7" bg="0" />
+    <sound linked="snd_st_mutradibeast_die" vol="0.9" bg="0" />
+    <sound linked="snd_st_mutradibeast_hit_1" vol="0.8" bg="0" />
+    <sound linked="snd_st_mutradibeast_hit_2" vol="0.8" bg="0" />
+    <sound linked="snd_st_mutradibeast_persuit" vol="0" bg="0" />
+    <sound linked="snd_st_mutradibeast_walk" vol="0" bg="0" />
+
+
+    <!-- ITEMS 1UP / HP / BALL'S  -->
+    <sound linked="snd1up" vol="1" bg="0" />
+    <sound linked="sndEnergyBall" vol="9" bg="0" />
+    <sound linked="sndHP" vol="1.4" bg="0" />
+
+
+    <!-- SCENARIO SOUND -->
+    <sound linked="sndBlastDoorClosing" vol="0.8" bg="0" />
+    <sound linked="sndBreakableWallExplotion" vol="0.8" bg="0" />
+    <sound linked="sndCheckpointOn" vol="1" bg="0" />
+    <sound linked="sndDestructibleWallDestroyed" vol="1" bg="0" />
+    <sound linked="sndFireHole" vol="1" bg="1" />
+    <sound linked="sndLevel02Explosion" vol="0.9" bg="1" />
+    <sound linked="sndSpringUp" vol="1" bg="0" />
+
+
+    <!-- BOSS SOUND -->
+    <sound linked="sndBossAttackUpSpecialVoice" vol="2" bg="0" />
+    <sound linked="sndBossAttackUpStand" vol="1" bg="0" />
+    <sound linked="sndBossBurn" vol="1" bg="0" />
+    <sound linked="sndBossBurnOut" vol="3" bg="0" />
+    <sound linked="sndBossDeath" vol="1" bg="0" />
+    <sound linked="sndBossDeathVoice" vol="1" bg="0" />
+    <sound linked="sndBossHit01" vol="0.4" bg="0" />
+    <sound linked="sndBossHit02" vol="0.4" bg="0" />
+    <sound linked="sndBossHit03" vol="0.5" bg="0" />
+    <sound linked="sndBossRockBulletDestroy" vol="1.2" bg="0" />
+    <sound linked="sndBossRun" vol="0.8" bg="1" />
+    <sound linked="sndBossShootRock" vol="1.5" bg="0" />
+    <sound linked="sndBossStandFire" vol="0.6" bg="1" />
+
+
+    <!-- POPUS SOUND -->
+    <sound linked="sndButtonClick" vol="1" bg="0" />
+    <sound linked="sndButtonOver" vol="2" bg="0" />
+    <sound linked="sndGuiDialogue" vol="1" bg="0" />
+
+
+    <!-- GAME PLAY -->
+    <sound linked="snd_ST_Gameplay" vol="0.9" bg="1" />
+
+
+    <!-- TRY AGAIN / YOU WIN -->
+    <sound linked="snd_ST_Ganar" vol="1" bg="0" />
+    <sound linked="snd_ST_Perder" vol="1" bg="0" />
+    <sound linked="snd_ST_GanarFinal" vol="1" bg="0" />
+
+    <!-- BOSS BATTLE -->
+    <sound linked="snd_ST_Boss2" vol="1" bg="1" />
+
+</data>

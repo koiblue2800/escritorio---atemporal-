@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<player>
+        <playerLife>3</playerLife>
+		<gravity> 0.0013 </gravity>
+		<elasticity> 0.1 </elasticity>
+		<friction> 0.020 </friction>
+		<slopeFriction> 0.05 </slopeFriction>
+		<maxVerletUpDisplace> 23 </maxVerletUpDisplace>
+		<maxVerletDownDisplace> 17 </maxVerletDownDisplace>
+		<maxVerletHorizontalDisplace> 17 </maxVerletHorizontalDisplace>
+
+		<debugSpeed> 2.6 </debugSpeed>
+		<walkSpeed> 0.0045 </walkSpeed>
+		<airSpeed> 0.0058 </airSpeed>
+		<runFactor> 1.6 </runFactor>
+		<maxSpeedFloor> 8 </maxSpeedFloor>
+		<maxSpeedAir> 7.5 </maxSpeedAir>
+		<jumpInitSpeed> 0.85 </jumpInitSpeed>
+		<jumpRunInitSpeed> 1.1 </jumpRunInitSpeed>
+		<smallJumpTime> 200 </smallJumpTime>
+		<smallJumpSpeed> 0.6 </smallJumpSpeed>
+		<canRun> 0 </canRun>
+		<doubleJumpStart> 0 </doubleJumpStart>
+		<doubleJumpEnd> 1000 </doubleJumpEnd>
+		<doubleJumpSpeed> 0.80 </doubleJumpSpeed>
+        <jumpDownTime> 350 </jumpDownTime>
+	</player>
+
+	<playerIlana>
+		<gravity> 0.0005 </gravity>
+		<elasticity> 0.1 </elasticity>
+		<friction> 0.020 </friction>
+		<slopeFriction> 0.10 </slopeFriction>
+		<maxVerletUpDisplace> 28 </maxVerletUpDisplace>
+		<maxVerletDownDisplace> 15 </maxVerletDownDisplace>
+		<maxVerletHorizontalDisplace> 23 </maxVerletHorizontalDisplace>
+
+		<debugSpeed> 1.6 </debugSpeed>
+		<walkSpeed> 0.040 </walkSpeed>
+		<airSpeed> 0.0058 </airSpeed>
+		<runFactor> 1.6 </runFactor>
+		<maxSpeedFloor> 10 </maxSpeedFloor>
+		<maxSpeedAir> 7 </maxSpeedAir>
+		<jumpInitSpeed> 0.45 </jumpInitSpeed>
+		<jumpRunInitSpeed> 1.1 </jumpRunInitSpeed>
+		<smallJumpTime> 200 </smallJumpTime>
+		<smallJumpSpeed> 0.6 </smallJumpSpeed>
+		<canRun> 0 </canRun>
+		<doubleJumpStart> 0 </doubleJumpStart>
+		<doubleJumpEnd> 1000 </doubleJumpEnd>
+		<doubleJumpSpeed> 0.45 </doubleJumpSpeed>
+	</playerIlana>
+
+    <enemyG3>
+        <speed> 0.4 </speed>
+        <speedExit> 1.2 </speedExit>
+        <timeRest> 8000 </timeRest>
+        <damage> 10 </damage>
+        <walkRange> 2000 </walkRange>
+        <hitTimer> 600 </hitTimer>
+        <squashFactor> 0.7 </squashFactor>
+        <squashImpulse> 0.45 </squashImpulse>
+        <hitImpulseX> 75 </hitImpulseX>
+        <hitImpulseY> 5 </hitImpulseY>
+        <speedBullet> 0.1 </speedBullet>
+        <rangeBullet> 400 </rangeBullet>
+    </enemyG3>
+
+    <g3DataAppear>
+        <timeAppear>11</timeAppear>
+        <waveG3>1</waveG3>
+    </g3DataAppear>
+
+    <enemyMutradi>
+        <speed> 0.05 </speed>
+        <speedPersuit> 0.25 </speedPersuit>
+        <timeRest> 2000 </timeRest>
+        <damage> 10 </damage>
+        <walkRange> 350 </walkRange>
+        <hitTimer> 600 </hitTimer>
+        <squashFactor> 0.7 </squashFactor>
+        <squashImpulse> 0.45 </squashImpulse>
+        <hitImpulseX> 75 </hitImpulseX>
+        <hitImpulseY> 5 </hitImpulseY>
+        <zoneSpecialWalk> 700 </zoneSpecialWalk>
+        <speedBullet> 0.6 </speedBullet>
+        <rangeBullet> 250 </rangeBullet>
+    </enemyMutradi>
+
+    <spring>
+        <jumpSpeed> 1.6 </jumpSpeed>
+    </spring>
+
+    <score>
+        <scoreOrbs>10</scoreOrbs>
+        <scoreMutradi>50</scoreMutradi>
+        <scoreHumans>80</scoreHumans>
+    </score>
+
+    <roomTrap>
+        <totalEnemys>10</totalEnemys>
+         <intervalTime>1,3,2,2,3,2,2,2,2,2</intervalTime>
+    </roomTrap>
+	
+    <damagePlayer>
+        <damage lance="50" ilana="35" />
+    </damagePlayer>
+	
+	<checkPoints>
+		<pos x="3680" y="1245"/>
+        <pos x="5350" y="450" />
+		<pos x="5215" y="1240" />
+        <pos x="8150" y="1330"/>
+		<pos x="10300" y="1410"/>
+    </checkPoints>
+	
+	<cameraXLimits>
+		<xLimit value="7990" />
+	</cameraXLimits>
+
+    <maxCollectedLifes>50</maxCollectedLifes>
+	
+	<IlanaShieldChargeTime>300</IlanaShieldChargeTime>
+	<IlanaShieldTimeLimit>3000</IlanaShieldTimeLimit>
+	
+	<ilanaHP>100</ilanaHP>
+	<lanceHP>120</lanceHP>
+</data>
+

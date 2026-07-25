@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<player>
+		<gravity> 0.0013 </gravity>
+		<elasticity> 0.1 </elasticity>
+		<friction> 0.020 </friction>
+		<slopeFriction> 0.05 </slopeFriction>
+		<maxVerletUpDisplace> 23 </maxVerletUpDisplace>
+		<maxVerletDownDisplace> 17 </maxVerletDownDisplace>
+		<maxVerletHorizontalDisplace> 17 </maxVerletHorizontalDisplace>
+
+		<debugSpeed> 2.6 </debugSpeed>
+		<walkSpeed> 0.0045 </walkSpeed>
+		<airSpeed> 0.0058 </airSpeed>
+		<runFactor> 1.6 </runFactor>
+		<maxSpeedFloor> 8 </maxSpeedFloor>
+		<maxSpeedAir> 7.5 </maxSpeedAir>
+		<jumpInitSpeed> 0.85 </jumpInitSpeed>
+		<jumpRunInitSpeed> 1.1 </jumpRunInitSpeed>
+		<smallJumpTime> 200 </smallJumpTime>
+		<smallJumpSpeed> 0.6 </smallJumpSpeed>
+		<canRun> 0 </canRun>
+		<doubleJumpStart> 0 </doubleJumpStart>
+		<doubleJumpEnd> 1000 </doubleJumpEnd>
+		<doubleJumpSpeed> 0.80 </doubleJumpSpeed>
+        <jumpDownTime> 350 </jumpDownTime>
+	</player>
+
+	<playerTest>
+		<gravity> 0.0009 </gravity>
+		<elasticity> 0.2 </elasticity>
+		<friction> 0.009 </friction>
+		<slopeFriction> 0.4 </slopeFriction>
+		<maxVerletUpDisplace> 30 </maxVerletUpDisplace>
+		<maxVerletDownDisplace> 23 </maxVerletDownDisplace>
+		<maxVerletHorizontalDisplace> 22 </maxVerletHorizontalDisplace>
+
+		<debugSpeed> 1.0 </debugSpeed>
+		<walkSpeed> 0.0075 </walkSpeed>
+		<airSpeed> 0.0005 </airSpeed>
+		<runFactor> 1.6 </runFactor>
+		<maxSpeedFloor> 9 </maxSpeedFloor>
+		<maxSpeedAir> 4.5 </maxSpeedAir>
+		<jumpInitSpeed> 0.9 </jumpInitSpeed>
+		<jumpRunInitSpeed> 1.1 </jumpRunInitSpeed>
+		<smallJumpTime> 100 </smallJumpTime>
+		<smallJumpSpeed> 0.7 </smallJumpSpeed>
+		<canRun> 0 </canRun>
+		<doubleJumpStart> 0 </doubleJumpStart>
+		<doubleJumpEnd> 2000 </doubleJumpEnd>
+		<doubleJumpSpeed> 1.1 </doubleJumpSpeed>
+        <jumpDownTime> 350 </jumpDownTime>
+	</playerTest>
+
+	<playerIlana>
+		<gravity> 0.0005 </gravity>
+		<elasticity> 0.1 </elasticity>
+		<friction> 0.020 </friction>
+		<slopeFriction> 0.10 </slopeFriction>
+		<maxVerletUpDisplace> 28 </maxVerletUpDisplace>
+		<maxVerletDownDisplace> 15 </maxVerletDownDisplace>
+		<maxVerletHorizontalDisplace> 23 </maxVerletHorizontalDisplace>
+
+		<debugSpeed> 1.6 </debugSpeed>
+		<walkSpeed> 0.040 </walkSpeed>
+		<airSpeed> 0.0058 </airSpeed>
+		<runFactor> 1.6 </runFactor>
+		<maxSpeedFloor> 10 </maxSpeedFloor>
+		<maxSpeedAir> 7 </maxSpeedAir>
+		<jumpInitSpeed> 0.45 </jumpInitSpeed>
+		<jumpRunInitSpeed> 1.1 </jumpRunInitSpeed>
+		<smallJumpTime> 200 </smallJumpTime>
+		<smallJumpSpeed> 0.6 </smallJumpSpeed>
+		<canRun> 0 </canRun>
+		<doubleJumpStart> 0 </doubleJumpStart>
+		<doubleJumpEnd> 1000 </doubleJumpEnd>
+		<doubleJumpSpeed> 0.45 </doubleJumpSpeed>
+	</playerIlana>
+
+    <spring>
+        <jumpSpeed> 1.6 </jumpSpeed>
+    </spring>
+
+    <star>
+        <score> 15 </score>
+    </star>
+
+	<checkPoints>
+        <pos x="1700" y="2605"/>
+        <pos x="4265" y="2605" />
+		<pos x="6110" y="2605" />
+		<pos x="8160" y="2605" />
+    </checkPoints>
+	
+	<IlanaShieldChargeTime>1000</IlanaShieldChargeTime>
+	<IlanaShieldTimeLimit>3000</IlanaShieldTimeLimit>
+	
+	<waitTimeEnteringBuilding>1000</waitTimeEnteringBuilding>
+	
+	<actionByX>
+		<xLimit value="8300" action="hudArrowGoUP" />
+	</actionByX>
+	
+	<cameraXLimits>
+		<xLimit value="1600" changeQuotaX="1600" humanQuota="2"  freeCameraGoTo="speed:0.6;x:1250;y:1900;waitTime:2000;destroyWindowID:0;addItem:1;itemType:mcGoRightExported;itemX:1320;itemY:2100;rotation:0;itemDepth:1" />
+		<xLimit value="3960" changeQuotaX="2500" humanQuota="5" freeCameraGoTo="speed:0.6;x:3250;y:1250;waitTime:2000;destroyCeil:10;addItem:1;itemType:mcGoUpExported;itemX:3430;itemY:1600;rotation:0;itemDepth:1" />
+		<xLimit value="5860" changeQuotaX="4400" humanQuota="7" freeCameraGoTo="speed:0.6;x:5400;y:1130;waitTime:2000;destroyWindowID:1;addItem:1;itemType:mcGoRightExported;itemX:5580;itemY:1300;rotation:0;itemDepth:1" />
+		<xLimit value="7910" changeQuotaX="6000" humanQuota="10" freeCameraGoTo="speed:0.6;x:7365;y:680;waitTime:2000;destroyWindowID:2;addItem:1;itemType:mcGoRightExported;itemX:7600;itemY:900;rotation:0;itemDepth:1" />
+		<xLimit value="10600" changeQuotaX="8500" humanQuota="13" freeCameraGoTo="speed:0.6;x:9680;y:2185;waitTime:2000;destroyWindowID:-1;addItem:0;itemType:mcGoUpExported;itemX:7670;itemY:885;rotation:0;itemDepth:1" />
+	</cameraXLimits>
+</data>
+

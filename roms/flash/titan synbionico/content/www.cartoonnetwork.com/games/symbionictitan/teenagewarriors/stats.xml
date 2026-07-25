@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<data>
+    <stats>
+        <saveIlana name="Save Ilana" id="100" />
+        <collectOrb name="Orbs" id="400" />
+        <saveHumans name="Save Humans" id="101" />
+        <pacifistPlayer name="No Death" id="102" />
+        <fullGameCompleted name="Ilana and Lance" id="103" />
+    </stats>
+</data>

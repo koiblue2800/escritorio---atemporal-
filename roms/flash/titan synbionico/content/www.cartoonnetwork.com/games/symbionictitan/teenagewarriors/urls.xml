@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+    <!-- Main -->
+    <url id="strings"   type="xml" path="strings/strings.xml"/>
+    <url id="sounds"    type="xml" path="sounds.xml"/>
+
+	<!-- Level Demo -->
+	<url id="DataLevelDemo" type="xml" path="games/symbionic/general.xml" />
+	<url id="ST_General_01" type="xml" path="games/symbionic/general01.xml" />
+	<url id="ST_General_02" type="xml" path="games/symbionic/general02.xml" />
+	<url id="ST_General_03" type="xml" path="games/symbionic/general03.xml" />
+    <url id="Level_0" type="xml" path="games/symbionic/lvl00.xml" />
+    <url id="Level_1" type="xml" path="games/symbionic/lvl01.xml" />
+    <url id="Level_2" type="xml" path="games/symbionic/lvl02.xml" />
+    <url id="Level_3" type="xml" path="games/symbionic/lvl03.xml" />
+    <url id="ST_BossStates" type="xml" path="games/symbionic/bossStates.xml" />
+    <url id="stats" type="xml" path="stats.xml" />
+
+</data>

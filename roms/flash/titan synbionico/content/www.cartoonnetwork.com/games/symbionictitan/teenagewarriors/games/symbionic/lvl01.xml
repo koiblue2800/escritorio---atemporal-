@@ -1,0 +1,546 @@
+<world>
+	<properties>
+		<width> 31200 </width>
+		<height> 3200 </height>
+		<cameraWidth> 600 </cameraWidth>
+		<cameraHeight> 400 </cameraHeight>
+		<cameraScreenX> 0 </cameraScreenX>
+		<cameraScreenY> 0 </cameraScreenY>
+		<cameraYMin> 0.5 </cameraYMin>
+		<cameraYMax> 0.5 </cameraYMax>
+		<cameraXMin> 0.3 </cameraXMin>
+		<cameraXMax> 0.5 </cameraXMax>
+		<showCollisions> 0 </showCollisions>
+        <playerX> 330 </playerX>
+		<playerY> 90 </playerY>
+        <useEmbeddedAssets> 1 </useEmbeddedAssets>
+	</properties>
+	
+	<layer type="player" name="player" >
+	</layer>
+	
+	<layer type="objects" name="items2" >
+		<object x="100" y="200" id="302" depth="-1" />
+		<object x="30871" y="3000" id="301" depth="-1" />
+	</layer>
+
+	<layer type="objects" name="items1" >
+		<object x="446" y="977" id="262" params="depth:-1;type:11" />
+		<object x="449" y="1075" id="262" params="depth:-1;type:11" />
+		<object x="449" y="1179" id="262" params="depth:-1;type:11" />
+		<object x="969" y="1759" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="1033" y="1760" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="1088" y="1708" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="1143" y="1732" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="1194" y="1774" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="1238" y="1832" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="1273" y="1889" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="1301" y="1940" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="1313" y="1986" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="1620" y="2010" id="303" params="depth:-1;doorType:1" />
+		<object x="1695" y="2098" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="1860" y="1930" id="303" params="depth:-1;doorType:1" />
+		<object x="1935" y="2015" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="2100" y="1850" id="303" params="depth:-1;doorType:1" />
+		<object x="2175" y="1934" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="2340" y="1770" id="303" params="depth:-1;doorType:1" />
+		<object x="2416" y="1857" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="2580" y="1690" id="303" params="depth:-1;doorType:1" />
+        <object x="2795" y="1748" id="262" params="depth:-1;type:13" />
+		<object x="2840" y="1800" id="207" depth="-1" />
+		<object x="2960" y="1010" id="304" params="depth:-1;doorType:1" />
+		<object x="2980" y="1730" id="304" params="depth:-1;doorType:0" />
+		<object x="3202" y="1772" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="3264" y="1772" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="3325" y="1772" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="3475" y="1298" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="3480" y="1690" id="303" params="depth:-1;doorType:1" />
+		<object x="3537" y="1298" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="3603" y="1298" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="3643" y="1347" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="3679" y="1401" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="3717" y="1461" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="3752" y="1516" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="3774" y="1572" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="3999" y="1862" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="4061" y="1862" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="4360" y="1690" id="303" params="depth:-1;doorType:1" />
+		<object x="4602" y="1700" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="4724" y="1618" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="4778" y="1618" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="4829" y="1617" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="4879" y="1617" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="5123" y="1538" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="5177" y="1538" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="5228" y="1537" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="5278" y="1537" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="5401" y="1456" id="204" params="depth:0;name:mcHP;score:0" />
+		<object x="5880" y="1370" id="303" params="depth:-1;doorType:1" />
+		<object x="6480" y="1250" id="304" params="depth:-1;doorType:0" />
+		<object x="6720" y="1090" id="304" params="depth:-1;doorType:0" />
+		<object x="6762" y="1442" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="6792" y="1142" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="6816" y="1388" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="6843" y="1142" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="6867" y="1388" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="6892" y="1142" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="6917" y="1442" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="6943" y="1142" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="7040" y="1090" id="304" params="depth:-1;doorType:0" />
+		<object x="7528" y="1220" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="7582" y="1220" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="7633" y="1220" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="7683" y="1220" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="7720" y="1458" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="7778" y="1188" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="7835" y="1201" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="7887" y="1246" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="7937" y="1302" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="7983" y="1362" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="8003" y="1457" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="8013" y="1409" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="8057" y="1457" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="8108" y="1456" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="8158" y="1456" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="8520" y="1461" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="8599" y="1462" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="8839" y="1458" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="9140" y="1370" id="303" params="depth:-1;doorType:1" />
+		<object x="9261" y="1455" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="9314" y="1455" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="9376" y="1478" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="9431" y="1526" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="9487" y="1582" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="9540" y="1636" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="9598" y="1692" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="9653" y="1744" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="9707" y="1796" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="9765" y="1853" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="9815" y="1908" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="9875" y="1964" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="9933" y="2026" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="10006" y="2093" id="203" params="depth:0;name:mc1up;score:0" />
+		<object x="10083" y="2030" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="10140" y="2043" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="10192" y="2088" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="10242" y="2144" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="10288" y="2204" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="10318" y="2251" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="10360" y="2308" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="10406" y="2368" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="10436" y="2415" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="10477" y="2474" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="10523" y="2534" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="10553" y="2581" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="10594" y="2639" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="10624" y="2686" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="11480" y="2649" id="303" params="depth:-1;doorType:1" />
+		<object x="11700" y="2650" id="303" params="depth:-1;doorType:1" />
+		<object x="11774" y="2737" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="11940" y="2570" id="303" params="depth:-1;doorType:1" />
+		<object x="12016" y="2661" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="12180" y="2490" id="303" params="depth:-1;doorType:1" />
+		<object x="12251" y="2579" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="12420" y="2410" id="303" params="depth:-1;doorType:1" />
+		<object x="12489" y="2501" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="12660" y="2330" id="303" params="depth:-1;doorType:1" />
+		<object x="12726" y="2418" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="12900" y="2250" id="303" params="depth:-1;doorType:1" />
+		<object x="13006" y="2272" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="13054" y="2236" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="13100" y="2187" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="13143" y="2145" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="13192" y="2091" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="13254" y="2027" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="13305" y="1975" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="13355" y="1927" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="13409" y="1870" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="13464" y="1816" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="13519" y="1764" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="13579" y="1703" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="13658" y="1683" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="13716" y="1683" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="13780" y="1824" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="13783" y="1682" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="13836" y="1825" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="13894" y="1824" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="13920" y="1570" id="304" params="depth:-1;doorType:1" />
+		<object x="14000" y="1615" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="14160" y="1490" id="304" params="depth:-1;doorType:1" />
+		<object x="14239" y="1536" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="14400" y="1410" id="304" params="depth:-1;doorType:1" />
+		<object x="14477" y="1455" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="14640" y="1330" id="304" params="depth:-1;doorType:1" />
+		<object x="14699" y="1378" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="14880" y="1250" id="304" params="depth:-1;doorType:1" />
+		<object x="14932" y="1294" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="15098" y="1227" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="15179" y="1143" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="15257" y="1068" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="15310" y="1011" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="15440" y="930" id="304" params="depth:-1;doorType:1" />
+		<object x="15636" y="999" id="207" depth="-1" />
+		<object x="15760" y="210" id="304" params="depth:-1;doorType:1" />
+		<object x="15779" y="930" id="304" params="depth:-1;doorType:0" />
+		<object x="15963" y="384" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="16208" y="382" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="16227" y="253" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="16281" y="253" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="16332" y="253" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="16382" y="253" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="16420" y="1090" id="304" params="depth:-1;doorType:0" />
+		<object x="16441" y="384" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="16442" y="252" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="16476" y="1140" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="16496" y="252" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="16547" y="252" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="16558" y="1140" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="16597" y="252" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="16620" y="1090" id="304" params="depth:-1;doorType:0" />
+		<object x="16653" y="253" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="16682" y="1141" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="16685" y="382" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="16707" y="253" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="16758" y="253" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="16761" y="1263" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="16764" y="1141" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="16808" y="253" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="16820" y="1090" id="304" params="depth:-1;doorType:0" />
+		<object x="16885" y="1140" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="16920" y="383" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="16967" y="1140" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="17020" y="1090" id="304" params="depth:-1;doorType:0" />
+		<object x="17080" y="1140" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="17162" y="1140" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="17220" y="1090" id="304" params="depth:-1;doorType:0" />
+		<object x="17280" y="1139" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="17323" y="1261" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="17362" y="1139" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="17420" y="1090" id="304" params="depth:-1;doorType:0" />
+		<object x="17484" y="1137" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="17566" y="1137" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="17620" y="1090" id="304" params="depth:-1;doorType:0" />
+		<object x="17663" y="738" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="17723" y="691" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="17798" y="648" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="17872" y="682" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="17929" y="734" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="17959" y="1177" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="17985" y="804" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="18033" y="870" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="18080" y="937" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="18110" y="998" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="18127" y="1056" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="18150" y="1102" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="18184" y="1142" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="18226" y="1094" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="18276" y="1060" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="18283" y="1177" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="18324" y="1094" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="18374" y="1141" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="18760" y="1050" id="303" params="depth:-1;doorType:1" />
+		<object x="19068" y="1269" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="19124" y="1270" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="19172" y="1141" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="19182" y="1269" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="19226" y="1141" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="19277" y="1141" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="19327" y="1141" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="19377" y="1141" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="19419" y="1093" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="19462" y="1177" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="19481" y="1059" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="19518" y="1178" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="19548" y="1059" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="19576" y="1177" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="19608" y="1094" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="19658" y="1141" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="19719" y="1140" id="204" params="depth:0;name:mcHP;score:0" />
+		<object x="19778" y="1143" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="19820" y="1095" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="19857" y="1177" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="19882" y="1061" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="19921" y="1177" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="19949" y="1061" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="19983" y="1176" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="20009" y="1096" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="20059" y="1143" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="20108" y="1143" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="20162" y="1143" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="20213" y="1143" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="20263" y="1143" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="20313" y="1143" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="20361" y="1143" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="20411" y="1143" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="20960" y="1170" id="304" params="depth:-1;doorType:0" />
+		<object x="21046" y="1508" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="21112" y="1510" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="21279" y="1103" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="21279" y="1139" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="21286" y="1382" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="21287" y="1507" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="21333" y="1103" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="21333" y="1139" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="21340" y="1382" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="21353" y="1509" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="21384" y="1103" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="21384" y="1139" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="21391" y="1382" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="21434" y="1103" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="21434" y="1139" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="21441" y="1382" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="21498" y="1382" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="21520" y="1010" id="304" params="depth:-1;doorType:1" />
+		<object x="21528" y="1502" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="21552" y="1382" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="21594" y="1504" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="21603" y="1012" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="21603" y="1382" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="21605" y="1050" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="21653" y="1382" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="21657" y="1012" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="21659" y="1050" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="21708" y="1012" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="21710" y="1050" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="21716" y="1382" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="21758" y="1012" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="21760" y="1050" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="21768" y="1504" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="21770" y="1382" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="21821" y="1382" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="21834" y="1506" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="21840" y="1010" id="304" params="depth:-1;doorType:1" />
+		<object x="21871" y="1382" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="21932" y="1382" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="21986" y="1382" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="22013" y="1500" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="22037" y="1382" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="22079" y="1502" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="22087" y="1382" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="22255" y="1503" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="22321" y="1505" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="22400" y="1170" id="304" params="depth:-1;doorType:0" />
+		<object x="22840" y="1330" id="304" params="depth:-1;doorType:1" />
+		<object x="22983" y="1335" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="23031" y="1299" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="23077" y="1250" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="23120" y="1208" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="23169" y="1154" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="23231" y="1090" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="23282" y="1038" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="23340" y="985" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="23391" y="933" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="23540" y="850" id="304" params="depth:-1;doorType:1" />
+		<object x="23612" y="903" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="23679" y="903" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="23740" y="850" id="304" params="depth:-1;doorType:1" />
+		<object x="23785" y="1023" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="23813" y="903" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="23841" y="1024" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="23880" y="903" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="23899" y="1023" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="23940" y="850" id="304" params="depth:-1;doorType:1" />
+		<object x="24007" y="903" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="24074" y="903" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="24140" y="850" id="304" params="depth:-1;doorType:1" />
+		<object x="24269" y="888" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="24317" y="851" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="24374" y="850" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="24431" y="850" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="24469" y="891" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="24518" y="930" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="24561" y="974" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="24610" y="1016" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="24657" y="1061" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="24702" y="1105" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="24754" y="1154" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="24802" y="1199" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="24852" y="1247" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="24896" y="1297" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="24901" y="1587" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="24944" y="1345" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="24957" y="1588" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="24988" y="1396" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="25015" y="1587" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="25045" y="1447" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="25102" y="1447" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="25159" y="1446" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="25209" y="1438" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="25267" y="1440" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="25330" y="1468" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="25398" y="1519" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="25437" y="1026" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="25458" y="1569" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="25496" y="1610" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="25545" y="1649" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="25588" y="1693" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="25637" y="1735" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="25684" y="1780" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="25729" y="1824" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="25781" y="1873" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="25829" y="1918" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="25879" y="1966" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="25920" y="1427" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="25923" y="2016" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="25948" y="2304" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="25971" y="2064" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="26004" y="2305" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="26015" y="2115" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="26062" y="2304" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="26072" y="2166" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="26127" y="2168" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="26163" y="1587" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="26207" y="2115" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="26282" y="2065" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="26341" y="2090" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="26395" y="2131" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="26457" y="2174" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="26525" y="2225" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="26585" y="2275" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="26623" y="2316" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="26641" y="1981" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="26672" y="2355" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="26715" y="2399" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="26764" y="2441" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="26811" y="2486" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="26856" y="2530" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="26881" y="2141" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="26908" y="2579" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="26956" y="2624" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="27006" y="2672" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="27050" y="2722" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="27104" y="2759" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="27157" y="2810" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="27227" y="2875" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="27279" y="2385" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="27302" y="2938" id="200" params="depth:0;name:mcEnergyBall;score:10" />
+		<object x="27442" y="2384" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="27601" y="2384" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="27720" y="2890" id="303" params="depth:-1;doorType:1" />
+		<object x="27760" y="2546" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="28360" y="2890" id="303" params="depth:-1;doorType:1" />
+		<object x="28400" y="2543" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="29000" y="2890" id="303" params="depth:-1;doorType:1" />
+		<object x="29036" y="2548" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="29640" y="2890" id="303" params="depth:-1;doorType:1" />
+		<object x="29681" y="2549" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="30320" y="3108" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="30440" y="2930" id="304" params="depth:-1;doorType:1" />
+		<object x="30560" y="3109" id="212" params="depth:-1;initTime:500;times:40;standDuration:0;fireDuration:5000;start:1" />
+		<object x="15393" y="928" id="305" params="depth:-1;index:2" />
+        <object x="2652" y="1685" id="305" params="depth:-1;index:0" />
+		<object x="6040" y="1376" id="306" params="depth:-1;index:1" />
+        <object x="20633" y="1188" id="306" params="depth:-1;index:3" />
+	</layer>
+	<layer type="collision" name="collisions" cols="1560" rows="160" tileW="20" tileH="20" map="mc_map_lvl01_collisions" width="31200" height="3200" >
+	</layer>
+	<layer type="cell" name="tiles" cols="390" rows="40" tileW="80" tileH="80" map="mc_map_lvl01_tiles" width="31200" height="3200" >
+		<set name="mct_lvl01_tiles" />
+		<tile set="0" frame="10" />
+		<tile set="0" frame="5" />
+		<tile set="0" frame="9" />
+		<tile set="0" frame="29" />
+		<tile set="0" frame="7" />
+		<tile set="0" frame="28" />
+		<tile set="0" frame="22" />
+		<tile set="0" frame="6" />
+		<tile set="0" frame="2" />
+		<tile set="0" frame="3" />
+		<tile set="0" frame="35" />
+		<tile set="0" frame="37" />
+		<tile set="0" frame="38" />
+		<tile set="0" frame="39" />
+		<tile set="0" frame="21" />
+		<tile set="0" frame="20" />
+		<tile set="0" frame="36" />
+		<tile set="0" frame="4" />
+		<tile set="0" frame="23" />
+		<tile set="0" frame="32" />
+		<tile set="0" frame="30" />
+		<tile set="0" frame="34" />
+		<tile set="0" frame="33" />
+		<tile set="0" frame="46" />
+		<tile set="0" frame="44" />
+		<tile set="0" frame="43" />
+		<tile set="0" frame="42" />
+		<tile set="0" frame="17" />
+		<tile set="0" frame="18" />
+		<tile set="0" frame="19" />
+		<tile set="0" frame="31" />
+		<tile set="0" frame="16" />
+		<tile set="0" frame="8" />
+		<tile set="0" frame="24" />
+		<tile set="0" frame="26" />
+	</layer>
+	<layer type="cell" name="background1" cols="22" rows="8" tileW="256" tileH="256" map="mc_map_lvl01_background1" width="6144" height="1792" >
+		<set name="mct_lvl01_background1" />
+		<tile set="0" frame="43" />
+		<tile set="0" frame="44" />
+		<tile set="0" frame="47" />
+		<tile set="0" frame="62" />
+		<tile set="0" frame="45" />
+		<tile set="0" frame="48" />
+		<tile set="0" frame="56" />
+		<tile set="0" frame="57" />
+		<tile set="0" frame="61" />
+		<tile set="0" frame="66" />
+		<tile set="0" frame="67" />
+		<tile set="0" frame="58" />
+		<tile set="0" frame="64" />
+		<tile set="0" frame="65" />
+		<tile set="0" frame="63" />
+	</layer>
+	<layer type="cell" name="background2" cols="22" rows="7" tileW="256" tileH="256" map="mc_map_lvl01_background2" width="5632" height="1792" >
+		<set name="mct_lvl01_background2" />
+		<tile set="0" frame="19" />
+		<tile set="0" frame="20" />
+		<tile set="0" frame="21" />
+		<tile set="0" frame="22" />
+		<tile set="0" frame="23" />
+		<tile set="0" frame="24" />
+		<tile set="0" frame="25" />
+		<tile set="0" frame="2" />
+		<tile set="0" frame="5" />
+		<tile set="0" frame="8" />
+		<tile set="0" frame="11" />
+		<tile set="0" frame="26" />
+		<tile set="0" frame="27" />
+		<tile set="0" frame="28" />
+		<tile set="0" frame="29" />
+		<tile set="0" frame="30" />
+		<tile set="0" frame="31" />
+		<tile set="0" frame="3" />
+		<tile set="0" frame="6" />
+		<tile set="0" frame="9" />
+		<tile set="0" frame="12" />
+		<tile set="0" frame="32" />
+		<tile set="0" frame="33" />
+		<tile set="0" frame="34" />
+		<tile set="0" frame="35" />
+		<tile set="0" frame="36" />
+		<tile set="0" frame="37" />
+		<tile set="0" frame="4" />
+		<tile set="0" frame="7" />
+		<tile set="0" frame="10" />
+		<tile set="0" frame="13" />
+		<tile set="0" frame="38" />
+		<tile set="0" frame="39" />
+		<tile set="0" frame="40" />
+		<tile set="0" frame="41" />
+		<tile set="0" frame="42" />
+		<tile set="0" frame="43" />
+		<tile set="0" frame="44" />
+		<tile set="0" frame="45" />
+		<tile set="0" frame="46" />
+		<tile set="0" frame="61" />
+		<tile set="0" frame="47" />
+		<tile set="0" frame="48" />
+		<tile set="0" frame="49" />
+		<tile set="0" frame="50" />
+		<tile set="0" frame="51" />
+		<tile set="0" frame="52" />
+		<tile set="0" frame="53" />
+		<tile set="0" frame="54" />
+	</layer>
+</world>
+
