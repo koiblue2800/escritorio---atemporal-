@@ -74,6 +74,13 @@ const GAMES = {
     controls: 'Mouse / Teclado',
     stars: 4,
     preview: ''   // ruta a imagen de preview, ej: 'roms/flash/previews/game.jpg'
+  },
+  teentitans: {
+    title: 'Teen Titans Go: Teenage Warriors',
+    icon: '🦸',
+    type: 'html',
+    rom: 'roms/flash/teen titans/dist/index.html', // ajustar si el index.html esta en otra ruta
+    width: 900, height: 650
   }
 };
 
@@ -268,9 +275,21 @@ function loadEmulator(gameId, game) {
   const content = document.getElementById('content-' + gameId);
   if (game.type === 'flash') {
     loadRuffle(content, game);
+  } else if (game.type === 'html') {
+    loadHtmlGame(content, game);
   } else {
     loadEmulatorJS(content, game);
   }
+}
+
+function loadHtmlGame(container, game) {
+  const iframe = document.createElement('iframe');
+  iframe.style.width = '100%';
+  iframe.style.height = '100%';
+  iframe.style.border = 'none';
+  iframe.src = game.rom;
+  container.innerHTML = '';
+  container.appendChild(iframe);
 }
 
 function showFlashPreview(container, game, gameId) {
