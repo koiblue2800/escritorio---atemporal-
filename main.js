@@ -127,13 +127,6 @@ const WEBAPPS = {
     width: 1024, height: 700,
     newTab: true
   },
-  gta: {
-    title: 'GTA Vice City',
-    icon: '🚗',
-    url: 'https://gtabrowser.vercel.app/',
-    width: 1024, height: 700,
-    newTab: true
-  },
   solitario: {
     title: 'Spider Solitaire',
     icon: '🃏',
